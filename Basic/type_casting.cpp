@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // **Implicit Type Conversion (Type Promotion)**
+    int num = 10;
+    double result = num;  // Implicit conversion from int to double
+    cout << "Implicit Conversion: Integer " << num << " converted to Double " << result << endl;
+
+    // **Explicit Type Conversion (Using static_cast)**
+    double pi = 3.14159;
+    int roundedPi = static_cast<int>(pi);  // Explicitly convert double to int
+    cout << "Explicit Conversion: Double " << pi << " converted to Integer " << roundedPi << endl;
+    
+    return 0;
+}
+
