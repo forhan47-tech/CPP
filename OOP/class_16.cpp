@@ -1,24 +1,30 @@
 #include <iostream>
+#include <array>
 using namespace std;
 
-class Math {
+class MyClass {
+private:
+    array<int, 5> arr;
+
 public:
-    // Overloaded method for adding two integers
-    int add(int a, int b) {
-        return a + b;
+    MyClass() {
+        cout << "Enter 5 integers:\n";
+        for (int i = 0; i < arr.size(); ++i) {
+            cin >> arr[i];  
+        }
     }
 
-    // Overloaded method for adding two doubles
-    double add(double a, double b) {
-        return a + b;
+    void print() {
+        cout << "Array values: ";
+        for (int val : arr) {
+            cout << val << " ";
+        }
+        cout << endl;
     }
 };
 
 int main() {
-    Math calc;
-
-    cout << "Integer Addition: " << calc.add(5, 3) << endl;
-    cout << "Double Addition: " << calc.add(5.5, 3.2) << endl;
-
+    MyClass obj;
+    obj.print();
     return 0;
 }

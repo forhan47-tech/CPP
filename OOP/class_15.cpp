@@ -1,27 +1,22 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
-class Student {
-    int roll;
-    string name;
+class Math {
 public:
-    Student(int r, string n) : roll(r), name(n) {}
-
-    void display() {
-        cout << "Roll: " << roll << ", Name: " << name << endl;
+    void add(int a, int b) { 
+        cout << "Sum: " << a + b << endl; 
+    }
+    void add(double a, double b) { 
+        cout << "Sum: " << a + b << endl; 
     }
 };
 
 int main() {
-    vector<Student> students;
-
-    students.emplace_back(201, "Ali");
-    students.emplace_back(202, "Hasan");
-
-    for (Student& s : students) {
-        s.display();
-    }
+    Math calc;
+    
+    calc.add(5, 3);        // Calls int version
+    calc.add(2.5, 4.5);    // Calls double version
 
     return 0;
 }
+

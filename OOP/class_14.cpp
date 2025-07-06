@@ -1,33 +1,24 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
-class Student {
-    int roll;
-    string name;
-    vector<int> marks;  // STL container inside the class
-
+class Math {
 public:
-    Student(int r, string n, vector<int> m) {
-        roll = r;
-        name = n;
-        marks = m;
+    // Overloaded method for adding two integers
+    int add(int a, int b) {
+        return a + b;
     }
 
-    void display() {
-        cout << "Roll: " << roll << ", Name: " << name << endl;
-        cout << "Marks: ";
-        for (int mark : marks) {
-            cout << mark << " ";
-        }
-        cout << endl;
+    // Overloaded method for adding two doubles
+    double add(double a, double b) {
+        return a + b;
     }
 };
 
 int main() {
-    vector<int> marks1 = {85, 90, 78};
-    Student s1(101, "NAIMUDDIN", marks1);
-    s1.display();
+    Math calc;
+
+    cout << "Integer Addition: " << calc.add(5, 3) << endl;
+    cout << "Double Addition: " << calc.add(5.5, 3.2) << endl;
 
     return 0;
 }

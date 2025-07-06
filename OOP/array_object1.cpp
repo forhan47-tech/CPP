@@ -2,15 +2,9 @@
 using namespace std;
 
 class Student {
-private:
+public:
     int roll;
     string name;
-
-public:
-    void setData(int r, string n) {
-        roll = r;
-        name = n;
-    }
 
     void display() {
         cout << "Roll: " << roll << ", Name: " << name << endl;
@@ -18,8 +12,16 @@ public:
 };
 
 int main() {
-    Student s;
-    s.setData(102, "Ali");
-    s.display();           // Output: Roll: 102, Name: Ali
+    Student arr[2];
+
+    arr[0].roll = 101;  
+    arr[0].name = "Rahim";
+
+    arr[1].roll = 102;
+    arr[1].name = "Karim";
+
+    arr[0].display();
+    arr[1].display();
+
     return 0;
 }

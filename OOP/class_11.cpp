@@ -1,18 +1,25 @@
 #include <iostream>
 using namespace std;
 
-class Student {
+class Car {
 public:
-    void display();  // Declaration only
+    string model;
+
+    void show() const {
+        cout << "Model: " << model << endl;
+    }
 };
 
-// Definition using scope resolution
-void Student::display() {
-    cout << "Scope resolution in action!" << endl;
+void updateModel(Car &refCar) {
+    refCar.model = "Tesla";
 }
 
 int main() {
-    Student s;
-    s.display();
+    Car car1;
+    car1.model = "Nissan";
+
+    updateModel(car1); // car1 passed by reference
+    car1.show();       // Output: Model: Tesla
+
     return 0;
 }

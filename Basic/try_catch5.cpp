@@ -6,8 +6,7 @@ int main() {
         bool error = true;
         if (error)
             throw true;  // throwing a bool
-    }
-    catch (bool flag) {
+    } catch (bool flag) {
         cout << "Caught a bool exception: " << (flag ? "true" : "false") << endl;
     }
 
