@@ -1,26 +1,13 @@
 #include <iostream>
 using namespace std;
 
-// Template class to demonstrate a simple box
-template <typename T>
-class Box {
-private:
-    T value;
-public:
-    Box(T v) : value(v) {}  // Constructor
-
-    void show() { cout << "Stored Value: " << value << endl; }
-};
-
-int main() {
-    Box<int> intBox(100);    // Box holding an int
-    Box<double> doubleBox(5.75);  // Box holding a double
-    Box<string> strBox("Hello");
-
-    intBox.show();
-    doubleBox.show();
-    strBox.show();
-
-    return 0;
+template <typename T, typename U>
+auto add(T a, U b) {
+    return a + b;
 }
 
+int main() {
+    cout << "add(3, 4): " << add(3, 4) << endl;           // int + int
+    cout << "add(2.5, 4): " << add(2.5, 4) << endl;       // double + int
+    return 0;
+}

@@ -1,37 +1,32 @@
 #include <iostream>
 using namespace std;
 
-class Buffer {
-private:
-    int* data;
-
+class Student {
 public:
-    Buffer(int val) {
-        data = new int(val);
-    }
+    string name;
+    int roll;
+    float grade;
 
-    Buffer(Buffer&& other) noexcept {
-        data = other.data;
-        other.data = nullptr;
-        cout << "Move constructor called" << endl;
-    }
+    // Constructor with multiple parameters
+    Student(string n, int r, float g) : name(n), roll(r), grade(g) {}
 
-    ~Buffer() {
-        delete data;
-    }
-
-    void show() {
-        if (data)
-            cout << "Data: " << *data << endl;
-        else
-            cout << "Empty (moved-from)" << endl;
+    // Display function
+    void display() {
+        cout << "Name: " << name << endl;
+        cout << "Roll: " << roll << endl;
+        cout << "Grade: " << grade << endl;
     }
 };
 
 int main() {
-    Buffer a(77);
-    Buffer b = std::move(a);  // Move constructor
-    a.show();
-    b.show();
+    // Create Student objects
+    Student s1("Naimuddin", 101, 9.2);
+    Student s2("Ayesha", 102, 8.7);
+
+    // Display student information
+    s1.display();
+    cout << endl;
+    s2.display();
+
     return 0;
 }

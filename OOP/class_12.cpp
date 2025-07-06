@@ -1,25 +1,24 @@
 #include <iostream>
 using namespace std;
 
-class Student {
-    int roll;
+class Hero {
 public:
-    Student(int r);     // Constructor declaration
-    void display();     // Member function declaration
+    string name = "IronMan";
 };
 
-// Scope resolution to define constructor
-Student::Student(int r) {
-    roll = r;
-}
-
-// Scope resolution to define member function
-void Student::display() {
-    cout << "Roll: " << roll << endl;
-}
-
 int main() {
-    Student s(2025);  // Object created on stack
-    s.display();
+    Hero h;                // Create original object
+    Hero& alias = h;       // Create a reference alias to object h
+
+    alias.name = "WarMachine";  // Modify the object via the alias
+
+    // Output results
+    cout << "Hero name via original object: " << h.name << endl;
+    cout << "Hero name via reference alias: " << alias.name << endl;
+
+    // Show they share the same memory address
+    cout << "Address of h: " << &h << endl;
+    cout << "Address of alias: " << &alias << endl;
+
     return 0;
 }

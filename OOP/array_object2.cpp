@@ -6,18 +6,20 @@ public:
     int roll;
     string name;
 
-    void show() {
+    void display() const {
         cout << "Roll: " << roll << ", Name: " << name << endl;
     }
 };
 
 int main() {
-    Student* ptr = new Student();  // Object created on heap
+    Student arr[2] = {
+        {101, "Rahim"},
+        {102, "Karim"}
+    };
 
-    ptr->roll = 101;
-    ptr->name = "Naimuddin";
-    ptr->show();
+    for (int i = 0; i < 2; ++i) {
+        arr[i].display();
+    }
 
-    delete ptr;
     return 0;
 }

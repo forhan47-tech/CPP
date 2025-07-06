@@ -1,22 +1,35 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
-class Math {
+class MyClass {
+private:
+    vector<int> arr;
+
 public:
-    void add(int a, int b) { 
-        cout << "Sum: " << a + b << endl; 
+    MyClass() {
+        int size;
+        cout << "Enter how many integers you want to store: ";
+        cin >> size;
+
+        arr.resize(size);
+        cout << "Enter " << size << " integers:\n";
+        for (int i = 0; i < size; ++i) {
+            cin >> arr[i];
+        }
     }
-    void add(double a, double b) { 
-        cout << "Sum: " << a + b << endl; 
+
+    void print() const {
+        cout << "Vector values: ";
+        for (int val : arr) {
+            cout << val << " ";
+        }
+        cout << endl;
     }
 };
 
 int main() {
-    Math calc;
-    
-    calc.add(5, 3);        // Calls int version
-    calc.add(2.5, 4.5);    // Calls double version
-
+    MyClass obj;
+    obj.print();
     return 0;
 }
-

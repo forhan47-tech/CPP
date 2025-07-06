@@ -3,36 +3,31 @@ using namespace std;
 
 class BankAccount {
 private:
-    double balance;  // Hidden from outside
+    double balance;
 
 public:
-    // Constructor to initialize balance to 0
-    BankAccount() {
-        balance = 0.0;
-    }
+    BankAccount() : balance(0.0) {}
 
-    // Function to deposit money
     void deposit(double amount) {
         if (amount > 0)
             balance += amount;
-        else
-            cout << "Invalid deposit amount." << endl;
     }
 
-    // Function to retrieve balance
+    void withdraw(double amount) {
+        if (amount > 0 && amount <= balance)
+            balance -= amount;
+    }
+
     double getBalance() const {
         return balance;
     }
 };
 
 int main() {
-    BankAccount myAccount;
-
-    myAccount.deposit(500.0);
-    cout << "Current balance: $" << myAccount.getBalance() << endl;
-
-    myAccount.deposit(-100.0);  // Invalid deposit
-    cout << "Updated balance: $" << myAccount.getBalance() << endl;
+    BankAccount account;
+    account.deposit(1000);
+    account.withdraw(300);
+    cout << "Current Balance: $" << account.getBalance() << endl;
 
     return 0;
 }
