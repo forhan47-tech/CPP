@@ -1,39 +1,37 @@
-#include <iostream>
 #include <vector>
+#include <iostream>
 using namespace std;
 
 class Student {
-public:
     string name;
-    int age;
-
-    void getDetails() {
+    int marks;
+public:
+    void getData() {
         cout << "Enter name: ";
         cin >> name;
-        cout << "Enter age: ";
-        cin >> age;
+        cout << "Enter marks: ";
+        cin >> marks;
     }
-
-    void display() const {
-        cout << "Name: " << name << ", Age: " << age << endl;
+    void showData() const {
+        cout << "Name: " << name << ", Marks: " << marks << endl;
     }
 };
 
 int main() {
-    int count;
+    vector<Student> students;
+    int n;
     cout << "How many students? ";
-    cin >> count;
+    cin >> n;
 
-    vector<Student> students(count); // Vector of Student objects
-
-    for (int i = 0; i < count; ++i) {
-        cout << "Student " << i + 1 << ":\n";
-        students[i].getDetails();
+    for (int i = 0; i < n; ++i) {
+        Student s;
+        s.getData();
+        students.push_back(s); // Add object to vector
     }
 
-    cout << "\n--- Student List ---\n";
+    cout << "\nStudent Details:\n";
     for (const auto& s : students) {
-        s.display();
+        s.showData();
     }
 
     return 0;
