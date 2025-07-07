@@ -18,6 +18,7 @@ int main() {
 
     s1.emplace_back(201, "Ali");
     s1.emplace_back(202, "Hasan");
+    s1.emplace_back(203, "Sara");
 
     for (const auto& s : s1) {
         s.display();

@@ -1,28 +1,27 @@
 #include <iostream>
 using namespace std;
 
-class Student {
-private:
-    string name;
-    int roll;
-
+class Base {
 public:
-    void input() {
-        cout << "Enter name: ";
-        cin >> name;
-        cout << "Enter roll: ";
-        cin >> roll;
+    void greet() {
+        cout << "Hello from Base" << endl;
+    }
+};
+
+class Derived : public Base {
+public:
+    void greet() {
+        cout << "Hello from Derived" << endl;
     }
 
-    void display() const {
-        cout << "Name: " << name << ", Roll: " << roll << endl;
+    void callBase() {
+        Base::greet(); // Calls the base class version
     }
 };
 
 int main() {
-    Student s;
-    s.input();
-    s.display();
-
+    Derived obj;
+    obj.greet();     // Outputs: Hello from Derived
+    obj.callBase();  // Outputs: Hello from Base
     return 0;
 }

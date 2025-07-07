@@ -3,23 +3,21 @@ using namespace std;
 
 class Car {
 public:
-    string model;
+    void drive() {
+        cout << "Driving the car..." << endl;
+    }
 
-    void show() const {
-        cout << "Model: " << model << endl;
+    void honk() {
+        cout << "Honking the horn!" << endl;
     }
 };
 
-void updateModel(Car &refCar) {
-    refCar.model = "Tesla";
-}
-
 int main() {
-    Car car1;
-    car1.model = "Nissan";
+    Car myCar;
+    Car& carRef = myCar;    // Create a reference to the Car object
 
-    updateModel(car1); // car1 passed by reference
-    car1.show();       // Output: Model: Tesla
+    carRef.drive();         // Accessing method via reference
+    carRef.honk();
 
     return 0;
 }

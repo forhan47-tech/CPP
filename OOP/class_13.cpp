@@ -1,27 +1,25 @@
 #include <iostream>
 using namespace std;
 
-class Base {
+class Car {
 public:
-    void greet() {
-        cout << "Hello from Base" << endl;
+    string model;
+
+    void show() const {
+        cout << "Model: " << model << endl;
     }
 };
 
-class Derived : public Base {
-public:
-    void greet() {
-        cout << "Hello from Derived" << endl;
-    }
-
-    void callBase() {
-        Base::greet(); // Calls the base class version
-    }
-};
+void updateModel(Car &refCar) {
+    refCar.model = "Tesla";
+}
 
 int main() {
-    Derived obj;
-    obj.greet();     // Outputs: Hello from Derived
-    obj.callBase();  // Outputs: Hello from Base
+    Car car1;
+    car1.model = "Nissan";
+
+    updateModel(car1); // car1 passed by reference
+    car1.show();       // Output: Model: Tesla
+
     return 0;
 }

@@ -1,5 +1,5 @@
 #include <iostream>
-#include <functional> // for std::function
+#include <functional> 
 
 using namespace std;
 
