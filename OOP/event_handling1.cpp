@@ -1,15 +1,27 @@
 #include <iostream>
+#include <functional> 
+
 using namespace std;
 
-class EventHandler {
+class Button {
 public:
-    void operator()(int code) const {
-        cout << "Handled event with code: " << code << endl;
+    function<void()> onClick; // Callback function
+
+    void click() {
+        if (onClick) {
+            onClick(); // Trigger the lambda
+        } else {
+            cout << "No action assigned to onClick." << endl;
+        }
     }
 };
 
 int main() {
-    EventHandler handler;
-    handler(42); // Output: Handled event with code: 42
+    Button b;
+    b.onClick = []() {
+        cout << "Lambda says: Button was clicked!" << endl;
+    };
+    b.click();
+
     return 0;
 }
