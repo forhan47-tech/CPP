@@ -1,4 +1,5 @@
 #include <iostream>
+#include <functional>
 using namespace std;
 
 // Event handler function
@@ -7,8 +8,8 @@ void greet() {
 }
 
 int main() {
-    // Function pointer to hold the event handler
-    void (*onClick)();
+    // std::function to hold the event handler
+    function<void()> onClick;
 
     // Assign the handler
     onClick = greet;

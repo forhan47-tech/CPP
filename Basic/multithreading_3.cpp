@@ -1,21 +1,16 @@
 #include <iostream>
 #include <thread>
-#include <mutex>
+#include <string>
+
 using namespace std;
 
-mutex mtx;
-
-void printMessage(string msg) {
-    lock_guard<mutex> lock(mtx); // safer than manual lock/unlock
-    cout << msg << endl;
+void greet(const string& name) {
+    cout << "Hello, " << name << "!" << endl;
 }
 
 int main() {
-    thread t1(printMessage, "Thread 1");
-    thread t2(printMessage, "Thread 2");
-
-    t1.join();
-    t2.join();
-
+    string userName = "NAIMUDDIN";
+    thread greetingThread(greet, userName);
+    greetingThread.join();
     return 0;
 }

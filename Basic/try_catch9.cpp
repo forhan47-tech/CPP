@@ -5,7 +5,6 @@ using namespace std;
 
 int main() {
     try {
-        // Simulate a logic error
         throw out_of_range("Index error");
     } catch (const logic_error& e) {
         cerr << "Logic error: " << e.what() << endl;

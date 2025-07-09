@@ -1,24 +1,15 @@
 #include <iostream>
 using namespace std;
 
-class Button {
+class EventHandler {
 public:
-    void (*onClick)(); // Function pointer as event handler
-
-    void click() {
-        if (onClick) onClick(); // Trigger handler
+    void operator()(int code) const {
+        cout << "Handled event with code: " << code << endl;
     }
 };
 
-// Event handler function
-void greet() {
-    cout << "Button clicked! Hello, Naimuddin!" << endl;
-}
-
 int main() {
-    Button b;
-    b.onClick = greet; // Assign handler
-    b.click();         // Simulate click
-
+    EventHandler handler;
+    handler(42); // Output: Handled event with code: 42
     return 0;
 }

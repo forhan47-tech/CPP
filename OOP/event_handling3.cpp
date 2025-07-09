@@ -1,29 +1,27 @@
 #include <iostream>
+#include <functional> 
 
 using namespace std;
 
-class Event {
+class Button {
 public:
-    virtual void trigger() = 0;
-};
+    function<void()> onClick; // Callback function
 
-class MyEvent : public Event {
-public:
-    void trigger() override {
-        cout << "MyEvent triggered!\n";
-    }
-};
-
-class EventListener {
-public:
-    void onEvent(Event* e) {
-        e->trigger();
+    void click() {
+        if (onClick) {
+            onClick(); // Trigger the lambda
+        } else {
+            cout << "No action assigned to onClick." << endl;
+        }
     }
 };
 
 int main() {
-    MyEvent evt;
-    EventListener listener;
-    listener.onEvent(&evt); // Output: MyEvent triggered!
+    Button b;
+    b.onClick = []() {
+        cout << "Lambda says: Button was clicked!" << endl;
+    };
+    b.click();
+
     return 0;
 }
