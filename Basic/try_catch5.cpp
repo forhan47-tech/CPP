@@ -2,8 +2,8 @@
 using namespace std;
 
 int main() {
+    bool error = true;
     try {
-        bool error = true;
         if (error)
             throw true;  // throwing a bool
     } catch (bool flag) {

@@ -1,22 +1,16 @@
 #include <iostream>
 #include <thread>
-#include <mutex>
+
 using namespace std;
 
-mutex mtx; // global mutex
-
-void printMessage(string msg) {
-    mtx.lock();
-    cout << msg << endl;
-    mtx.unlock();
+void print(int x) {
+    cout << "Value: " << x << "\n";
 }
 
 int main() {
-    thread t1(printMessage, "Thread 1");
-    thread t2(printMessage, "Thread 2");
+    thread t(print, 42); // Create thread
 
-    t1.join();
-    t2.join();
+    t.join(); // Wait for thread to finish
 
     return 0;
 }

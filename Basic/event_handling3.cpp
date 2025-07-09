@@ -1,25 +1,19 @@
 #include <iostream>
 #include <functional>
+
 using namespace std;
 
-// Event handler function
-void greet() {
-    cout << "Button clicked! Hello, Naimuddin!" << endl;
-}
-
 int main() {
-    // std::function to hold the event handler
-    function<void()> onClick;
+    // Declare a flexible event handler using std::function
+    function<void(int)> handler;
 
-    // Assign the handler
-    onClick = greet;
+    // Assign a lambda to handle the event
+    handler = [](int code) {
+        cout << "std::function handled event with code: " << code << endl;
+    };
 
-    // Simulate button click
-    if (onClick) {
-        onClick();
-    } else {
-        cout << "No action assigned to onClick." << endl;
-    }
+    // Trigger the event
+    handler(42);
 
     return 0;
 }
