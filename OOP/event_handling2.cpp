@@ -1,29 +1,22 @@
 #include <iostream>
-
+#include <functional>
 using namespace std;
 
-class Event {
+class Button {
 public:
-    virtual void trigger() = 0;
-};
+    function<void(string)> onClick;
 
-class MyEvent : public Event {
-public:
-    void trigger() override {
-        cout << "MyEvent triggered!\n";
-    }
-};
-
-class EventListener {
-public:
-    void onEvent(Event* e) {
-        e->trigger();
+    void click(string label) {
+        if (onClick) {
+            onClick(label);
+        }
     }
 };
 
 int main() {
-    MyEvent evt;
-    EventListener listener;
-    listener.onEvent(&evt); // Output: MyEvent triggered!
-    return 0;
+    Button b;
+    b.onClick = [](string label) {
+        cout << "Button '" << label << "' was clicked!" << endl;
+    };
+    b.click("Play");
 }
