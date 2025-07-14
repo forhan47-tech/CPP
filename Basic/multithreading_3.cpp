@@ -10,7 +10,7 @@ void greet(const string& name) {
 
 int main() {
     string userName = "NAIMUDDIN";
-    thread greetingThread(greet, userName);
-    greetingThread.join();
+    thread t1(greet, userName);
+    t1.join();
     return 0;
 }
