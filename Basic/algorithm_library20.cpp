@@ -9,12 +9,12 @@ int main() {
     // Finding the minimum element
     auto minValue = min_element(num.begin(), num.end());
     cout << "Minimum Value: " << *minValue << endl;
-    cout << "Index of Minimum Value: " << distance(nums.begin(), minValue) << endl;
+    cout << "Index of Minimum Value: " << distance(num.begin(), minValue) << endl;
 
     // Finding the maximum element
     auto maxValue = max_element(num.begin(), num.end());
     cout << "Maximum Value: "  << *maxValue << endl;
-    cout << "Index of Maximum Value: " << distance(nums.begin(), maxValue) << endl;
+    cout << "Index of Maximum Value: " << distance(num.begin(), maxValue) << endl;
 
     return 0;
 }
