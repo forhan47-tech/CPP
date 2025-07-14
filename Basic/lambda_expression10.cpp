@@ -1,19 +1,19 @@
 #include <iostream>
+#include <algorithm>
+#include <vector>
 using namespace std;
 
-class MyClass {
-    int val = 42;
-public:
-    void show() {
-        auto lambda = [this]() {
-            cout << "Value: " << val << endl;
-        };
-        lambda();
-    }
-};
-
 int main() {
-    MyClass obj;
-    obj.show();  // Output: Value: 42
+    vector<int> nums = {5, 2, 9, 1};
+
+    sort(nums.begin(), nums.end(), [](int a, int b) {
+        return a < b;  // Ascending order
+    });
+
+    cout << "Sorted vector: ";
+    for (int n : nums)
+        cout << n << " ";
+    cout << endl;
+
     return 0;
 }
