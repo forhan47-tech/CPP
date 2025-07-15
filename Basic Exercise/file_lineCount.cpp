@@ -6,6 +6,7 @@ using namespace std;
 
 int main() {
     ifstream file("sample.txt");
+    
     if (!file) {
         cout << "Error opening file." << endl;
         return 1;

@@ -1,25 +1,20 @@
 #include <iostream>
 #include <thread>
 
-using namespace std;
+using namespace std; 
 
-// Function to run in a thread
-void printMessage(const string& msg, int count) {
-    for (int i = 0; i < count; ++i) {
-        cout << msg << " (" << i + 1 << ")" << endl;
-    }
+// Function to be executed by thread
+void add(int a, int b) {
+    cout << "Sum: " << a + b << endl;
 }
 
 int main() {
-    // Create threads
-    thread t1(printMessage, "Hello from thread 1", 3);
-    thread t2(printMessage, "Hello from thread 2", 5);
+    // Create thread t that runs the add function with arguments 5 and 3
+    thread t(add, 5, 3);
 
-    // Wait for threads to finish
-    t1.join();
-    t2.join();
+    // Wait for the thread to complete
+    t.join();
 
-    cout << "Main thread done." << endl;
-
+    cout << "Main thread finished." << endl;
     return 0;
 }
