@@ -1,16 +1,21 @@
 #include <iostream>
-#include <future>
-
+#include <thread>
+#include <mutex>
 using namespace std;
 
-int compute(int x) {
-    return x * x;
+mutex mtx;
+
+void printMessage(string msg) {
+    lock_guard<mutex> lock(mtx); // safer than manual lock/unlock
+    cout << msg << endl;
 }
 
 int main() {
-    future<int> result = async(compute, 5); // runs in background
-    cout << "Doing other work..." << endl;
+    thread t1(printMessage, "Thread 1");
+    thread t2(printMessage, "Thread 2");
 
-    cout << "Result: " << result.get() << endl; // waits for result
+    t1.join();
+    t2.join();
+
     return 0;
 }

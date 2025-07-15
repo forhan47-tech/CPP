@@ -1,21 +1,25 @@
 #include <iostream>
 #include <thread>
-#include <mutex>
+
 using namespace std;
 
-mutex mtx;
-
-void printMessage(string msg) {
-    lock_guard<mutex> lock(mtx); // safer than manual lock/unlock
-    cout << msg << endl;
+// Function to run in a thread
+void printMessage(const string& msg, int count) {
+    for (int i = 0; i < count; ++i) {
+        cout << msg << " (" << i + 1 << ")" << endl;
+    }
 }
 
 int main() {
-    thread t1(printMessage, "Thread 1");
-    thread t2(printMessage, "Thread 2");
+    // Create threads
+    thread t1(printMessage, "Hello from thread 1", 3);
+    thread t2(printMessage, "Hello from thread 2", 5);
 
+    // Wait for threads to finish
     t1.join();
     t2.join();
+
+    cout << "Main thread done." << endl;
 
     return 0;
 }

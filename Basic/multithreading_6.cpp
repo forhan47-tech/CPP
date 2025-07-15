@@ -1,23 +1,16 @@
 #include <iostream>
 #include <thread>
-#include <mutex>
 
 using namespace std;
 
-mutex mtx;
-int counter = 0;
-
-void increment() {
-    lock_guard<mutex> lock(mtx);
-    counter++;
-    cout << "Counter: " << counter << endl;
-}
-
 int main() {
-    thread t1(increment);
-    thread t2(increment);
-    t1.join();
-    t2.join();
+    // Create and launch a thread using a lambda expression
+    thread t([](int a, int b) {
+        cout << "Sum: " << a + b << endl;
+    }, 5, 3);
 
+    t.join(); // Wait for thread to finish
+
+    cout << "Main thread finished." << endl;
     return 0;
 }

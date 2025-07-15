@@ -5,20 +5,19 @@
 using namespace std;
 
 mutex mtx;
+int counter = 0;
 
-void safePrint(int id) {
+void increment() {
     lock_guard<mutex> lock(mtx);
-    cout << "Thread " << id << "\n";
+    counter++;
+    cout << "Counter: " << counter << endl;
 }
 
 int main() {
-    thread t1(safePrint, 1);
-    thread t2(safePrint, 2);
-    thread t3(safePrint, 3);
-
+    thread t1(increment);
+    thread t2(increment);
     t1.join();
     t2.join();
-    t3.join();
 
     return 0;
 }
