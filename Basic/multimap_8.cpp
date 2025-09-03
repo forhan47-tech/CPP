@@ -10,6 +10,8 @@ int main() {
     auto it = mm.find(2);
     cout << "First occurrence of Key 2: " << it->second << endl;
 
+    cout << Is key 2 exist? " << (mm.contains(2) ? "Yes" : "No") << endl;  // Output: Yes
+
     return 0;
 }
 

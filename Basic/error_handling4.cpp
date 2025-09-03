@@ -8,7 +8,8 @@ int main() {
         if (b == 0)
             throw "Division by zero!";
         cout << "Result: " << a / b << endl;
-    } catch (const char* msg) {
+    } 
+    catch (const char* msg) {
         cout << "Error: " << msg << endl;
     }
 

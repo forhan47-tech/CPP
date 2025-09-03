@@ -1,18 +1,28 @@
 #include <iostream>
+#include <vector>
 #include <algorithm>
 using namespace std;
 
 int main() {
-    int a = 10, b = 20;
-    
-    // Finding maximum and minimum between a and b
-    cout << "Max: " << max(a, b) << endl;  
-    cout << "Min: " << min(a, b) << endl; 
+    vector<int> v = {3, 1, 4, 2, 5};
 
-    // Swapping values of a and b
-    swap(a, b);
-    cout << "After swap: a = " << a << ", b = " << b << endl; 
+    // Sort ascending
+    sort(v.begin(), v.end());
+    cout << "Ascending: ";
+    for (int x : v) cout << x << " ";
+    cout << endl;
+
+    // Check if sorted ascending
+    cout << "Is ascending? " << boolalpha << is_sorted(v.begin(), v.end()) << endl;
+
+    // Sort descending
+    sort(v.begin(), v.end(), greater<int>());
+    cout << "Descending: ";
+    for (int x : v) cout << x << " ";
+    cout << endl;
+
+    // Check if sorted descending
+    cout << "Is descending? " << boolalpha << is_sorted(v.begin(), v.end(), greater<int>()) << endl;
 
     return 0;
 }
-

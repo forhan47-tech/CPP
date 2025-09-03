@@ -1,21 +1,16 @@
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
 int main() {
-    vector<vector<int>> matrix(3, vector<int>(4));
+    vector<vector<int>> v = {{1, 2, 3}, {4, 5, 6}};
 
-    cout << "Enter matrix elements:\n";
-    for (auto& row : matrix)
-        for (auto& element : row)
-            cin >> element;
+    cout << "Number of rows: " << v.size() << endl;
+    cout << "Number of columns in row 1: " << v[1].size() << endl;
 
-    cout << "\nStored Matrix:\n";
-    for (const auto& row : matrix) {
-        for (int num : row) cout << num << " ";
-        cout << endl;
-    }
-    
+    v.clear();  // Remove all elements
+    cout << "Is vector empty? " << (v.empty() ? "Yes" : "No") << endl;
+
     return 0;
 }
-

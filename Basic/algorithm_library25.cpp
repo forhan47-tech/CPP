@@ -4,15 +4,17 @@
 using namespace std;
 
 int main() {
-    vector<int> v = {1, 2, 3, 4};
+    vector<int> v1 = {10, 5, 8, 1, 7, 3};
 
-    // Double each element using std::transform with a lambda
-    transform(v.begin(), v.end(), v.begin(), [](int x) { return x + 2; });
+    // Make a copy for the 3rd smallest element
+    vector<int> s1 = v1;
+    nth_element(s1.begin(), s1.begin() + 2, s1.end());
+    cout << "3rd smallest element: " << s1[2] << endl;
 
-    // Print the transformed vector
-    for (int num : v)
-        cout << num << " ";
-    cout << endl;
+    // Make a copy for the 3rd largest element
+    vector<int> l1 = v1;
+    nth_element(l1.begin(), l1.begin() + 2, l1.end(), greater<int>());
+    cout << "3rd largest element: " << l1[2] << endl;
 
     return 0;
 }

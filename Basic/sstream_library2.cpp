@@ -5,10 +5,10 @@ using namespace std;
 
 int main() {
     string data = "10 20 30 40 50";
-    istringstream iss(data);
+    istringstream ss(data);
 
     int num;
-    while (iss >> num) { // Read each integer from the string
+    while (ss >> num) { // Read each integer from the string
         cout << "Extracted: " << num << endl;
     }
 

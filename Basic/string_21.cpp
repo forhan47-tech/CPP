@@ -1,14 +1,19 @@
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 int main() {
-    string str = "100";
-    cout << "Integer Value: " << stoi(str) << endl;
+    string s = "Hello";
 
-    int num = 100;
-    cout << "String Value: " << to_string(num) + " is now a string!" << endl;
+    s.push_back('!');               // Add a character at the end
+    cout << "After push_back: " << s << endl;
+
+    s.pop_back();                   // Remove the last character
+    cout << "After pop_back: " << s << endl;
+
+    const char* raw = s.data();     // Get pointer to internal char array
+    cout << "Using data(): " << raw << endl;
 
     return 0;
 }
-

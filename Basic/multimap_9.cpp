@@ -4,8 +4,7 @@
 using namespace std;  // Place this at the top for global namespace usage
 
 int main() {
-    // Declare a multimap with duplicate keys allowed
-    multimap<int, string>  = {
+    multimap<int, string> mm = {
         {1, "Apple"},
         {2, "Banana"},
         {2, "Berry"},

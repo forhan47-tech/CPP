@@ -4,31 +4,23 @@
 using namespace std;
 
 int main() {
-    vector<int> v = {10, 20, 20, 20, 30, 40, 50};
+    vector<int> v1 = {5, 2, 9, 1, 5, 6};
 
-    // Sort the vector to prepare for equal_range
-    sort(v.begin(), v.end()); 
+    // Reverse the entire vector
+    reverse(v1.begin(), v1.end());
 
-    // Get the range of elements equal to 20
-    auto range = equal_range(v.begin(), v.end(), 20);
+    cout << "Reversed: ";
+    for (int num : v1)
+        cout << num << " ";
+    cout << endl;
 
-    // Display all elements equal to 20
-    cout << "Occurrences of 20: ";
-    for (auto it = range.first; it != range.second; ++it) {
-        cout << *it << " ";
-    }
+    // Rotate the vector left by 2 positions
+    rotate(v1.begin(), v1.begin() + 2, v1.end());
 
-    // Count total occurrences
-    cout << "\nCount of 20: " << distance(range.first, range.second) << endl; 
-
-    // Show the bounds
-    cout << "Lower Bound of 20: " << *range.first << endl;  // Output: 20
-    cout << "Upper Bound of 20: " << *range.second << endl;  // Output: 30
-    
-    // Show positions
-    cout << "First Occurrence of 20: " << distance(v.begin(), range.first) << endl;  // Output: 1
-    cout << "Last Occurrence of 20: " << distance(v.begin(), range.second) - 1 << endl;  // Output: 3
+    cout << "Rotated: ";
+    for (int num : v1)
+        cout << num << " ";
+    cout << endl;
 
     return 0;
 }
-

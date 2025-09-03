@@ -6,9 +6,11 @@ using namespace std;
 int main() {
     try {
         throw out_of_range("Index error");
-    } catch (const logic_error& e) {
+    } 
+    catch (const logic_error& e) {
         cerr << "Logic error: " << e.what() << endl;
-    } catch (...) {
+    } 
+    catch (...) {
         cerr << "Unknown exception caught\n";
     }
 

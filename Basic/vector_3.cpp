@@ -5,14 +5,13 @@
 using namespace std;
 
 int main() {
-    vector<int> numbers; // Declare a vector to store integers
-    int n = 5, x;
+    vector<int> numbers(5); // Preallocate space for 5 elements
+    int v1;
 
-    
-    cout << "Enter " << n << " elements:\n";
-    for (int i = 0; i < n; i++) {
-        cin >> x;
-        numbers.push_back(x); // Append each element to the vector
+
+    for (int i = 0; i < numbers.size(); i++) {
+        cin >> v1;
+        numbers.push_back(v1); // Append each element to the vector
     }
 
     cout << "Stored Elements: ";

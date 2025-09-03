@@ -8,8 +8,9 @@ int main() {
     cout << "Value: " << ref << endl;
 
     // ref = 20; // ❌ ERROR! Cannot modify through const reference
-    // a = 20;   // ✅ Allowed! Modifying original variable
-    //cout << "Modified a: " << a << endl; // Outputs: 20
+    
+    a = 20;   // ✅ Allowed! Modifying original variable
+    cout << "Modified a: " << a << endl; // Outputs: 20
 
     return 0;
 }

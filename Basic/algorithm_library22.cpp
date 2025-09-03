@@ -1,29 +1,36 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-
 using namespace std;
 
 int main() {
-    vector<int> v1 = {1, 2, 3}, v2 = {1, 2, 3};
+    vector<int> A = {1, 3, 5, 7, 9};
+    vector<int> B = {3, 4, 5, 6, 7};
 
-    // Check if the vectors are equal
-    if (equal(v1.begin(), v1.end(), v2.begin())) {
-        cout << "Vectors are equal!" << endl;
-    } else {
-        cout << "Vectors are different!" << endl;
-    }
+    // Sort both ranges
+    sort(A.begin(), A.end());
+    sort(B.begin(), B.end());
 
-    // Find the first mismatch, if any
-    auto result = mismatch(v1.begin(), v1.end(), v2.begin());
+    // Prepare result containers
+    vector<int> diffResult(A.size());
+    vector<int> symDiffResult(A.size() + B.size());
 
-    if (result.first != v1.end()) {
-        cout << "First mismatch at position: " 
-             << distance(v1.begin(), result.first) << endl;
-        cout << "v1: " << *result.first << ", v2: " << *result.second << endl;
-    } else {
-        cout << "No mismatch found." << endl;
-    }
+    // Set difference: A - B
+    auto itD = set_difference(A.begin(), A.end(), B.begin(), B.end(), diffResult.begin());
+    diffResult.resize(itD - diffResult.begin());
+
+    // Set symmetric difference: (A - B) ∪ (B - A)
+    auto itS = set_symmetric_difference(A.begin(), A.end(), B.begin(), B.end(), symDiffResult.begin());
+    symDiffResult.resize(itS - symDiffResult.begin());
+
+    // Output results
+    cout << "Set Difference (A - B): ";
+    for (int x : diffResult) cout << x << " ";
+    cout << "\n";
+
+    cout << "Symmetric Difference: ";
+    for (int x : symDiffResult) cout << x << " ";
+    cout << "\n";
 
     return 0;
 }

@@ -1,20 +1,36 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-
 using namespace std;
 
 int main() {
-    vector<string> v1 = {"Hello", "World"};
-    vector<string> v2(v1.size());
+    vector<int> A = {1, 3, 5, 7, 9};
+    vector<int> B = {3, 4, 5, 6, 7};
+    
+    // Ensure both ranges are sorted
+    sort(A.begin(), A.end());
+    sort(B.begin(), B.end());
 
-    // Move elements from v1 to v2
-    // After this operation, v1 will be empty and v2 will contain the elements
-    move(v1.begin(), v1.end(), v2.begin());
+    // Prepare result containers
+    vector<int> unionResult(A.size() + B.size());
+    vector<int> intersectionResult(min(A.size(), B.size()));
 
-    cout << "Moved elements: ";
-    for (const auto& str : v2) cout << str << " ";
+    // Set union
+    auto itU = set_union(A.begin(), A.end(), B.begin(), B.end(), unionResult.begin());
+    unionResult.resize(itU - unionResult.begin());
+
+    // Set intersection
+    auto itI = set_intersection(A.begin(), A.end(), B.begin(), B.end(), intersectionResult.begin());
+    intersectionResult.resize(itI - intersectionResult.begin());
+
+    // Output results
+    cout << "Union: ";
+    for (int x : unionResult) cout << x << " ";
+    cout << "\n";
+
+    cout << "Intersection: ";
+    for (int x : intersectionResult) cout << x << " ";
+    cout << "\n";
 
     return 0;
 }
-

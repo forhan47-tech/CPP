@@ -12,6 +12,7 @@ int main() {
     l.clear(); // Clear the list
     
     cout << "Size: " << l.size() << endl;
+    cout << "Is empty? " << (l.empty() ? "Yes" : "No") << endl;
 
     return 0;
 }

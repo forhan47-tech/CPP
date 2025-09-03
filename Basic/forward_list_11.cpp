@@ -4,12 +4,13 @@
 using namespace std;
 
 int main() {
-    forward_list<int> fl = {40, 10, 30, 20};
+    forward_list<int> fl1 = {10, 30, 50};
+    forward_list<int> fl2 = {20, 40, 60};
 
-    fl.sort();  // Sorts the list in ascending order
+    fl1.merge(fl2);  // Merges fl2 into fl1
 
-    cout << "Sorted list: ";
-    for (int num : fl) cout << num << " ";
+    cout << "Merged list: ";
+    for (int num : fl1) cout << num << " ";
 
     return 0;
 }

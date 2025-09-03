@@ -11,7 +11,7 @@ int main() {
         int key;
         string value;
         cin >> key >> value;
-        mm.insert({key, value});  // Insert key-value pair
+        mm.emplace(key, value); // Insert key-value pair
     }
 
     cout << "Multimap elements:\n";

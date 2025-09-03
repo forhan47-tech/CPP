@@ -3,16 +3,19 @@
 
 using namespace std;
 
-void triggerEvent(const function<void(int)>& callback) {
-    int data = 5;
-    callback(data);  // Event triggered
+// Define a regular function that matches the signature
+void handleEvent(int code) {
+    cout << "std::function handled event with code: " << code << endl;
 }
 
 int main() {
-    auto handler = [](int value) {
-        cout << "Event handled with value: " << value << '\n';
-    };
+    function<void(int)> handler;
 
-    triggerEvent(handler);
+    // Assign the regular function to std::function
+    handler = handleEvent;
+
+    // Trigger the event
+    handler(42);
+
     return 0;
 }

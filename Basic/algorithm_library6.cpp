@@ -4,21 +4,15 @@
 using namespace std;
 
 int main() {
-    vector<int> numbers = {10, 20, 25, 30, 40, 50};
+    vector<int> v = {1, 2, 3, 4};
 
-    // Find the first element ≥ target
-    auto lower = lower_bound(numbers.begin(), numbers.end(), 25);
-    if (lower != numbers.end())
-        cout << "First element ≥ 25: " << *lower << endl;
-    else
-        cout << "No element ≥ 25 found!" << endl;
+    // Double each element using std::transform with a lambda
+    transform(v.begin(), v.end(), v.begin(), [](int x) { return x + 2; });
 
-    // Find the first element > target
-    auto upper = upper_bound(numbers.begin(), numbers.end(), 25);
-    if (upper != numbers.end())
-        cout << "First element > 25: " << *upper << endl;
-    else
-        cout << "No element > 25 found!" << endl;
+    // Print the transformed vector
+    for (int num : v)
+        cout << num << " ";
+    cout << endl;
 
     return 0;
 }

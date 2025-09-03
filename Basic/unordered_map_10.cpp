@@ -10,6 +10,8 @@ int main() {
 
     cout << "New bucket count: " << um.bucket_count() << endl;
 
+    cout << "Load Factor: " << um.load_factor() << endl;  // avg elements per bucket
+
     return 0;
 }
 

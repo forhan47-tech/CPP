@@ -4,36 +4,24 @@
 using namespace std;
 
 int main() {
-    vector<int> numbers = {10, 20, 30, 20, 40};
+    vector<int> source = {10, 15, 20, 25, 30};
+    vector<int> allCopy(source.size());       // for std::copy
+    vector<int> filteredCopy;                 // for std::copy_if
 
-    // Example 1: Remove all occurrences of 20
-    auto new_end = remove(numbers.begin(), numbers.end(), 20);
-    numbers.erase(new_end, numbers.end());
+    // std::copy — copy all elements
+    copy(source.begin(), source.end(), allCopy.begin());
 
-    cout << "After removing 20: ";
-    for (int n : numbers) cout << n << " ";
+    // std::copy_if — copy only elements divisible by 10
+    copy_if(source.begin(), source.end(), back_inserter(filteredCopy),
+            [](int x) { return x % 10 == 0; });
+
+    // Output results
+    cout << "All elements copied: ";
+    for (int x : allCopy) cout << x << " ";
     cout << endl;
 
-    // Reset vector for next example
-    numbers = {10, 20, 30, 20, 40};
-
-    // Example 2: Remove elements less than 20
-    new_end = remove_if(numbers.begin(), numbers.end(), [](int x) { return x < 20; });
-    numbers.erase(new_end, numbers.end());
-
-    cout << "After removing elements < 20: ";
-    for (int n : numbers) cout << n << " ";
-    cout << endl;
-
-    // Reset vector for next example
-    numbers = {10, 10, 20, 20, 30, 30};
-
-    // Example 3: Remove consecutive duplicates
-    new_end = unique(numbers.begin(), numbers.end());
-    numbers.erase(new_end, numbers.end());
-
-    cout << "After removing consecutive duplicates: ";
-    for (int n : numbers) cout << n << " ";
+    cout << "Filtered elements (divisible by 10): ";
+    for (int x : filteredCopy) cout << x << " ";
     cout << endl;
 
     return 0;

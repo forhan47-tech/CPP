@@ -1,19 +1,18 @@
 #include <iostream>
 #include <vector>
-#include <algorithm> 
+#include <algorithm>
 using namespace std;
 
 int main() {
-    vector<int> nums(5);
+    vector<int> v = {10, 20, 30, 40, 50};
 
-    // Fill all elements with the value 99
-    fill(nums.begin(), nums.end(), 99);
+    // Sort the vector before performing binary search
+    sort(v.begin(), v.end());
 
-    cout << "Filled Array: ";
-    for (int num : nums)
-        cout << num << " ";
-    cout << endl;
+    // Search for the element 30
+    bool found = binary_search(v.begin(), v.end(), 30);
+    
+    cout << "Is 30 in the vector? " << (found ? "Yes" : "No") << endl;
 
     return 0;
 }
-

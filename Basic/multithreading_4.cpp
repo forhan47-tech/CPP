@@ -9,7 +9,6 @@ void add(int a, int b) {
 }
 
 int main() {
-    // Create thread t that runs the add function with arguments 5 and 3
     thread t(add, 5, 3);
 
     // Wait for the thread to complete

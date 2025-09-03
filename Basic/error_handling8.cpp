@@ -12,7 +12,8 @@ int divide(int a, int b) {
 int main() {
     try {
         cout << divide(10, 0);
-    } catch (const exception& e) {
+    } 
+    catch (const exception& e) {
         cerr << "Exception caught: " << e.what() << '\n';
     }
 

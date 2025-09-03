@@ -9,7 +9,8 @@ int main() {
 
     try {
         cout << v.at(10); // Throws out_of_range
-    } catch (const out_of_range& e) {
+    } 
+    catch (const out_of_range& e) {
         cout << "Caught: " << e.what() << endl;
     }
 

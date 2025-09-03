@@ -1,17 +1,18 @@
 #include <iostream>
-#include <fstream>
+#include <filesystem>
 
 using namespace std;
+using namespace filesystem;
 
 int main() {
-    ifstream src("example.txt", ios::binary); // Open source file in binary mode
-    ofstream dest("copy_example.txt", ios::binary); // Open destination file
+    path source = "example.txt";
+    path destination = "copy_example.txt";
 
-    if (src.is_open() && dest.is_open()) {
-        dest << src.rdbuf(); // Copy file contents
+    try {
+        copy_file(source, destination, copy_options::overwrite_existing);
         cout << "File copied successfully!\n";
-    } else {
-        cout << "Error opening files.\n";
+    } catch (const filesystem_error& e) {
+        cout << "Error: " << e.what() << endl;
     }
 
     return 0;

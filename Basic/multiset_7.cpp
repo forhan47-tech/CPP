@@ -15,5 +15,8 @@ int main() {
     // Occurrence of element
     cout << "Occurrences of 30: " << ms.count(30) << endl;
 
+    // Check if an element exists
+    cout << "Does 30 exist? " << (ms.contains(30) ? "Yes" : "No") << endl;
+
     return 0;
 }

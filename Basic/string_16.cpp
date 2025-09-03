@@ -7,6 +7,8 @@ int main() {
     string str2 = "World!";
     
     string combined = str1 + str2;  // Using +
+    combined += "Welcome to C++."; // Using +=
+    
     cout << "Combined: " << combined << endl;
     
     str1.append(str2);  // Using append()

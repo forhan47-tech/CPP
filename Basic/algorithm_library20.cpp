@@ -1,20 +1,22 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>  // For min_element
+#include <algorithm>
 using namespace std;
 
 int main() {
-    vector<int> num = {5, 2, 8, 1, 3};
-    
-    // Finding the minimum element
-    auto minValue = min_element(num.begin(), num.end());
-    cout << "Minimum Value: " << *minValue << endl;
-    cout << "Index of Minimum Value: " << distance(num.begin(), minValue) << endl;
+    vector<int> v1 = {1, 3, 5};
+    vector<int> v2 = {2, 4, 6};
 
-    // Finding the maximum element
-    auto maxValue = max_element(num.begin(), num.end());
-    cout << "Maximum Value: "  << *maxValue << endl;
-    cout << "Index of Maximum Value: " << distance(num.begin(), maxValue) << endl;
+    // Ensure both vectors are sorted before merging
+    vector<int> merged(v1.size() + v2.size());
+
+    // Merged the two sorted vectors v1 and v2 into merged
+    merge(v1.begin(), v1.end(), v2.begin(), v2.end(), merged.begin());
+
+    cout << "Merged: ";
+    for (int n : merged) 
+        cout << n << " ";
+    cout << endl;
 
     return 0;
 }

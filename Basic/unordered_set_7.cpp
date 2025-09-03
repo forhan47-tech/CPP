@@ -9,6 +9,8 @@ int main() {
     
     cout << "\nDoes 30 exist? " << (us.count(30) ? "Yes" : "No") << endl;
 
+    cout << "\nDoes 50 exist? " << (us.contains(50) ? "Yes" : "No") << endl;
+
     return 0;
 }
 

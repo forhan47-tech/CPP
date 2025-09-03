@@ -1,6 +1,6 @@
 #include <iostream>
 
-using namespace std; // This allows you to use 'cout' and 'cin' without the 'std::' prefix
+using namespace std;
 
 int main() {
     int n, num;

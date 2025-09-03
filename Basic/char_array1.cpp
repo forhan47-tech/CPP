@@ -2,7 +2,6 @@
 using namespace std;
 
 int main() {
-    // Declaration & Initialization
     char str1[] = "Hello";   // Automatically adds '\0' (null terminator)
     char str2[6] = {'H', 'e', 'l', 'l', 'o', '\0'};  // Explicitly defined
 

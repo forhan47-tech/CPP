@@ -3,11 +3,11 @@
 using namespace std;
 
 int main() {
-    vector<int> numbers = {1, 2, 3, 4, 5}; // Initializes a vector with 5 elements
+    vector<int> v1 = {1, 2, 3, 4, 5}; // Initializes a vector with 5 elements
     
-    //vector<int> more_numbers(5, 10); // Initializes a vector with 5 elements, each set to 10
+    //vector<int> v1(5, 0); // Initializes a vector with 5 elements, all set to 0
 
-    for (auto num : numbers) {  // Range-based for loop to iterate through the vector
+    for (auto num : v1) {  // Range-based for loop to iterate through the vector
         cout << num << " ";
     }
     cout << endl;

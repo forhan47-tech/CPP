@@ -1,17 +1,25 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
 using namespace std;
 
 int main() {
-    vector<int> v = {1, 2, 3, 4, 5, 6};
+    int x = 10, y = 20;
 
-    // Count even numbers using a lambda with count_if
-    int evenCount = count_if(v.begin(), v.end(), [](int n) {
-        return n % 2 == 0;
-    });
+    auto sum = [=]() { 
+        return x + y; 
+    };     // Captures x and y by value
 
-    cout << "Even numbers count: " << evenCount << endl;
+    auto diff = [&]() { 
+        return x - y; 
+    };    // Captures x and y by reference
+
+    cout << "Sum: " << sum() << endl;       // Output: 30
+
+    // Let's change x and y now
+    x = 50;
+    y = 15;
+
+    cout << "Sum (again): " << sum() << endl;    // Still 30 (captured earlier)
+    cout << "Difference: " << diff() << endl;    // 50 - 15 = 35
 
     return 0;
 }

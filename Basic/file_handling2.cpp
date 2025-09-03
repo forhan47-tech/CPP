@@ -4,15 +4,25 @@
 using namespace std;
 
 int main() {
-    ofstream file("output.txt"); // Open file for writing
-
-    if (file.is_open()) {
-        file << "Hello, World!\n"; // Write data
-        file << "File handling in C++.\n";
-        file.close(); // Close file
-    } else {
-        cout << "Error opening file!" << endl;
+    ifstream file("data.txt"); // Open file in read mode
+    string line;
+    
+    if (!file) {
+        cerr << "Error opening file!" << endl;
+        return 1;
     }
+
+    // Read and display the first line
+    getline(file, line);
+    cout << line << endl;
+
+    // Read and display content line by line
+    while (getline(file, line)) {
+        cout << line << endl;
+    }
+
+    // Close the file
+    file.close();
 
     return 0;
 }

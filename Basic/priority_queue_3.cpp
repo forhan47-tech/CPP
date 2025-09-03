@@ -1,24 +1,21 @@
 #include <iostream>
 #include <queue>
-#include <vector>
 
 using namespace std;
 
 int main() {
     priority_queue<int> pq;
-    pq.push(10);
-    pq.push(20);
-    pq.push(5);
+    int num;
 
-    vector<int> v;
-    while (!pq.empty()) {
-        v.push_back(pq.top());
-        pq.pop();
+    cout << "Enter numbers (type -1 to stop): ";
+    while (cin >> num && num != -1) {
+        pq.push(num);
     }
 
     cout << "Priority queue elements (sorted order): ";
-    for (int num : v) {
-        cout << num << " ";
+    while (!pq.empty()) {
+        cout << pq.top() << " ";
+        pq.pop();
     }
 
     return 0;

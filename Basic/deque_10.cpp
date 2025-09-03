@@ -11,5 +11,8 @@ int main() {
     cout << "Deque size after clear: " << dq.size() << endl;
     cout << "Is deque empty? " << (dq.empty() ? "Yes" : "No") << endl;
 
+    dq.shrink_to_fit(); // Reduces capacity to fit size
+    cout << "Deque capacity after shrink_to_fit: " << dq.size() << endl;
+
     return 0;
 }

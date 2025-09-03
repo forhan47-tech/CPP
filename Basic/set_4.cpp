@@ -1,20 +1,20 @@
 #include <iostream>
 #include <set>
-
 using namespace std;
 
 int main() {
-    set<int> mySet;
+    set<int> numbers;
+    int num;
 
-    cout << "Enter number of elements: ";
-    for (int i = 0; i < 10; i++) {
-        int num;
-        cin >> num;
-        mySet.insert(num);  // Insert elements into the set
+    cout << "Enter numbers (type -1 to stop): ";
+    while (cin >> num && num != -1) {
+        numbers.insert(num);
     }
 
-    cout << "Set elements: ";
-    for (int num : mySet) cout << num << " ";
+    cout << "Stored unique sorted numbers: ";
+    for (int n : numbers) cout << n << " ";
+    cout << endl;
 
     return 0;
 }
+

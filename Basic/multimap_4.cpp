@@ -11,7 +11,7 @@ int main() {
     cout << "Enter key-value pairs (type -1 to stop):\n";
     while (cin >> key && key != -1) {
         cin >> value;
-        mm.insert({key, value});
+        mm.emplace(key, value); // Insert key-value pair
     }
 
     cout << "Multimap elements:\n";

@@ -1,25 +1,18 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 using namespace std;
 
 int main() {
-    ifstream file("output.txt");  // Open a missing file
+    ifstream file("students.txt");
 
-    if (file.fail()) {  // Check if the file opened successfully
-        cout << "Error: File does not exist!" << endl;
-        return 1;
+    string name;
+    int age, score;
+
+    while (file >> name >> age >> score) {
+        cout << "Name: " << name << ", Age: " << age << ", Score: " << score << "\n";
     }
 
-    string data;
-    while (file >> data) {  // Read data from the file
-        cout << data << endl;
-    }
-
-    if (file.eof()) {
-        cout << "End of file reached!" << endl;
-    }
-    
     file.close();
     return 0;
 }
-

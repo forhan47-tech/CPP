@@ -2,19 +2,17 @@
 using namespace std;
 
 int main() {
-    int x = 10, y = 20;
+    int x = 3;
+    int y = 4;
 
-    auto sum = [=]() { return x + y; };     // Captures x and y by value
-    auto diff = [&]() { return x - y; };    // Captures x and y by reference
+    auto custom = [x, &y]() {
+        return x * y;  // x is captured by value, y by reference
+    };
+    
+    x = 10; // change x after lambda definition
+    y = 5;  // change y after lambda definition
 
-    cout << "Sum: " << sum() << endl;       // Output: 30
-
-    // Let's change x and y now
-    x = 50;
-    y = 15;
-
-    cout << "Sum (again): " << sum() << endl;    // Still 30 (captured earlier)
-    cout << "Difference: " << diff() << endl;    // 50 - 15 = 35
+    cout << "Result: " << custom() << endl;  // Outputs: 15 (3 * 5)
 
     return 0;
 }

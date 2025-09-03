@@ -1,24 +1,27 @@
 #include <iostream>
 #include <fstream>
-
 using namespace std;
 
 int main() {
-    ifstream file("data.txt"); // Open file in read mode
-    string line;
-    
+    ifstream file("input.txt");  // Open file for reading
+    int num;
+
     if (!file) {
         cerr << "Error opening file!" << endl;
         return 1;
     }
 
-    // Read and display content line by line
-    while (getline(file, line)) {
-        cout << line << endl;
-    }
+    // Read and display the first number
+    file >> num;  // Read first number
+    cout << "First number: " << num << endl;
 
-    // Close the file
-    file.close();
+    cout << "Reading numbers from file:" << endl;
+    while (file >> num) {  // Reads unknown numbers until EOF
+        cout << num << " ";
+    }
+    cout << endl;
+
+    file.close();  // Close file
 
     return 0;
 }

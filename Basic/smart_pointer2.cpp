@@ -9,8 +9,11 @@ int main() {
 
     cout << "Reference count: " << ptr1.use_count() << endl;
 
+    cout << "Value via ptr1: " << *ptr1 << endl;
+    cout << "Value via ptr2: " << *ptr2 << endl;
+
     return 0;
-} // Object is deleted only when reference count reaches zero
+} 
 
 
 

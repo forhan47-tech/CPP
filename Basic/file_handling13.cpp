@@ -1,18 +1,25 @@
 #include <iostream>
-#include <filesystem>
+#include <fstream>
 
 using namespace std;
-using namespace filesystem;
 
 int main() {
-    path source = "example.txt";
-    path destination = "copy_example.txt";
+    ofstream file("output.txt"); // Open file for writing
 
-    try {
-        copy_file(source, destination, copy_options::overwrite_existing);
-        cout << "File copied successfully!\n";
-    } catch (const filesystem_error& e) {
-        cout << "Error: " << e.what() << endl;
+    string line = "This is a sample line.";
+    int number = 42;
+
+    if (file.is_open()) {
+        file << "Hello, World!\n"; // Write multiple lines
+        file << "File handling in C++.\n";
+
+        file << line << "\n"; // Write a string variable
+        file << "The answer is: " << number << "\n"; // Write an integer variable
+
+        file.close(); // Close file
+        cout << "Data written successfully!" << endl;
+    } else {
+        cout << "Error opening file!" << endl;
     }
 
     return 0;
