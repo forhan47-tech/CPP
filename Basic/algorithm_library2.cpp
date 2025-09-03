@@ -1,20 +1,29 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <cmath>
 using namespace std;
 
+// Function to check if a number is prime
+bool isPrime(int n) {
+    if (n < 2) return false;
+    for (int i = 2; i <= sqrt(n); ++i) {
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+
 int main() {
-    vector<int> numbers = {10, 5, 8, 1, 7, 3};
+    vector<int> v = {1, 2, 3, 4, 5, 6};
 
-    // Make a copy for the 3rd smallest element
-    vector<int> smallest = numbers;
-    nth_element(smallest.begin(), smallest.begin() + 2, smallest.end());
-    cout << "3rd smallest element: " << smallest[2] << endl;
+    int countVal = count(v.begin(), v.end(), 3);  // Count occurrences of 3
+    cout << "Count of 3: " << countVal << endl;
 
-    // Make a copy for the 3rd largest element
-    vector<int> largest = numbers;
-    nth_element(largest.begin(), largest.begin() + 2, largest.end(), greater<int>());
-    cout << "3rd largest element: " << largest[2] << endl;
+    int evenCount = count_if(v.begin(), v.end(), [](int x) { return x % 2 == 0; });
+    cout << "Number of even elements: " << evenCount << endl;
+
+    int primeCount = count_if(v.begin(), v.end(), isPrime);
+    cout << "Number of prime elements: " << primeCount << endl;
 
     return 0;
 }

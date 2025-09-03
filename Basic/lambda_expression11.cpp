@@ -1,21 +1,15 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 int main() {
-    vector<int> nums = {1, 2, 3};
+    vector<int> v = {1, 2, 3, 4, 5, 6};
 
-    auto modify = [&nums]() {
-        for (int& n : nums)
-            n *= 10;  // Directly modifies the original vector
-    };
+    // Count even numbers using a lambda with count_if
+    int evenCount = count_if(v.begin(), v.end(), [](int n) { return n % 2 == 0; });
 
-    modify();  // Now nums = {10, 20, 30}
-
-    cout << "Modified vector: ";
-    for (int n : nums)
-        cout << n << " ";
-    cout << endl;
+    cout << "Even numbers count: " << evenCount << endl;
 
     return 0;
 }

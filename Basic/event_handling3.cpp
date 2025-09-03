@@ -4,7 +4,6 @@
 using namespace std;
 
 int main() {
-    // Declare a flexible event handler using std::function
     function<void(int)> handler;
 
     // Assign a lambda to handle the event

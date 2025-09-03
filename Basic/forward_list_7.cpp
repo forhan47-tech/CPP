@@ -1,26 +1,20 @@
 #include <iostream>
 #include <forward_list>
-#include <sstream>
 
-using namespace std;
+using namespace std; 
 
 int main() {
-    forward_list<int> fl;
-    string input;
-    int num;
+    forward_list<int> flist = {10, 20, 30, 40};  // Declaring a forward list
 
-    auto it = fl.before_begin();  // Iterator before the first element
+    flist.push_front(5);  // Adding an element to the front
 
-    cout << "Enter numbers separated by spaces: ";
-    getline(cin, input);  // Read entire line
+    flist.pop_front();  // Removing the first element
 
-    stringstream ss(input);
-    while (ss >> num) {
-        it = fl.insert_after(it, num);
+    cout << "Forward list elements after modifications: ";
+    for (int num : flist) {
+        cout << num << " ";  // Displaying the elements of the forward list
     }
-
-    cout << "Forward list elements: ";
-    for (int num : fl) cout << num << " ";
-
+    
     return 0;
 }
+

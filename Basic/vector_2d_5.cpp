@@ -4,26 +4,13 @@
 using namespace std;
 
 int main() {
-    vector<vector<int>> matrix;
-    
-    for (int i = 0; i < 3; i++) {
-        vector<int> row;
-        
-        cout << "Enter 4 elements for row " << i + 1 << ": ";
-        int num;
-        for (int j = 0; j < 4; j++) {
-            cin >> num;
-            row.push_back(num);
-        }
+    vector<vector<int>> v = {{10, 20, 30}, {40, 50, 60}, {70, 80, 90}};
 
-        matrix.push_back(row);
-    }
+    cout << "Element at row 1, column 2: " << v[1][2] << endl;
 
-    cout << "Matrix:\n";
-    for (const auto& row : matrix) {
-        for (int num : row) cout << num << " ";
-        cout << endl;
-    }
+    v[1][2] = 30;
+    cout << "Element at row 1, column 2: " << v[1][2] << endl;
+
 
     return 0;
 }

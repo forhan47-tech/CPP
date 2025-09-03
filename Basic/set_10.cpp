@@ -4,11 +4,19 @@
 using namespace std;
 
 int main() {
-    set<int> s = {10, 20, 30, 40, 50};
+    set<int> set1 = {1, 2, 3, 4};
+    set<int> set2 = {5, 6, 7, 8};
 
-    
-    cout << "Lower Bound of 25: " << *s.lower_bound(25) << endl;
-    cout << "Upper Bound of 30: " << *s.upper_bound(30) << endl;
+    // Swap sets
+    set1.swap(set2);
+
+    cout << "\nAfter swapping:\n";
+    cout << "Set 1: ";
+    for (int num : set1) cout << num << " ";
+    cout << "\nSet 2: ";
+    for (int num : set2) cout << num << " ";
+    cout << endl;
 
     return 0;
 }
+

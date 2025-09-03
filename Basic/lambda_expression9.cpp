@@ -12,6 +12,7 @@ int main() {
     lambda();
 
     cout << x << endl;  // Output: 52
+    cout << y << endl;  // Output: 100
 
     return 0;
 }

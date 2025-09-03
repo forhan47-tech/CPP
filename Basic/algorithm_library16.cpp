@@ -1,29 +1,16 @@
-
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
 
 int main() {
-    vector<int> v = {1, 2, 3};
+    vector<int> scores = {50, 20, 80, 10, 60, 30};
 
-    // Get the next lexicographical permutation
-    next_permutation(v.begin(), v.end());
-    cout << "Next permutation: ";
-    for (int n : v)
-        cout << n << " ";
-    cout << endl;
+    partial_sort(scores.begin(), scores.begin() + 3, scores.end());
 
-    // Reset vector to original order
-    v = {1, 2, 3};
-
-    // Get the previous lexicographical permutation
-    prev_permutation(v.begin(), v.end());
-    cout << "Previous permutation: ";
-    for (int n : v)
-        cout << n << " ";
-    cout << endl;
+    cout << "Top 3 smallest scores:\n";
+    for (int i = 0; i < 3; ++i)
+        cout << scores[i] << " ";
 
     return 0;
 }
-

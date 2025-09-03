@@ -11,7 +11,7 @@ int main() {
     cout << "Enter key-value pairs (type -1 to stop):\n";
     while (cin >> key && key != -1) {
         cin >> value;
-        um.insert({key, value});
+        um.emplace(key, value); // Insert key-value pair
     }
 
     cout << "Unordered map elements:\n";

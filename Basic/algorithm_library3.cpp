@@ -4,21 +4,20 @@
 using namespace std;
 
 int main() {
-    vector<int> v = {10, 20, 30, 40, 50};
+    vector<int> A = {1, 2, 3, 4, 5};
+    vector<int> B = {1, 2, 0, 4, 5};
 
-    // Sort the vector before performing binary search
-    sort(v.begin(), v.end());
+    // Check if both ranges are equal
+    bool areEqual = equal(A.begin(), A.end(), B.begin());
+    cout << "Are equal: " << boolalpha << areEqual << "\n";
 
-    // Search for the element 30
-    bool found = binary_search(v.begin(), v.end(), 30);
-    
-    if (found) {
-        cout << "Element 30 found!" << endl;
+    // Find first mismatch
+    auto [itA, itB] = mismatch(A.begin(), A.end(), B.begin());
+    if (itA != A.end() && itB != B.end()) {
+        cout << "Mismatch at A: " << *itA << ", B: " << *itB << "\n";
     } else {
-        cout << "Element 30 not found!" << endl;
+        cout << "No mismatch found\n";
     }
-
-    cout << "Is 30 in the vector? " << (found ? "Yes" : "No") << endl;
 
     return 0;
 }

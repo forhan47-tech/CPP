@@ -10,4 +10,4 @@ int main() {
     cout << "Value: " << *ptr << endl; // Access value
 
     return 0;
-} // Automatically deletes the object at scope exit
+} 

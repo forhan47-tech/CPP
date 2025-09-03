@@ -8,7 +8,6 @@ void greet() {
 }
 
 int main() {
-    // std::function to hold the event handler
     function<void()> onClick;
 
     // Assign the handler

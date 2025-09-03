@@ -5,8 +5,6 @@ using namespace std;
 int main() {
     multimap<int, string> mm = {{1, "Apple"}, {2, "Banana"}, {2, "Blueberry"}, {3, "Cherry"}};
 
-    mm.insert({2, "Blackberry"});  // Insert duplicate key 2
-
     mm.emplace(2, "Date");  // Insert duplicate key 2 using emplace
 
     mm.erase(3);

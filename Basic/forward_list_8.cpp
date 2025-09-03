@@ -1,22 +1,22 @@
 #include <iostream>
 #include <forward_list>
 
-using namespace std; 
+using namespace std;
 
 int main() {
-    forward_list<int> flist = {10, 20, 30, 40};  // Declaring a forward list
+    forward_list<int> flist = {10, 20, 30, 40};  
 
-    flist.push_front(5);  // Adding an element to the front
+    auto it = flist.begin();  // Iterator pointing to the first element
 
-    flist.pop_front();  // Removing the first element
+    flist.insert_after(it, 15);  // Inserts 15 after the first element
 
-    flist.remove(20);  // Removing the element with value 20
+    flist.erase_after(it);  // Removes the element after the first (which is now 15)
 
-    cout << "Forward list elements after modifications: ";
+    cout << "Forward list elements after insert and erase: ";
     for (int num : flist) {
         cout << num << " ";  // Displaying the elements of the forward list
     }
-    
+ 
     return 0;
 }
 

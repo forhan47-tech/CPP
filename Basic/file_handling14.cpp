@@ -4,21 +4,18 @@
 using namespace std;
 
 int main() {
-    ifstream file("output.txt"); // Open file for reading
-    ofstream temp("temp.txt"); // Temporary file to write output
+    ofstream file("data.txt", ios::app); // Open file in append mode
 
-    if (!file) {
+    if (file.is_open()) {
+        file << "Line 1: This is an appended line.\n";  // Append multiple lines
+        file << "Line 2: File handling in C++.\n";
+        file << "Line 3: Adding data without overwriting!\n";
+
+        file.close();
+        cout << "Lines appended successfully!" << endl;
+    } else {
         cout << "Error opening file!" << endl;
-        return 1;
     }
-
-    char ch;
-    while (file.get(ch)) { // Read character by character
-        temp.put(ch); // Write each character to the temporary file
-    }
-
-    file.close();
-    temp.close();
 
     return 0;
 }

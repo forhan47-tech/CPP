@@ -1,31 +1,27 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-
 using namespace std;
 
 int main() {
-    vector<int> heap = {20, 30, 40, 10};
+    vector<int> v1 = {10, 20, 30, 20, 40};
 
-    // Create a max-heap
-    make_heap(heap.begin(), heap.end());
-    cout << "Max element (after make_heap): " << heap.front() << endl;
+    // Example 1: Remove all occurrences of 20
+    auto new_end = erase(remove(v1.begin(), v1.end(), 20), v1.end());
 
-    // Add a new element and push it into the heap
-    heap.push_back(50);
-    push_heap(heap.begin(), heap.end());
-    cout << "Max element (after push_heap): " << heap.front() << endl;
+    cout << "After removing 20: ";
+    for (int n : v1) cout << n << " ";
+    cout << endl;
 
-    // Remove the max element
-    pop_heap(heap.begin(), heap.end());
-    heap.pop_back(); // Actually removes the max element from the vector
-    cout << "Max element (after pop_heap): " << heap.front() << endl;
+    // Reset vector for next example
+    v1 = {10, 20, 30, 20, 40};
 
-    // Sort the heap into ascending order
-    sort_heap(heap.begin(), heap.end());
-    cout << "Sorted elements: ";
-    for (int num : heap)
-        cout << num << " ";
+    // Example 2: Remove elements less than 20
+    new_end = remove_if(v1.begin(), v1.end(), [](int x) { return x < 20; });
+    numbers.erase(new_end, v1.end());
+
+    cout << "After removing elements < 20: ";
+    for (int n : v1) cout << n << " ";
     cout << endl;
 
     return 0;

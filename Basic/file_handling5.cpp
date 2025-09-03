@@ -1,23 +1,29 @@
 #include <iostream>
 #include <fstream>
-
 using namespace std;
 
 int main() {
-    ifstream File("input.txt"); // Open file for reading
-    char ch;
+    ifstream file("output.txt");  
 
-    if (!File) {
-        cerr << "Error opening file!" << endl;
-        return 1; // Exit if file cannot be opened
+    if (!file) { 
+        cout << "Error: File does not exist!" << endl;
+        return 1;
     }
 
-    while (File.get(ch)) { // Read character by character
-        cout << ch; // Output each character
+    string data;
+
+    // Read and display the first word
+    file >> data; // Read first word
+    cout << "First word: " << data << endl;
+
+    while (file >> data) {  // Read word-by-word
+        cout << data << endl;
     }
 
-    File.close(); // Close the file
+    if (file.eof()) {
+        cout << "End of file reached!" << endl;
+    }
 
+    file.close();
     return 0;
 }
-

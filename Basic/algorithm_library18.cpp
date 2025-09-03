@@ -1,23 +1,18 @@
+
 #include <iostream>
 #include <vector>
-#include <algorithm>  // For std::partition
+#include <algorithm>
 using namespace std;
 
-// Predicate function to check for even numbers
-bool isEven(int num) {
-    return num % 2 == 0;
-}
-
 int main() {
-    vector<int> nums = {1, 2, 3, 4, 5, 6, 7, 8};
+    vector<int> v = {10, 20, 20, 30, 40, 50};
+    int key = 20;
 
-    // Partition the vector so that even numbers appear first
-    partition(nums.begin(), nums.end(), isEven);
+    auto lb = lower_bound(v.begin(), v.end(), key);
+    auto ub = upper_bound(v.begin(), v.end(), key);
 
-    cout << "Partitioned Array: ";
-    for (int num : nums)
-        cout << num << " ";
-    cout << endl;
+    cout << "Lower bound of " << key << ": " << *lb << " at index " << lb - v.begin() << "\n";
+    cout << "Upper bound of " << key << ": " << *ub << " at index " << ub - v.begin() << "\n";
 
     return 0;
 }

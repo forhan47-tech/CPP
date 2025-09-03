@@ -9,8 +9,11 @@ vector<int> createVector() {
 
 int main() {
     vector<int> myVector = createVector();
+
+    cout << "Vector elements: ";
     for (int num : myVector) {
         cout << num << " ";
     }
+    
     return 0;
 }

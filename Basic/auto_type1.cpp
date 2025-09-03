@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
-int main() {
 
+int main() {
 auto value = 42;       // Deduced as int
 cout << "Value: " << value << endl;
 

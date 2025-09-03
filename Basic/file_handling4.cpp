@@ -1,23 +1,26 @@
 #include <iostream>
 #include <fstream>
+
 using namespace std;
 
 int main() {
-    ifstream file("input.txt");  // Open file for reading
-    int num;
+    ifstream File("input.txt"); // Open file for reading
+    char ch;
 
-    if (!file) {
+    if (!File) {
         cerr << "Error opening file!" << endl;
-        return 1;
+        return 1; // Exit if file cannot be opened
     }
 
-    cout << "Reading numbers from file:" << endl;
-    while (file >> num) {  // Reads unknown numbers until EOF
-        cout << num << " ";
-    }
-    cout << endl;
+    // Read and display the first character
+    File.get(ch); // Read first character
+    cout << "First character: " << ch << endl;
 
-    file.close();  // Close file
+    while (File.get(ch)) { // Read character by character
+        cout << ch; // Output each character
+    }
+
+    File.close(); // Close the file
 
     return 0;
 }

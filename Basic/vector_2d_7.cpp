@@ -1,27 +1,23 @@
 #include <iostream>
 #include <vector>
-#include <sstream>
 
 using namespace std;
 
 int main() {
-    vector<vector<int>> matrix;
-    string input;
-    int num;
+    vector<vector<int>> v = {{1, 2, 3}, {4, 5, 6}}; // Initialize 2D vector
 
-    cout << "Enter rows of numbers separated by spaces (type 'end' to stop):\n";
-    while (getline(cin, input) && input != "end") {
-        vector<int> row;
-        stringstream ss(input);
-        while (ss >> num) {
-            row.push_back(num);
+    v.push_back({7, 8, 9});  // Add a new row
+    v.erase(v.begin()+1);  // Remove the second row
+
+    v[1].push_back(30);
+    v[1].insert(v[1].begin() + 1, 10);  // Insert value in row 1 at position 1
+    v[1].erase(v[1].begin() + 1);  // Remove element at index 1 in row 1
+
+    cout << "2D Vector elements:\n";
+    for (auto& row : v) {
+        for (int num : row) {
+            cout << num << " ";
         }
-        matrix.push_back(row);
-    }
-
-    cout << "Matrix:\n";
-    for (const auto& row : matrix) {
-        for (int num : row) cout << num << " ";
         cout << endl;
     }
 

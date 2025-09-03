@@ -4,14 +4,14 @@
 using namespace std;
 
 int main() {
-    forward_list<int> fl = {10, 20, 30, 40, 50}; // Initialize forward list
+    forward_list<int> fl = {10, 20, 30, 40};
 
-    cout << "First element: " << fl.front() << endl;
+    fl.reverse();  // Reverses the list
 
-    fl.clear(); // Clear the forward list
-    
-    cout << "Size after clear: " << fl.size() << endl; // Size will be 0
-    cout << "Is the forward list empty? " << (fl.empty() ? "Yes" : "No") << endl;
-    
+    cout << "Reversed list: ";
+    for (int num : fl) cout << num << " ";
+
     return 0;
 }
+
+

@@ -4,18 +4,13 @@
 using namespace std;
 
 int main() {
-    forward_list<int> fl;
-    int num;
+    forward_list<int> fl = {10, 20, 30, 40, 50}; // Initialize forward list
 
-    auto it = fl.before_begin();  // Iterator before the first element
+    cout << "First element: " << fl.front() << endl;
 
-    cout << "Enter numbers (type -1 to stop): ";
-    while (cin >> num && num != -1) {
-        it = fl.insert_after(it, num);  // Insert after the last inserted element
-    }
-
-    cout << "Forward list elements: ";
-    for (int num : fl) cout << num << " ";
-
+    fl.clear(); // Clear the forward list
+    
+    cout << "Is the forward list empty? " << (fl.empty() ? "Yes" : "No") << endl;
+    
     return 0;
 }

@@ -4,20 +4,22 @@
 using namespace std;
 
 int main() {
-    vector<int> values = {5, 2, 9, 1, 5, 6};
+    vector<int> v1 = {10, 20, 20, 30, 40};
 
-    // Reverse the entire vector
-    reverse(values.begin(), values.end());
-    cout << "Reversed: ";
-    for (int num : values)
-        cout << num << " ";
+    // Replace all occurrences of 20 with 99
+    replace(v1.begin(), v1.end(), 20, 99);
+
+    cout << "Modified Vector after replace: ";
+    for (int val : v1)
+        cout << val << " ";
     cout << endl;
 
-    // Rotate the vector left by 2 positions
-    rotate(values.begin(), values.begin() + 2, values.end());
-    cout << "Rotated: ";
-    for (int num : values)
-        cout << num << " ";
+    // Replace elements greater than 30 with 100
+    replace_if(v1.begin(), v1.end(), [](int x) { return x > 30; }, 100);
+
+    cout << "Modified Vector after replace_if: ";
+    for (int val : v1)
+        cout << val << " ";
     cout << endl;
 
     return 0;

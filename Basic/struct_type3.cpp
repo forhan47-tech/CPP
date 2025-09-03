@@ -8,12 +8,12 @@ struct Employee {
 };
 
 int main() {
-    Employee employees[2] = { {"John", 101, 5000.5}, {"Emily", 102, 6200.0} };
+    Employee emp[2] = { {"John", 101, 5000.5}, {"Emily", 102, 6200.0} };
 
     for (int i = 0; i < 2; i++) {
-        cout << "Employee " << i + 1 << " - Name: " << employees[i].name
-             << ", ID: " << employees[i].id
-             << ", Salary: $" << employees[i].salary << endl;
+        cout << "Employee " << i + 1 << " - Name: " << emp[i].name
+             << ", ID: " << emp[i].id
+             << ", Salary: $" << emp[i].salary << endl;
     }
 
     return 0;

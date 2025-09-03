@@ -6,6 +6,8 @@ using namespace std;
 int main() {
     forward_list<int> fl = {10, 20, 30, 40, 50};
 
+    // forward_list<int> fl(5, 0); // Initializes a forward_list with 5 elements, all set to 0 --- IGNORE ---
+
     for (int num : fl) {
         cout << num << " ";
     }

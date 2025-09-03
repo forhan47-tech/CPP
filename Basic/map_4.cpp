@@ -11,7 +11,7 @@ int main() {
     cout << "Enter key-value pairs (type -1 to stop):\n";
     while (cin >> key && key != -1) {
         cin >> value;
-        myMap.insert({key, value});
+        myMap.emplace(key, value);
     }
 
     cout << "Map elements:\n";

@@ -1,23 +1,26 @@
 #include <iostream>
 #include <queue>
-
 using namespace std;
 
 int main() {
-    priority_queue<int> pq;
+    priority_queue<int> pq;  // Default: Max Heap
 
-    cout << "Enter 5 integers to add to the priority queue:\n";
-    for (int i = 0; i < 5; i++) {
-        int num;
-        cin >> num;
-        pq.push(num);  // Push elements into the priority queue
-    }
+    pq.push(10);
+    pq.push(30);
+    pq.push(20);
 
-    cout << "Priority queue elements (sorted order): ";
-    while (!pq.empty()) {
-        cout << pq.top() << " ";
-        pq.pop();
-    }
+    cout << "Highest Priority Element: " << pq.top() << endl;  // Output: 30
+
+    pq.pop();  // Removes 30
+
+    cout << "New Top Element: " << pq.top() << endl;  // Output: 20
+
+    cout << "Size of Priority Queue: " << pq.size() << endl;  // Output: 2
+    
+    cout << "Is Priority Queue Empty? " << (pq.empty() ? "Yes" : "No") << endl;  // Output: No
 
     return 0;
 }
+
+
+

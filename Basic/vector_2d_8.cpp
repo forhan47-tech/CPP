@@ -4,13 +4,16 @@
 using namespace std;
 
 int main() {
-    vector<vector<int>> v = {{10, 20, 30}, {40, 50, 60}, {70, 80, 90}};
+    vector<vector<int>> v1 = {{1, 2, 3}, {4, 5, 6}};
+    vector<vector<int>> v2 = {{7, 8, 9}, {10, 11, 12}};
 
-    cout << "Element at row 1, column 2: " << v[1][2] << endl;
+    v1.swap(v2);  // Swap contents
 
-    v[1][2] = 30;
-    cout << "Element at row 1, column 2: " << v[1][2] << endl;
-
+    cout << "\nAfter swap:\n";
+    for (auto& row : v1) {
+        for (int num : row) cout << num << " ";
+        cout << endl;
+    }
 
     return 0;
 }

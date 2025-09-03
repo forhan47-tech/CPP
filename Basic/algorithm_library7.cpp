@@ -1,27 +1,22 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
+#include <algorithm>  // For std::partition
 using namespace std;
 
+// Predicate function to check for even numbers
+bool isEven(int num) {
+    return num % 2 == 0;
+}
+
 int main() {
-    vector<int> values = {10, 20, 20, 30, 40};
+    vector<int> nums = {1, 2, 3, 4, 5, 6, 7, 8};
 
-    // Replace all occurrences of 20 with 99
-    replace(values.begin(), values.end(), 20, 99);
+    // Partition the vector so that even numbers appear first
+    partition(nums.begin(), nums.end(), isEven);
 
-    cout << "Modified Vector after replace: ";
-    for (int value : values)
-        cout << value << " ";
-    cout << endl;
-
-    // Replace elements greater than 30 with 100
-    replace_if(values.begin(), values.end(), [](int x) {
-        return x > 30;
-    }, 100);
-
-    cout << "Modified Vector after replace_if: ";
-    for (int value : values)
-        cout << value << " ";
+    cout << "Partitioned Array: ";
+    for (int num : nums)
+        cout << num << " ";
     cout << endl;
 
     return 0;

@@ -3,18 +3,18 @@
 
 using namespace std;
 
-class Node {
+class Test {
 public:
-    weak_ptr<Node> neighbor; // Weak reference to prevent cyclic dependency
-    Node() { cout << "Node Created\n"; }
-    ~Node() { cout << "Node Destroyed\n"; }
+    Test() { cout << "Object Created\n"; }
+    ~Test() { cout << "Object Destroyed\n"; }
+    void show() { 
+        cout << "Hello from Test!\n"; 
+    }
 };
 
 int main() {
-    shared_ptr<Node> nodeA = make_shared<Node>();
-    shared_ptr<Node> nodeB = make_shared<Node>();
+    unique_ptr<Test> ptr = make_unique<Test>(); // Creating an object dynamically
 
-    nodeA->neighbor = nodeB; // Prevents cyclic dependency
-
-    return 0;
+    ptr->show(); // Accessing member function
+    return 0; 
 }

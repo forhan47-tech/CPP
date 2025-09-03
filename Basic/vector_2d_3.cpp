@@ -4,12 +4,18 @@
 using namespace std;
 
 int main() {
-    vector<vector<int>> matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    vector<vector<int>> matrix(3, vector<int>(4));  // Create a 2D vector
 
-    for (auto row = matrix.begin(); row != matrix.end(); ++row) {
-        for (auto col = row->begin(); col != row->end(); ++col) {
-            cout << *col << " ";
+    cout << "Enter elements:\n";
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 4; j++) {
+            cin >> matrix[i][j];  // Store input in the 2D vector
         }
+    }
+
+    cout << "Matrix:\n";
+    for (const auto& row : matrix) {
+        for (int num : row) cout << num << " ";
         cout << endl;
     }
 

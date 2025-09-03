@@ -4,15 +4,16 @@
 using namespace std;
 
 int main() {
-    string str1 = "Hello";
-    string str2 = "World";
+    string s;
 
-    cout << "Before swap: " << str1 << " | " << str2 << endl;
+    s.reserve(100);               // Pre-allocate memory
+    cout << "Capacity after reserve: " << s.capacity() << endl;
 
-    str1.swap(str2);  // Swap the contents
+    s = "Optimizing memory usage";
+    cout << "Capacity before shrink_to_fit: " << s.capacity() << endl;
 
-    cout << "After swap: " << str1 << " | " << str2 << endl;
+    s.shrink_to_fit();            // Reduce unused capacity
+    cout << "Capacity after shrink_to_fit: " << s.capacity() << endl;
 
     return 0;
 }
-

@@ -1,29 +1,27 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <cmath>
 using namespace std;
 
-// Function to check if a number is prime
-bool isPrime(int n) {
-    if (n < 2) return false;
-    for (int i = 2; i <= sqrt(n); ++i) {
-        if (n % i == 0) return false;
-    }
-    return true;
-}
-
 int main() {
-    vector<int> v = {1, 2, 3, 4, 5, 6};
+    vector<int> nums = {2, 4, 6, 8, 10};
 
-    int count_val = count(v.begin(), v.end(), 3);  // Count occurrences of 3
-    cout << "Count of 3: " << count_val << endl;
+    // Apply a function to each element
+    cout << "Elements: ";
+    for_each(nums.begin(), nums.end(), [](int x) { cout << x << " "; });
+    cout << "\n";
 
-    int even_count = count_if(v.begin(), v.end(), [](int x) { return x % 2 == 0; });
-    cout << "Number of even elements: " << even_count << endl;
+    // Check if all are even
+    bool allEven = all_of(nums.begin(), nums.end(), [](int x) { return x % 2 == 0; });
+    cout << "All even: " << boolalpha << allEven << "\n";
 
-    int prime_count = count_if(v.begin(), v.end(), isPrime);
-    cout << "Number of prime elements: " << prime_count << endl;
+    // Check if any are greater than 9
+    bool anyLarge = any_of(nums.begin(), nums.end(), [](int x) { return x > 9; });
+    cout << "Any > 9: " << boolalpha << anyLarge << "\n";
+
+    // Check if none are negative
+    bool noneNegative = none_of(nums.begin(), nums.end(), [](int x) { return x < 0; });
+    cout << "None negative: " << boolalpha << noneNegative << "\n";
 
     return 0;
 }

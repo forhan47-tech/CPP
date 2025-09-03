@@ -8,7 +8,7 @@ int main() {
 
     // Modifying elements using range-based for loop
     for (auto& num : arr) {
-        num += 5; // Increment each element by 5
+        num += 5; 
     }
     
     cout << "Modified Elements: ";

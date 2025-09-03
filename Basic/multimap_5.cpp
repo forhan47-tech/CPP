@@ -15,7 +15,7 @@ int main() {
 
     stringstream ss(input);
     while (ss >> key >> value) {
-        mm.insert({key, value});
+        mm.emplace(key, value); // Insert key-value pair
     }
 
     cout << "Multimap elements:\n";

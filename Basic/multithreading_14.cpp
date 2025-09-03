@@ -1,12 +1,16 @@
 #include <iostream>
-#include <atomic>
+#include <future>
 
 using namespace std;
 
-atomic<int> flag(5);
+int compute(int x) {
+    return x * x;
+}
 
 int main() {
-    int value = flag.load();
-    cout << "Loaded value: " << value << endl;
+    future<int> result = async(compute, 5); // runs in background
+    cout << "Doing other work..." << endl;
+
+    cout << "Result: " << result.get() << endl; // waits for result
     return 0;
 }

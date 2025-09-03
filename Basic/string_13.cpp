@@ -4,7 +4,6 @@ using namespace std;
 
 int main() {
     string text = "Hello";
-    text.append(", World!");  // Append another string
 
     cout << "Length: " << text.length() << endl;
     cout << "Text: " << text << endl;

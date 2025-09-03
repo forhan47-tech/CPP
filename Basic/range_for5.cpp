@@ -8,7 +8,7 @@ int main() {
     cout << "Modified Elements:\n";
     for (auto& row : matrix) {  // Iterates over rows
         for (auto& element : row) {  // Iterates over elements in row
-            element += 1;  // Increment each element by 1
+            element += 1;  
         }
     }
 

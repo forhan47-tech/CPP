@@ -4,33 +4,17 @@
 using namespace std;
 
 int main() {
-    vector<int> v = {50, 10, 30, 20, 40, 20};
+    vector<int> nums = {10, 25, 30, 45, 60};
 
-    // Check if the vector is already sorted
-    cout << "Is the vector sorted? "
-         << (is_sorted(v.begin(), v.end()) ? "Yes" : "No") << endl;
+    // std::find — search for exact value
+    auto it1 = find(nums.begin(), nums.end(), 30);
+    if (it1 != nums.end())
+        cout << "Found value 30 at index: " << distance(nums.begin(), it1) << endl;
 
-    // Sort in ascending order
-    sort(v.begin(), v.end());
-    cout << "Sorted in ascending order? "
-         << (is_sorted(v.begin(), v.end()) ? "Yes" : "No") << endl;
-
-    // Sort in descending order
-    sort(v.begin(), v.end(), greater<int>());
-    cout << "Sorted in descending order? "
-         << (is_sorted(v.begin(), v.end(), greater<int>()) ? "Yes" : "No") << endl;
-
-    // Stable sort to preserve relative ordering
-    stable_sort(v.begin(), v.end());
-    cout << "After stable sort: ";
-    for (int num : v) cout << num << " ";
-    cout << endl;
-
-    // Partial sort: Only the first 2 elements will be sorted
-    partial_sort(v.begin(), v.begin() + 2, v.end());
-    cout << "After partial sort (first 2 elements): ";
-    for (int num : v) cout << num << " ";
-    cout << endl;
+    // std::find_if — search using a condition
+    auto it2 = find_if(nums.begin(), nums.end(), [](int x) { return x > 40 && x % 2 == 0; });
+    if (it2 != nums.end())
+        cout << "Found first even number > 40: " << *it2 << " at index: " << distance(nums.begin(), it2) << endl;
 
     return 0;
 }

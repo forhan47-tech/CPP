@@ -4,14 +4,19 @@
 using namespace std;
 
 int main() {
-    forward_list<int> fl = {10, 20, 30, 40};
+    forward_list<int> fl = {10, 10, 20, 20, 30, 30};
 
-    fl.reverse();  // Reverses the list
+    fl.unique();  // Removes consecutive duplicates
 
-    cout << "Reversed list: ";
+    cout << "After unique: ";
     for (int num : fl) cout << num << " ";
+    cout << endl;
+
+    fl.remove(20);  // Removes all 20s
+
+    cout << "After remove(20): ";
+    for (int num : fl) cout << num << " ";
+    cout << endl;
 
     return 0;
 }
-
-

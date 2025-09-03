@@ -1,14 +1,19 @@
 #include <iostream>
 #include <queue>
+#include <sstream>
 
 using namespace std;
 
 int main() {
     priority_queue<int> pq;
+    string input;
     int num;
 
-    cout << "Enter numbers (type -1 to stop): ";
-    while (cin >> num && num != -1) {
+    cout << "Enter numbers separated by spaces: ";
+    getline(cin, input);  // Read entire line
+
+    stringstream ss(input);
+    while (ss >> num) {
         pq.push(num);
     }
 

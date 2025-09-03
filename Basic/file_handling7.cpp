@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    fstream file("output.txt", ios::in | ios::out | ios::app);  // Open file in read/write mode
+    fstream file("output.txt", ios::in | ios::out | ios::app); 
 
     if (file.is_open()) {
         file << "Appending new data!" << endl;

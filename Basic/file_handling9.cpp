@@ -1,29 +1,20 @@
 #include <iostream>
-#include <fstream>
-#include <string>
+#include <filesystem>
 
 using namespace std;
+using namespace filesystem;
 
 int main() {
-    ofstream file("output.txt");
-    string line;
+    path oldName = "example.txt";
+    path newName = "renamed_example.txt";
 
-    if (!file) {
-        cout << "Error opening file!" << endl;
-        return 1;
+    try {
+        rename(oldName, newName);
+        cout << "File renamed successfully!\n";
+    } catch (const filesystem_error& e) {
+        cout << "Error: " << e.what() << endl;
     }
 
-    cout << "Enter multiple lines (type 'exit' to stop):" << endl;
-
-    while (true) {
-        getline(cin, line);
-        if (line == "exit") {  // Check for exit command
-            break;
-        }
-        file << line << endl;
-    }
-
-    file.close();
-    cout << "Lines written successfully to output.txt." << endl;
     return 0;
 }
+

@@ -1,24 +1,17 @@
 #include <iostream>
 #include <set>
-#include <sstream>
-
 using namespace std;
 
 int main() {
-    set<int> mySet;
-    string input;
-    int num;
+    set<int> s = {30, 10, 20, 40, 10};  // Duplicate 10 is ignored
 
-    cout << "Enter numbers separated by spaces: ";
-    getline(cin, input);  // Read entire line
+    s.insert(50);   // Insert new element  
+    s.erase(20);    // Remove element
 
-    stringstream ss(input);
-    while (ss >> num) {
-        mySet.insert(num);
+    for (int num : s) {
+        cout << num << " ";  // Output: 10 30 40 50 (sorted & unique)
     }
-
-    cout << "Set elements: ";
-    for (int num : mySet) cout << num << " ";
 
     return 0;
 }
+

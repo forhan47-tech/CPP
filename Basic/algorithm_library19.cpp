@@ -4,44 +4,20 @@
 using namespace std;
 
 int main() {
-    vector<int> setA = {1, 3, 5};
-    vector<int> setB = {2, 3, 4};
+    vector<int> v = {10, 10, 30, 30, 30, 100, 300, 300, 70, 70, 80};
+    
+    // Sort the vector first
+    sort(v.begin(), v.end()); // v becomes: 10 10 30 30 30 70 70 80 100 300 300
 
-    // Ensure both sets are sorted
-    sort(setA.begin(), setA.end());
-    sort(setB.begin(), setB.end());
+    // Find range of all 30s
+    auto range = equal_range(v.begin(), v.end(), 30);
 
-    // Union
-    vector<int> unionResult(setA.size() + setB.size());
-    auto unionEnd = set_union(setA.begin(), setA.end(), setB.begin(), setB.end(), unionResult.begin());
-    unionResult.resize(distance(unionResult.begin(), unionEnd));
-    cout << "Union Set: ";
-    for (int num : unionResult) cout << num << " ";
-    cout << endl;
-
-    // Intersection
-    vector<int> intersectionResult(min(setA.size(), setB.size()));
-    auto intersectionEnd = set_intersection(setA.begin(), setA.end(), setB.begin(), setB.end(), intersectionResult.begin());
-    intersectionResult.resize(distance(intersectionResult.begin(), intersectionEnd));
-    cout << "Intersection Set: ";
-    for (int num : intersectionResult) cout << num << " ";
-    cout << endl;
-
-    // Difference
-    vector<int> differenceResult(setA.size());
-    auto differenceEnd = set_difference(setA.begin(), setA.end(), setB.begin(), setB.end(), differenceResult.begin());
-    differenceResult.resize(distance(differenceResult.begin(), differenceEnd));
-    cout << "Difference Set: ";
-    for (int num : differenceResult) cout << num << " ";
-    cout << endl;
-
-    // Symmetric Difference
-    vector<int> symmetricResult(setA.size() + setB.size());
-    auto symmetricEnd = set_symmetric_difference(setA.begin(), setA.end(), setB.begin(), setB.end(), symmetricResult.begin());
-    symmetricResult.resize(distance(symmetricResult.begin(), symmetricEnd));
-    cout << "Symmetric Difference Set: ";
-    for (int num : symmetricResult) cout << num << " ";
-    cout << endl;
+    cout << "30 appears from index " << (range.first - v.begin())
+         << " to " << (range.second - v.begin()) << "\n";
+    
+    // show lower and upper bounds
+    cout << "Lower bound of 30 is: " << *range.first << "\n";
+    cout << "Upper bound of 30 is: " << *range.second << "\n";    
 
     return 0;
 }

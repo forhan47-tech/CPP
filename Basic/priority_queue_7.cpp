@@ -1,26 +1,23 @@
 #include <iostream>
 #include <queue>
+
 using namespace std;
 
 int main() {
-    priority_queue<int> pq;  // Default: Max Heap
+    priority_queue<int> pq1, pq2;
 
-    pq.push(10);
-    pq.push(30);
-    pq.push(20);
+    pq1.push(10);
+    pq1.push(20);
+    pq1.push(5);
 
-    cout << "Highest Priority Element: " << pq.top() << endl;  // Output: 30
+    pq2.push(40);
+    pq2.push(50);
 
-    pq.pop();  // Removes 30
+    pq1.swap(pq2);  // Swap contents
 
-    cout << "New Top Element: " << pq.top() << endl;  // Output: 20
-
-    cout << "Size of Priority Queue: " << pq.size() << endl;  // Output: 2
-    
-    cout << "Is Priority Queue Empty? " << (pq.empty() ? "Yes" : "No") << endl;  // Output: No
+    cout << "\nAfter swap:\n";
+    cout << "Top of pq1: " << pq1.top() << "\n";
+    cout << "Top of pq2: " << pq2.top() << "\n";
 
     return 0;
 }
-
-
-

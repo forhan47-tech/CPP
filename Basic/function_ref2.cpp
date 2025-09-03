@@ -8,7 +8,9 @@ void calculate(int a, int b, int &sum, int &product) {
 
 int main() {
     int s, p;
+
     calculate(3, 4, s, p);
+    
     cout << "Sum: " << s << ", Product: " << p << endl;
     return 0;
 }

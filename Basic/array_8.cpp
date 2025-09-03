@@ -8,7 +8,7 @@ int main() {
 
     cout << "Element at index 2: " << arr.at(2) << endl;
 
-    arr[2] = 45;
+    arr[2] = 45; // Modify element at index 2
     cout << "Element at index 2: " << arr[2] << endl;
 
     return 0;

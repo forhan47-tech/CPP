@@ -15,6 +15,11 @@ int main() {
     // Check if an element exists
     cout << "Does 30 exist? " << (s.count(30) ? "Yes" : "No") << endl;
 
+    // Check if an element exists
+    bool exists = s.contains(30);
+
+    cout << "Does 30 exist? " << (exists ? "Yes" : "No") << endl;
+
     return 0;
 }
 

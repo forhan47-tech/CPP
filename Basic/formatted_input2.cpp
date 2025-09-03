@@ -1,5 +1,5 @@
 #include <iostream>
-#include <iomanip> // For manipulators like setw, fixed, scientific, setfill, quoted, put_money, put_time
+#include <iomanip> 
 using namespace std;
 
 int main() {

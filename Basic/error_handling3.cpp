@@ -4,11 +4,14 @@ using namespace std;
 int main() {
     try {
         throw "Critical failure!";
-    } catch (int x) {
+    } 
+    catch (int x) {
         cout << "Integer error: " << x << endl;
-    } catch (const char* msg) {
+    } 
+    catch (const char* msg) {
         cout << "String error: " << msg << endl;
-    } catch (...) {
+    } 
+    catch (...) {
         cout << "Unknown error occurred!" << endl;
     }
     
