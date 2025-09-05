@@ -8,7 +8,7 @@ int main() {
 
     // Assign a lambda to handle the event
     handler = [](int code) {
-        cout << "std::function handled event with code: " << code << endl;
+        cout << "function handled event with code: " << code << endl;
     };
 
     // Trigger the event
