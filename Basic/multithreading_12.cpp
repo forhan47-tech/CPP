@@ -1,12 +1,15 @@
 #include <iostream>
-#include <atomic>
-
+#include <thread>
 using namespace std;
 
-atomic<int> flag(5);
+void backgroundTask() {
+    cout << "Running in background...\n";
+}
 
 int main() {
-    int value = flag.load();
-    cout << "Loaded value: " << value << endl;
+    thread t(backgroundTask);
+    
+    t.detach(); // Runs independently
+    cout << "Main thread continues...\n";
     return 0;
 }

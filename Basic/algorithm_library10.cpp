@@ -9,7 +9,7 @@ int main() {
     vector<string> v2(v1.size()); // must be pre-sized for std::move
 
     // Move elements from v1 to v2
-    move(v1.begin(), v1.end(), v2.begin());  // v1 is now in a valid but unspecified state
+    move(v1.begin(), v1.end(), v2.begin()); 
 
     cout << "Moved elements: ";
     for (const auto& str : v2) cout << str << " ";

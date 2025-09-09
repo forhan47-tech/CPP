@@ -1,20 +1,18 @@
 #include <iostream>
-#include <filesystem>
-
+#include <fstream>
 using namespace std;
-using namespace filesystem;
 
 int main() {
-    path source = "example.txt";
-    path destination = "copy_example.txt";
+    ofstream file("many_values.txt");
 
-    try {
-        copy_file(source, destination, copy_options::overwrite_existing);
-        cout << "File copied successfully!\n";
-    } catch (const filesystem_error& e) {
-        cout << "Error: " << e.what() << endl;
+    if (!file) {
+        cerr << "Error opening file.\n";
+        return 1;
     }
 
+    for (int i = 1; i <= 3; ++i) {
+        file << "ID: " << i << ", Score: " << i * 10 << '\n';
+    }        
+    file.close();
     return 0;
 }
-

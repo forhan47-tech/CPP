@@ -1,12 +1,22 @@
 #include <iostream>
-#include <atomic>
-
+#include <thread>
+#include <chrono>
 using namespace std;
 
-atomic<int> flag;
+void backgroundTask() {
+    cout << "Running in background...\n";
+    this_thread::sleep_for(chrono::seconds(1)); 
+    cout << "Background task finished.\n";
+}
 
 int main() {
-    flag.store(42);
-    cout << "Stored value: " << flag << endl;
+    thread t(backgroundTask);
+    t.detach(); 
+
+    cout << "Main thread continues...\n";
+
+    // Give the detached thread time to complete
+    this_thread::sleep_for(chrono::seconds(2));
+
     return 0;
 }

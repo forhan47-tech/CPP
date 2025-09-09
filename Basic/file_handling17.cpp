@@ -1,29 +1,24 @@
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <string>
-
 using namespace std;
 
 int main() {
-    ofstream file("output.txt");
+    ofstream file("word_output.txt");
 
-    if (!file) {
+    if (!file.is_open()) {
         cout << "Error opening file!" << endl;
         return 1;
     }
 
-    cout << "Enter multiple lines (type 'exit' to stop):" << endl;
-    string line;
+    string sentence = "Writing word by word in C++.";
+    stringstream ss(sentence);
+    string word;
 
-    while (true) {
-        getline(cin, line);
-        if (line == "exit") {  // Check for exit command
-            break;
-        }
-        file << line << endl;
+    while (ss >> word) {
+        file << word << '\n'; // Write each word on a new line
     }
-
     file.close();
-    cout << "Lines written successfully to output.txt." << endl;
     return 0;
 }

@@ -3,13 +3,18 @@
 using namespace std;
 
 int main() {
-    string str1 = "apple", str2 = "banana";
+    string text = "Welcome to C++! C++ code have fun!";
+    
+    // First occurrence
+    size_t firstPos = text.find("C++");
+    if (firstPos != string::npos) {
+        cout << "First occurrence of 'C++' at position: " << firstPos << endl;
+    }
 
-    if (str1 < str2) 
-        cout << "apple comes first!" << endl;
-
-    if (str1.compare(str2) < 0) 
-        cout << "Same result using compare()" << endl;
-
+    // Last occurrence
+    size_t lastPos = text.rfind("C++");
+    if (lastPos != string::npos) {
+        cout << "Last occurrence of 'C++' at position: " << lastPos << endl;
+    }
     return 0;
 }

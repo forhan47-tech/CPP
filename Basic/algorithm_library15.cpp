@@ -11,7 +11,8 @@ int main() {
         {70, "Dave"}
     };
 
-    stable_sort(students.begin(), students.end());
+    // preserving the relative order of equivalent elements
+    stable_sort(students.begin(), students.end()); 
 
     cout << "Sorted by marks (stable):\n";
     for (auto& s : students)

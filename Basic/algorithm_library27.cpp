@@ -9,6 +9,7 @@ int main() {
 
     // Get the next lexicographical permutation
     next_permutation(v.begin(), v.end());
+
     cout << "Next permutation: ";
     for (int n : v)
         cout << n << " ";
@@ -19,6 +20,7 @@ int main() {
 
     // Get the previous lexicographical permutation
     prev_permutation(v.begin(), v.end());
+    
     cout << "Previous permutation: ";
     for (int n : v)
         cout << n << " ";

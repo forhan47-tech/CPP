@@ -1,25 +1,20 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 using namespace std;
 
 int main() {
-    ofstream file("data.txt");
+    ofstream file("lines.txt"); 
 
-    if (!file) {
-        cerr << "Error opening file.\n";
+    if (!file.is_open()) {
         return 1;
     }
 
-    // Write using put()
-    file.put('A');
-    file.put('\n');
-
-
-    string str = "Hello, World!";  // Example string
-    for (char ch : str) 
-    file.put(ch);
-    file.put('\n');
-
+    string line;
+    for (int i = 1; i <= 5; ++i) {
+        getline(cin, line);     
+        file << line << '\n';    // Write the line to the file
+    }
     file.close();
     return 0;
 }

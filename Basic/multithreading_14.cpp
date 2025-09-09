@@ -1,16 +1,15 @@
 #include <iostream>
-#include <future>
-
+#include <atomic>
 using namespace std;
 
-int compute(int x) {
-    return x * x;
-}
-
 int main() {
-    future<int> result = async(compute, 5); // runs in background
-    cout << "Doing other work..." << endl;
+    atomic<int> value(10);  // shared data
 
-    cout << "Result: " << result.get() << endl; // waits for result
+    int old = value.fetch_add(5); 
+    cout << "Old value: " << old << ", New value: " << value << endl;
+
+    int newVal = value.fetch_sub(3); 
+    cout << "Previous value: " << newVal << ", Current value: " << value << endl;
+
     return 0;
 }
