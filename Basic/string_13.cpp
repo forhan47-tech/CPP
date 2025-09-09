@@ -3,15 +3,19 @@
 using namespace std;
 
 int main() {
-    string text = "Hello";
+    string text = "World";
 
-    cout << "Length: " << text.length() << endl;
-    cout << "Text: " << text << endl;
+    text.insert(0, "Hello, ");  // Insert at beginning
+    cout << "Inserted: " << text << endl;
 
-    text.clear();
-    cout << "Is Empty? " << (text.empty() ? "Yes" : "No") << endl; 
-    cout << "Length after clear: " << text.size() << endl;
+    text.erase(5, 2);  // Remove ", "
+    cout << "After Erase: " << text << endl;
 
+    int pos = 4;
+    if (pos < text.size()) {
+        cout << "Substring: " << text.substr(pos, 5) << endl; // Substring
+    } 
     return 0;
 }
+
 

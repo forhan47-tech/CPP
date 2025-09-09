@@ -1,21 +1,19 @@
 #include <iostream>
 #include <thread>
 #include <mutex>
-
 using namespace std;
 
 mutex mtx;
-int counter = 0;
 
-void increment() {
-    lock_guard<mutex> lock(mtx);
-    counter++;
-    cout << "Counter: " << counter << endl;
+void safePrint(int id) {
+    lock_guard<mutex> lock(mtx);   // threads safety
+    cout << "Thread " << id << "\n";
 }
 
 int main() {
-    thread t1(increment);
-    thread t2(increment);
+    thread t1(safePrint, 1);
+    thread t2(safePrint, 2);
+
     t1.join();
     t2.join();
 

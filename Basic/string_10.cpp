@@ -1,22 +1,20 @@
-#include<iostream>
-#include<string>  // Needed for string
+#include <iostream>
+#include <string>
 using namespace std;
 
 int main() {
-    string names[3];  // Array of 3 strings
+    string str1 = "Hello, ";
+    string str2 = "World!";
 
-    cout << "Enter 3 full names:" << endl;
+    // Using + and +=
+    string combined = str1 + str2;  
 
-    for (int i = 0; i < 3; i++) {
-        getline(cin, names[i]);  // Read full line into a string
-    }
-
-    cout << "The names are:" << endl;
-
-    for (int i = 0; i < 3; i++) {
-        cout << names[i] << endl;  // Output each name
-    }
-
+    combined += "Welcome to C++.";  
+    cout << "Combined: " << combined << endl;
+    
+    // Using append()
+    str1.append(str2);  
+    cout << "Appended: " << str1 << endl;
     return 0;
 }
 

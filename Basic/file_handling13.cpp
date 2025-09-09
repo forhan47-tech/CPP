@@ -1,27 +1,15 @@
 #include <iostream>
 #include <fstream>
-
 using namespace std;
 
 int main() {
-    ofstream file("output.txt"); // Open file for writing
-
-    string line = "This is a sample line.";
-    int number = 42;
+    ofstream file("data.txt", ios::app); // Open file in append mode
 
     if (file.is_open()) {
-        file << "Hello, World!\n"; // Write multiple lines
-        file << "File handling in C++.\n";
+        file << "Line 1: This is an appended line.\n";  // Append multiple lines
+        file << "Line 2: File handling in C++.\n";
 
-        file << line << "\n"; // Write a string variable
-        file << "The answer is: " << number << "\n"; // Write an integer variable
-
-        file.close(); // Close file
-        cout << "Data written successfully!" << endl;
-    } else {
-        cout << "Error opening file!" << endl;
+        file.close();
     }
-
     return 0;
 }
-

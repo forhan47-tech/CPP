@@ -3,15 +3,12 @@
 using namespace std;
 
 int main() {
-    string original = "C++";
-    string copy;
+    string s = "   Beautiful day ahead   ";
 
-    copy.assign(original);  // Assign using `assign()`
-    cout << "Original: " << original << "\nCopy: " << copy << endl;
-    
-    copy = original;  // Alternative way to copy
-    cout << "Original: " << original << "\nCopy: " << copy << endl;
+    size_t first_vowel = s.find_first_of("aeiou");
+    size_t last_non_space = s.find_last_not_of(" ");
 
+    cout << "First vowel at index: " << first_vowel << endl;
+    cout << "Last non-space character at index: " << last_non_space << endl;
     return 0;
 }
-

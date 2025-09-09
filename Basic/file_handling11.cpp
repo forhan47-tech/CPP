@@ -1,24 +1,20 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 
 using namespace std;
 
 int main() {
-    ifstream file("output.txt"); // Open file for reading
-    ofstream temp("temp.txt"); // Temporary file to write output
-
+    ofstream file("data.txt");
+    
     if (!file) {
-        cout << "Error opening file!" << endl;
+        cerr << "Error opening file!" << endl;
         return 1;
     }
 
-    char ch;
-    while (file.get(ch)) { // Read character by character
-        temp.put(ch); // Write each character to the temporary file
-    }
+    file << "Name: " << "Alice" << ", Age: " << 25 << '\n'; // Write formatted text
+    file << "Hello, World!" << endl;
 
     file.close();
-    temp.close();
-
     return 0;
 }

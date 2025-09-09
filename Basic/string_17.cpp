@@ -3,13 +3,13 @@
 using namespace std;
 
 int main() {
-    string text = "World";
-    text.insert(0, "Hello, ");  // Insert at beginning
+    string str = "100";
 
-    cout << "Inserted: " << text << endl;
+    cout << "Integer Value: " << stoi(str) << endl;
+    cout << "Double Value: " << stod(str) << endl;
 
-    text.erase(5, 2);  // Remove ", "
-    cout << "After Erase: " << text << endl;
+    int num = 100;
+    cout << "String Value: " << to_string(num) + " is now a string!" << endl;
 
     return 0;
 }

@@ -3,17 +3,20 @@
 using namespace std;
 
 int main() {
-    list<int> l = {1, 2, 3};
+    list<int> lst = {10, 20, 20, 30, 40};
 
-    auto it = l.begin();
-    advance(it, 2);  // Move iterator to third element
-    l.insert(it, 99);  // Insert 99 at position 2
+    // remove example
+    lst.remove(20); 
 
-    l.erase(it);  // Remove element at position 2
+    cout << "\nAfter remove: ";
+    for (int n : lst) cout << n << " ";
 
-    cout << "Modified List: ";
-    for (int num : l) cout << num << " ";
+    // remove_if example
+    lst.remove_if([](int x) { return x > 25; });
+
+    cout << "\nAfter remove_if (>25): ";
+    for (int n : lst) cout << n << " ";
+        cout << endl;
 
     return 0;
 }
-

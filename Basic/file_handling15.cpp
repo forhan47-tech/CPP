@@ -1,26 +1,20 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 using namespace std;
 
 int main() {
-    ofstream file("many_values.txt");
+    ofstream file("chars.txt"); 
 
     if (!file.is_open()) {
-        cerr << "Error opening file.\n";
+        cout << "Error opening file!" << endl;
         return 1;
     }
 
-    // Write 100 values: squares of numbers from 1 to 100
-    for (int i = 1; i <= 100; ++i) {
-        string name;
-
-        cout << "Enter name for entry " << i << ": ";
-        cin >> name;
-
-        file << "Value " << i << ": " << i * i << " " << name << "\n";
+    string str = "All is Well";
+    for (char ch : str) {
+        file.put(ch); // Write each character
     }
-
     file.close();
-    cout << "100 values written to many_values.txt\n";
     return 0;
 }

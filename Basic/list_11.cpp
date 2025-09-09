@@ -3,15 +3,34 @@
 using namespace std;
 
 int main() {
-    list<int> l = {30, 10, 50, 20, 40};
-
-    l.sort();  // Sorts in ascending order
+    list<int> l1 = {1, 2, 5};
+    list<int> l2 = {4, 3};
     
-    // l.sort(greater<int>());  // Sorts in descending order
+    // Moving all elements from l2 to the beginning of l1
+    l1.splice(l1.begin(), l2); 
 
-    cout << "Sorted List: ";
-    for (int num : l) cout << num << " ";  // Output: 10 20 30 40 50
+    cout << "After moving l2 to the beginning of l1: ";
+    for (int num : l1) cout << num << " ";
+    cout << endl;
 
+    // moving the first element of l1 to the end of l1
+    l1.splice(l1.end(), l1, l1.begin()); 
+
+    cout << "After moving first element to end: ";
+    for (int num : l1) cout << num << " ";
+    cout << endl;
+
+    // Moving a range of elements from l1 to l2
+    auto first = l1.begin();
+    auto last = next(first, 2); 
+
+    l2.splice(l2.end(), l1, first, last);
+    
+    cout << "After moving first two elements of l1 to l2: ";
+    for (int num : l2) cout << num << " ";
+    cout << endl;
+
+    
     return 0;
 }
 

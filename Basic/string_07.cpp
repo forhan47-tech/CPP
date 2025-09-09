@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string text = "Hello";
+
+    cout << "Length: " << text.length() << endl;
+
+    text.clear(); // Clear all characters  
+    cout << "Is Empty? " << (text.empty() ? "Yes" : "No") << endl; 
+    
+    cout << "Length after clear: " << text.size() << endl;
+    return 0;
+}
+

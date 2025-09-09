@@ -1,0 +1,14 @@
+#include <iostream>
+#include <unordered_set>
+using namespace std;
+
+int main() {
+    unordered_set<int> us = {30, 10, 20, 40, 10};  
+
+    cout << "\ndoes 10 exist? " << (us.find(10) != us.end() ? "Yes" : "No") << endl;    
+    cout << "\nDoes 30 exist? " << (us.count(30) ? "Yes" : "No") << endl;
+
+    cout << "\nDoes 50 exist? " << (us.contains(50) ? "Yes" : "No") << endl;
+    return 0;
+}
+

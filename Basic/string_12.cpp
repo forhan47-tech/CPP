@@ -1,17 +1,15 @@
 #include <iostream>
 #include <string>
-
 using namespace std;
 
 int main() {
-    string str = "Hello";
+    string str1 = "apple", str2 = "banana";
 
-    cout << "First character: " << str.front() << endl;
-    cout << "Last character: " << str.back() << endl;
+    if (str1 < str2) 
+        cout << "apple comes first!" << endl;
 
-    cout << "Character at index 2: " << str.at(2) << endl; // Safe access
-    cout << "Character at index 2: " << str[4] << endl;   // Direct index access
-
+    // Using compare()
+    if (str1.compare(str2) < 0) 
+        cout << "Same result using compare()" << endl;
     return 0;
 }
-
