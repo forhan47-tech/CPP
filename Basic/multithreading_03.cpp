@@ -1,15 +1,14 @@
 #include <iostream>
 #include <thread>
-using namespace std; 
+using namespace std;
 
-void add(int a, int b) {
-    cout << "Sum: " << a + b << endl;
+void task() {
+    cout << "Hello from thread!\n";
 }
 
 int main() {
-    thread t(add, 5, 3);
-
-    t.join();
-    cout << "Main thread finished." << endl;
+    thread t(task); // Start thread
+    t.join();       // Wait for thread to finish
+    cout << "Main thread finished.\n";
     return 0;
 }

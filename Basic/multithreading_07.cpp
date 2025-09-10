@@ -3,13 +3,11 @@
 using namespace std;
 
 int main() {
-    int x = 10, y = 20;
+    thread t([](int a, int b) {
+        cout << "Sum: " << a + b << endl;
+    }, 5, 3);
 
-    thread t([=]() {
-        cout << "Sum: " << x + y << endl;
-    });
-
-    t.join();
+    t.join(); 
 
     cout << "Main thread finished." << endl;
     return 0;

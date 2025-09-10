@@ -1,13 +1,15 @@
 #include <iostream>
-#include <chrono>
-#include <thread>
-
+#include <mutex>
+#include <string>
 using namespace std;
-using namespace chrono;
+
+mutex logMutex;
+
+void logMessage(const string& msg) {
+    lock_guard<mutex> lock(logMutex);
+    cout << msg << endl;
+}
 
 int main() {
-    cout << "Waiting for 2 seconds...\n";
-    this_thread::sleep_for(seconds(2)); // Simulate work
-    cout << "Done!\n";
-    return 0;
+    logMessage("Thread-safe logging initialized.");
 }

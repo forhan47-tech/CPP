@@ -1,17 +1,17 @@
 #include <iostream>
-#include <future>
+#include <atomic>
 using namespace std;
 
-int compute(int a, int b) {
-    return a + b;
-}
-
 int main() {
-    // Launch asynchronously with two arguments
-    future<int> result = async(launch::async, compute, 20, 22);
+    atomic<bool> flag(false);
 
-    cout << "Waiting for result...\n";
-    cout << "Result: " << result.get() << endl; // Blocks until ready
+    cout << "Initial flag: " << flag << endl;
+
+    flag.store(true);
+    cout << "Flag after store: " << flag << endl;
+
+    bool current = flag.load();
+    cout << "Flag loaded: " << current << endl;
 
     return 0;
 }

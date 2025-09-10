@@ -2,14 +2,15 @@
 #include <thread>
 using namespace std;
 
-void task() {
-    cout << "Hello from thread!\n";
-}
+struct Task {
+    void operator()() {
+        cout << "Functor thread executed.\n";
+    }
+};
 
 int main() {
-    thread t(task); // Start thread
-    
-    t.join();       // Wait for thread to finish
-    cout << "Main thread finished.\n";
+    Task log;
+    thread t(log);
+    t.join();
     return 0;
 }
