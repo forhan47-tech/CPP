@@ -1,15 +1,17 @@
 #include <iostream>
 #include <thread>
-#include <string>
 using namespace std;
 
-void printMessage(string msg, int count) {
-    for (int i = 0; i < count; ++i)
-        cout << msg << " " << i << endl;
-}
+struct Task {
+    void operator()(int count) {
+        for (int i = 0; i < count; ++i)
+            cout << "Functor thread executed [" << i << "]\n";
+    }
+};
 
 int main() {
-    thread t(printMessage, "Thread running", 5);
+    Task log;
+    thread t(log, 3); // Pass parameter to operator()
     t.join();
     return 0;
 }

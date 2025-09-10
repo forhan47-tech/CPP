@@ -9,6 +9,5 @@ int main() {
 
     cout << "Map size after clear: " << mm.size() << endl;
     cout << "Is Empty? " << (mm.empty() ? "Yes" : "No") << endl;
-
     return 0;
 }

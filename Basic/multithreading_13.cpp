@@ -1,22 +1,21 @@
 #include <iostream>
 #include <thread>
-#include <chrono>
+#include <mutex>
 using namespace std;
 
-void backgroundTask() {
-    cout << "Running in background...\n";
-    this_thread::sleep_for(chrono::seconds(1)); 
-    cout << "Background task finished.\n";
+mutex mtx;
+
+void safePrint(int id) {
+    lock_guard<mutex> lock(mtx);   // threads safety
+    cout << "Thread " << id << "\n";
 }
 
 int main() {
-    thread t(backgroundTask);
-    t.detach(); 
+    thread t1(safePrint, 1);
+    thread t2(safePrint, 2);
 
-    cout << "Main thread continues...\n";
-
-    // Give the detached thread time to complete
-    this_thread::sleep_for(chrono::seconds(2));
+    t1.join();
+    t2.join();
 
     return 0;
 }

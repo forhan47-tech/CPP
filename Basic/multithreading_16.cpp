@@ -3,15 +3,13 @@
 using namespace std;
 
 int main() {
-    atomic<bool> flag(false);
+    atomic<int> value(10);  // shared data
 
-    cout << "Initial flag: " << flag << endl;
+    int old = value.fetch_add(5); 
+    cout << "Old value: " << old << ", New value: " << value << endl;
 
-    flag.store(true);
-    cout << "Flag after store: " << flag << endl;
-
-    bool current = flag.load();
-    cout << "Flag loaded: " << current << endl;
+    int newVal = value.fetch_sub(3); 
+    cout << "Previous value: " << newVal << ", Current value: " << value << endl;
 
     return 0;
 }

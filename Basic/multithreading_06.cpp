@@ -3,12 +3,9 @@
 using namespace std;
 
 int main() {
-    thread t([](int a, int b) {
-        cout << "Sum: " << a + b << endl;
-    }, 5, 3);
-
-    t.join(); 
-
-    cout << "Main thread finished." << endl;
+    thread t([]() {
+        cout << "Lambda thread executed.\n";
+    });
+    t.join();
     return 0;
 }

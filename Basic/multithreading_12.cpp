@@ -1,15 +1,21 @@
 #include <iostream>
 #include <thread>
+#include <mutex>
 using namespace std;
 
-void backgroundTask() {
-    cout << "Running in background...\n";
+mutex mtx;
+
+void printMessage(string msg) {
+    lock_guard<mutex> lock(mtx); 
+    cout << msg << endl;
 }
 
 int main() {
-    thread t(backgroundTask);
-    
-    t.detach(); // Runs independently
-    cout << "Main thread continues...\n";
+    thread t1(printMessage, "Thread 1");
+    thread t2(printMessage, "Thread 2");
+
+    t1.join();
+    t2.join();
+
     return 0;
 }

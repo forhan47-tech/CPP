@@ -1,12 +1,20 @@
 #include <iostream>
-#include <atomic>
+#include <thread>
+#include <chrono>
 using namespace std;
 
+void backgroundTask() {
+    cout << "Running in background...\n";
+    this_thread::sleep_for(chrono::seconds(1)); 
+    cout << "Background task finished.\n";
+}
+
 int main() {
-    atomic<int> val(42);
+    thread t(backgroundTask);
+    t.detach(); 
+    cout << "Main thread continues...\n";
 
-    int old = val.exchange(100);
-    cout << "Old value: " << old << ", New value: " << val << endl;
-
+    // Give the detached thread time to complete
+    this_thread::sleep_for(chrono::seconds(2));
     return 0;
 }

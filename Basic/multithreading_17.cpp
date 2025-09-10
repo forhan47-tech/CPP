@@ -1,23 +1,12 @@
 #include <iostream>
-#include <thread>
 #include <atomic>
-
 using namespace std;
 
-atomic<int> counter(0);
-
-void atomicIncrement() {
-    for (int i = 0; i < 1000; ++i)
-        ++counter;
-}
-
 int main() {
-    thread t1(atomicIncrement);
-    thread t2(atomicIncrement);
+    atomic<int> val(42);
 
-    t1.join();
-    t2.join();
+    int old = val.exchange(100);
+    cout << "Old value: " << old << ", New value: " << val << endl;
 
-    cout << "Atomic counter: " << counter << endl;
     return 0;
 }
