@@ -1,24 +1,24 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-class Vault {
-private:    
-    int secret = 12345;
+class Engine {
+    int horsepower;
+    friend class Car;  // Car can access private members of Engine
 
-    friend class Spy;  // spy is a friend class and can access private members
+public:
+    Engine(int hp) : horsepower(hp) {}    
 };
 
-class Spy {
+class Car {
 public:
-    void hack(const Vault& obj) {
-        cout << "Accessing secret: " << obj.secret << endl;
-    }
+    void showInfo(const Engine& e) {
+        cout << "Horsepower: " << e.horsepower << endl;
+    }    
 };
 
 int main() {
-    Vault v1;
-
-    Spy agent;
-    agent.hack(v1);  // ✅ Can access private member
+    Engine e1(300);
+    Car c1;
+    c1.showInfo(e1); 
     return 0;
 }
