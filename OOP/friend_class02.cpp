@@ -1,19 +1,23 @@
 #include <iostream>
 using namespace std;
 
-class Secrets {
-private:
-    int pin = 1234;
+class Engine {
+    int horsepower;
 
-    friend void reveal(Secrets); // friend function
+public:
+    Engine(int hp) : horsepower(hp) {}
+
+    // Declare a friend function
+    friend void showInfo(const Engine& e);
 };
 
-void reveal(Secrets obj) {
-    cout << "Access granted: " << obj.pin << endl;
+// Define the friend function
+void showInfo(const Engine &e) {
+    cout << "Horsepower: " << e.horsepower << endl;
 }
 
 int main() {
-    Secrets s;
-    reveal(s);  // ✅ Can access private pin
+    Engine e1(300);
+    showInfo(e1);  // Directly calls the friend function
     return 0;
 }
