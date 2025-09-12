@@ -16,7 +16,9 @@ int main() {
         destination.put(ch);
     }
 
+    source.close();
+    destination.close();
+    
     cout << "File copied successfully!" << endl;
-    file.close();
     return 0;
 }
