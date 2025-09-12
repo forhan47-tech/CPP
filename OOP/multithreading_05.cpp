@@ -5,7 +5,7 @@ using namespace std;
 
 class CircleArea {
     mutex logMutex; // Instance-level mutex
-
+    
 public:
     void operator()(double radius) {
         double area = 3.1416 * radius * radius;

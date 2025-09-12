@@ -13,8 +13,8 @@ public:
 int main() {
     CircleArea calc;
 
-    thread t(calc, 5.0); 
-    t.join();
+    thread t(calc, 5.0);  
+    t.join();  
     cout << "Main thread finished.\n";
     return 0;
 }

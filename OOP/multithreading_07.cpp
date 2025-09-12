@@ -14,7 +14,6 @@ int main() {
 
     // Launch asynchronously and get future
     future<double> result = async(launch::async, calc, 5);
-
     // Do other work here...
     cout << "Area of circle with radius 5 is " << result.get() << endl;
     cout << "Main thread finished.\n";
