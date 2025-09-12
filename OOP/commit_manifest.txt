@@ -1,0 +1,25 @@
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   ../Basic Exercise/file_copy.cpp
+	modified:   ../Basic Exercise/file_encrypted.cpp
+	modified:   ../Basic Exercise/file_freqCount.cpp
+	deleted:    ../Basic Exercise/largest_word.cpp
+	modified:   ../Basic Exercise/reverse_words2.cpp
+	modified:   ../Basic/file_handling21.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../Basic Exercise/concatenated_string.cpp
+	../Basic Exercise/largest_word1.cpp
+	../Basic Exercise/largest_word2.cpp
+	../Basic Exercise/remove_newline.cpp
+	../Basic Exercise/reverse_chars.cpp
+	../Basic Exercise/sort_words.cpp
+	../Basic Exercise/upper_to_lower.cpp
+	../Basic/file_handling22.cpp
+	../Container/
+	commit_manifest.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
