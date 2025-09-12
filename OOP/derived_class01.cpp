@@ -16,9 +16,9 @@ public:
 };
 
 int main() {
-    Derived d;
-    
+    Derived d;  
+
     d.greet();  // Inherited method
-    d.wave(); 
+    d.wave();   
     return 0;
 }

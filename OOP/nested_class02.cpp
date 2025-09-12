@@ -15,7 +15,7 @@ public:
 };
 
 int main() {
-    Tree::Node n(10); // Creating a Node object using Tree's scope
+    Tree::Node n(10); // Creating a Node object using Tree's scope  
     cout << n.value << endl; 
     n.showInfo();
     return 0;

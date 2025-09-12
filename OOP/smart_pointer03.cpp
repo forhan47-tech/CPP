@@ -4,8 +4,11 @@ using namespace std;
 
 class Circle {
 public:
-    Circle(double r) : radius(r) {}
-    double area() const { return 3.1416 * radius * radius; }
+    Circle(double r) : radius(r) {}  
+    double area() const { 
+        return 3.1416 * radius * radius; 
+    }
+
 private:
     double radius;
 };

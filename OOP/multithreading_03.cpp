@@ -18,7 +18,6 @@ int main() {
 
     thread t(calc);      
     t.join();
-
     cout << "Main thread finished.\n";
     return 0;
 }

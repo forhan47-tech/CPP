@@ -12,6 +12,7 @@ public:
 
 int main() {
     Task log;
+    
     thread t(log); // Launch thread with functor class
     t.join();        
     cout << "Main thread finished.\n";
