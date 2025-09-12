@@ -1,7 +1,6 @@
 #include <iostream>
 #include <thread>
 #include <atomic>
-
 using namespace std;
 
 atomic<int> counter(0);

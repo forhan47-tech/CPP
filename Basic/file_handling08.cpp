@@ -13,4 +13,7 @@ int main() {
     if (file.eof()) {
         cout << "End of file reached!" << endl;
     }
+    
+    file.close();
+    return 0;
 }

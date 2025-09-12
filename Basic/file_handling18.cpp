@@ -10,6 +10,5 @@ int main() {
     } catch (const filesystem_error& e) {
         cerr << "Error renaming file: " << e.what() << endl;
     }
-
     return 0;
 }

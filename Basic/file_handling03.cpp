@@ -21,8 +21,8 @@ int main() {
         cout << num << " ";
     }
     cout << endl;
-    file.close();  
 
+    file.close();  
     return 0;
 }
 

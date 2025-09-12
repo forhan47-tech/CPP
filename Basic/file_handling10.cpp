@@ -10,7 +10,7 @@ int main() {
         file << "Hello, World!\n"; 
         file << "File handling in C++.\n"; // Write multiple lines     
         file.close(); 
-    } 
+    }  
     return 0;
 }
 

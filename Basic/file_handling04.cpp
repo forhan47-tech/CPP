@@ -11,7 +11,6 @@ int main() {
     }
 
     string data;
-
     // Read and display the first word
     file >> data; 
     cout << "First word: " << data << endl;
