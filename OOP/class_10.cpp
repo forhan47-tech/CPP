@@ -2,24 +2,22 @@
 using namespace std;
 
 class Student {
-    int roll;
 public:
-    Student(int r);     // Constructor declaration
-    void display();     // Member function declaration
+    int roll;
+    string name;
 };
 
-// Scope resolution to define constructor
-Student::Student(int r) {
-    roll = r;
-}
-
-// Scope resolution to define member function
-void Student::display() {
-    cout << "Roll: " << roll << endl;
-}
-
 int main() {
-    Student s(2025);  // Object created on stack
-    s.display();
+    Student s1;
+
+    cout << "Enter student roll number: ";
+    cin >> s1.roll;
+    cin.ignore();
+    cout << "Enter student name: ";
+    getline(cin, s1.name);
+
+    cout << "\nStudent Details:\n";
+    cout << "Name: " << s1.name << endl;
+    cout << "Roll: " << s1.roll << endl;
     return 0;
 }

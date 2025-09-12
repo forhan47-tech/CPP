@@ -5,22 +5,29 @@ class Student {
     string name;
     int marks;
 public:
-    void input() {
+    void getData() {
         cout << "Enter name: ";
         cin >> name;
         cout << "Enter marks: ";
         cin >> marks;
     }
-
-    void output() const {
+    
+    void showData() {
         cout << "Name: " << name << ", Marks: " << marks << endl;
     }
 };
 
 int main() {
-    Student s;
+    Student st[3]; 
 
-    s.input();   // Input via class method
-    s.output();  // Output via class method
+    for (int i = 0; i < 3; ++i) {
+        cout << "Student " << i + 1 << endl;
+        st[i].getData();
+    }
+
+    cout << "\nStudent Details:\n";
+    for (int i = 0; i < 3; ++i) {
+        st[i].showData();
+    }
     return 0;
 }

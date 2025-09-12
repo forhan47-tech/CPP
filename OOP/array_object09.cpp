@@ -4,23 +4,26 @@ using namespace std;
 class Student {
     string name;
     int marks;
-
+    
 public:
     Student() {
         cout << "Enter name: ";
-        getline(cin, name);
+        cin >> name;
         cout << "Enter marks: ";
         cin >> marks;
     }
 
-    void output() const {
+    void showData() {
         cout << "Name: " << name << ", Marks: " << marks << endl;
     }
 };
 
 int main() {
-    Student s; // Calls constructor to input details
+    Student st[3]; // Will call the constructor 3 times automatically
 
-    s.output(); 
+    cout << "\nStudent Details:\n";
+    for (int i = 0; i < 3; ++i) {
+        st[i].showData();
+    }
     return 0;
 }
