@@ -14,11 +14,12 @@ int main() {
 
     string sentence = "Writing word by word in C++.";
     stringstream ss(sentence);
-    string word;
 
+    string word;
     while (ss >> word) {
         file << word << '\n'; // Write each word on a new line
     }
+    
     file.close();
     return 0;
 }

@@ -11,9 +11,10 @@ void backgroundTask() {
 
 int main() {
     thread t(backgroundTask);
+
     t.detach(); 
     cout << "Main thread continues...\n";
-
+    
     // Give the detached thread time to complete
     this_thread::sleep_for(chrono::seconds(2));
     return 0;

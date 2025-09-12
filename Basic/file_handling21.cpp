@@ -7,7 +7,7 @@ int main() {
     ofstream destination("destination.txt", ios::out);
 
     if (!source.is_open() || !destination.is_open()) {
-        cout << "Error opening files." << endl;
+        cerr << "Error opening files." << endl;
         return 1;
     }
 

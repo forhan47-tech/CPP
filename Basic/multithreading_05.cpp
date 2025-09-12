@@ -8,7 +8,6 @@ void add(int a, int b) {
 
 int main() {
     thread t(add, 5, 3);
-
     t.join();
     cout << "Main thread finished." << endl;
     return 0;

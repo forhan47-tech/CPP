@@ -12,6 +12,5 @@ int main() {
     lambda();  // Output: Inside lambda: 1
 
     cout << "Outside: " << count << endl;  // Output: Outside: 0
-
     return 0;
 }

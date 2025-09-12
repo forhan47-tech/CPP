@@ -15,6 +15,7 @@ int main() {
         getline(cin, line);     
         file << line << '\n';    // Write the line to the file
     }
+    
     file.close();
     return 0;
 }

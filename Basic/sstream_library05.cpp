@@ -6,6 +6,7 @@ using namespace std;
 int main() {
     string line = "42 John 3.5";
     stringstream ss(line);
+    
     int id;
     string name;
     float score;

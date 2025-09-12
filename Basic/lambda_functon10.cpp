@@ -14,6 +14,5 @@ int main() {
     for (int n : nums)
         cout << n << " ";
     cout << endl;
-
     return 0;
 }

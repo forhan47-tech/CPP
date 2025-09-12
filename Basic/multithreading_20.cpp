@@ -13,6 +13,5 @@ int main() {
 
     cout << "Waiting for result...\n";
     cout << "Result: " << result.get() << endl; // Blocks until ready
-
     return 0;
 }

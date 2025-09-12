@@ -15,6 +15,7 @@ int main() {
     for (char ch : str) {
         file.put(ch); // Write each character
     }
+    
     file.close();
     return 0;
 }

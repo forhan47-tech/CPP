@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    ofstream file("many_values.txt");
+    ofstream file("data.txt");
 
     if (!file) {
         cerr << "Error opening file.\n";
@@ -12,7 +12,8 @@ int main() {
 
     for (int i = 1; i <= 3; ++i) {
         file << "ID: " << i << ", Score: " << i * 10 << '\n';
-    }        
+    }   
+         
     file.close();
     return 0;
 }
