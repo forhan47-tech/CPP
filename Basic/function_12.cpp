@@ -12,6 +12,7 @@ int main() {
         {"Alice", 50},
         {"Bob", 40}
     };
+    
     updateScores(scores);
 
     for (const auto& [name, score] : scores)

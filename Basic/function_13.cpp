@@ -9,6 +9,5 @@ pair<int, int> minMax(int a, int b) {
 int main() {
     auto result = minMax(10, 20);
     cout << "Min: " << result.first << ", Max: " << result.second << endl;
-
     return 0;
 }

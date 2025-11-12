@@ -6,7 +6,7 @@ int main() {
     vector<int> v1(10); 
 
     cout << "Enter 10 numbers: ";
-    for (int &num : v1) {
+    for (int& num : v1) {
         cin >> num; 
     }
 

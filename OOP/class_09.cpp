@@ -4,10 +4,12 @@ using namespace std;
 
 class MyClass {
 private:
-    vector<int> arr(10); 
+    vector<int> arr; 
 
 public:
     MyClass() {
+        arr.resize(10);
+        
         cout << "Enter 10 integers: ";
         for (int i = 0; i < arr.size(); ++i) {
             cin >> arr[i];
