@@ -2,16 +2,13 @@
 using namespace std;
 
 int main() {
-    int num = 10;     
-    int &ref = num;    // 'ref' is a reference (alias) to 'num'
+    int a = 100;
+    int& ref = a; // ref is another name for a
 
-    cout << "Original num: " << num << endl; 
-    cout << "Reference ref: " << ref << endl; 
+    cout << "Value of a: " << a << endl;
+    cout << "Value via ref: " << ref << endl;
 
-    // Modify value
-    ref = 20; 
-    cout << "Modified num: " << num << endl; 
-
+    ref = 200; // Changing ref also changes a
+    cout << "Updated a: " << a << endl;
     return 0;
 }
-

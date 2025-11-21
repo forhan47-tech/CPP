@@ -14,7 +14,6 @@ int main() {
     cout << "Enter your name: ";
     getline(cin, name); 
     cout << "Name: " << name << endl;
-
     return 0;
 }
 

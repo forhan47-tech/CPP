@@ -1,8 +1,7 @@
-#include <iostream> // Header file for input/output
-using namespace std; // Namespace to use standard library functions
+#include <iostream>   // Preprocessor directive
+using namespace std;  // Namespace directive
 
-int main() {         // Main function
-    cout << "Hello, Naimuddin!" << endl;
-    cout << "Welcome to C++ programming!" << endl; 
-    return 0;         // Return 0 indicates successful execution
+int main() {          // Main function
+    cout << "Hello, C++ Basics!" << endl; // Statement
+    return 0;         // Exit status
 }

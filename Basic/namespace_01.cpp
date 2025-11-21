@@ -16,7 +16,6 @@ namespace LibraryB {
 int main() {
     LibraryA::display();
     LibraryB::display();
-    
     return 0;
 }
 

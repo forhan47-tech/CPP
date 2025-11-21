@@ -1,8 +1,7 @@
 #include <bits/stdc++.h> // Includes all standard headers (GCC-specific)
-using namespace std;     // Use standard namespace
+using namespace std;
 
 int main() {
-    cout << "Hello, Naimuddin!" << endl;
-    cout << "Welcome to C++ programming!" << endl;
+    cout << "Hello, C++ Basics!" << endl; // Statement
     return 0;
 }

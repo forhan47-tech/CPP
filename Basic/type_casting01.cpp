@@ -10,8 +10,7 @@ int main() {
     // **Explicit Type Conversion (Using static_cast)**
     double pi = 3.14159;
     int Pi = static_cast<int>(pi); 
-    cout << "Explicit Conversion: Double " << pi << " converted to Integer " << Pi << endl;
-    
+    cout << "Explicit Conversion: Double " << pi << " converted to Integer " << Pi << endl; 
     return 0;
 }
 

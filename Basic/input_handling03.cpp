@@ -12,4 +12,3 @@ int main() {
     cout << "You entered: Age = " << age << ", Height = " << height << ", Grade = " << grade << endl;
     return 0;
 }
-
