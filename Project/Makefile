@@ -6,7 +6,7 @@ CXXFLAGS	=	-Wall	-Iinclude
 TARGET	=	hello_app
 
 #	Source	and	object	files
-SRC	=	src/main.cpp	src/hello.cpp
+SRC	=	src/main.cpp	src/hello.cpp	src/math_utils.cpp
 OBJ	=	$(SRC:.cpp=.o)
 
 #	Default	rule

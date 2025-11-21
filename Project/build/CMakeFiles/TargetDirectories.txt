@@ -1,0 +1,3 @@
+/mnt/shared/C++/Project/build/CMakeFiles/hello_app.dir
+/mnt/shared/C++/Project/build/CMakeFiles/edit_cache.dir
+/mnt/shared/C++/Project/build/CMakeFiles/rebuild_cache.dir
