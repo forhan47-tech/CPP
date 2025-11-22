@@ -9,7 +9,6 @@ int main() {
         {"Charlie", 92}
     };
 
-    // Reference allows Modification
     for (auto& [name, score] : marks) {
         score += 5;
     }

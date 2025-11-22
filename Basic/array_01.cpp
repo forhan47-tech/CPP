@@ -2,14 +2,10 @@
 using namespace std;
 
 int main() {
-    int arr[5] = {10, 20, 30, 40, 50}; // Array of 5 integers
+    int arr[10];
 
-    cout << "First element: " << arr[0] << endl;
-    cout << "Third element: " << arr[2] << endl;
-
-    // Traversing array
-    for (int i = 0; i < 5; i++) {
-        cout << "arr[" << i << "] = " << arr[i] << endl;
-    }
+    cout << "Total size of array: " << sizeof(arr) << " bytes" << endl;
+    cout << "Size of one element: " << sizeof(arr[0]) << " bytes" << endl;
+    cout << "Number of elements: " << sizeof(arr) / sizeof(arr[0]) << endl;
     return 0;
 }

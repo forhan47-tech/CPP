@@ -8,6 +8,5 @@ int main() {
     unique_ptr<int> ptr = make_unique<int>(10);
 
     cout << "Value: " << *ptr << endl; // Access value
-
     return 0;
 } 

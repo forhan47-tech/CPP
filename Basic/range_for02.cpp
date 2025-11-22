@@ -3,15 +3,14 @@
 using namespace std;
 
 int main() {
-    vector<int> v = {10, 20, 30};
+    vector<int> vec = {10, 20, 30};
 
-    // Reference allows modification
-    for (auto& num : v) {  
-        num += 5;
+    for (auto& e : vec) {  
+        e += 5;
     }
 
     cout << "Modified values: ";
-    for (auto num : v) cout << num << " ";
+    for (auto val : vec) cout << val << " ";
     cout << endl;
 
     return 0;

@@ -5,7 +5,6 @@ using namespace std;
 int main() {
     map<string, int> marks = {{"Alice", 90}, {"Bob", 85}, {"Charlie", 92}};
 
-    // References allow modification
     for (auto& entry : marks) {
         entry.second += 5;
     }

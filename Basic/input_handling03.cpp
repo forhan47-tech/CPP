@@ -2,13 +2,13 @@
 using namespace std;
 
 int main() {
-    int age;
-    float height;
+    int id;
     char grade;
+    double marks;
 
-    cout << "Enter your age, height, and grade: ";
-    cin >> age >> height >> grade;
+    cout << "Enter ID, Grade, and Marks: ";
+    cin >> id >> grade >> marks; // input separated by spaces
 
-    cout << "You entered: Age = " << age << ", Height = " << height << ", Grade = " << grade << endl;
+    cout << "ID = " << id << ", Grade = " << grade << ", Marks = " << marks << endl;
     return 0;
 }

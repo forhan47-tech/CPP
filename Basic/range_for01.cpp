@@ -2,16 +2,15 @@
 using namespace std;
 
 int main() {
-    int numbers[] = {1, 2, 3, 4, 5};
+    int arr[] = {1, 2, 3, 4, 5};
 
-    // Reference allows modification
-    for (int &num : numbers) {  
-        num += 2;  
+    for (int& e : arr) {  
+        e += 2;           // Reference allows modification
     }
 
     cout << "Modified values: ";
-    for (int num : numbers) {  
-        cout << num << " ";
+    for (int val : arr) {  
+        cout << val << " ";
     }
 
     return 0;

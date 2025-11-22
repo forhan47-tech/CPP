@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 2;
+
+    if (x > 5) {
+        cout << "x is greater than 5" << endl;
+    }
+
+    cout << "Program ended" << endl;
+    return 0;
+}
