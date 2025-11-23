@@ -2,16 +2,19 @@
 #include <thread>
 using namespace std;
 
-struct Task {
-    void operator()(int count) {
-        for (int i = 0; i < count; ++i)
-            cout << "Functor thread executed [" << i << "]\n";
+class CircleArea {
+public:
+    void operator()(double radius) {
+        double area = 3.1416 * radius * radius;
+        cout << "Area of circle with radius " << radius << " is: " << area << endl;
     }
 };
 
 int main() {
-    Task log;
-    thread t(log, 3); // Pass parameter to operator()
-    t.join();
+    CircleArea calc;
+
+    thread t(calc, 5.0);  
+    t.join();  
+    cout << "Main thread finished.\n";
     return 0;
 }
