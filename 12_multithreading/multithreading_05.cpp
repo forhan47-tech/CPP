@@ -1,24 +1,14 @@
 #include <iostream>
 #include <thread>
-#include <mutex>
-using namespace std;
+using namespace std; 
 
-class CircleArea {
-    mutex logMutex; // Instance-level mutex
-    
-public:
-    void operator()(double radius) {
-        double area = 3.1416 * radius * radius;
-        lock_guard<mutex> lock(logMutex);  // Lock the mutex before logging
-        cout << "Area of circle with radius " << radius << " is: " << area << endl;
-    }
-};
+void add(int a, int b) {
+    cout << "Sum: " << a + b << endl;
+}
 
 int main() {
-    CircleArea calc;
-
-    thread t(calc, 5.0); 
+    thread t(add, 5, 3);
     t.join();
-    cout << "Main thread finished.\n";
+    cout << "Main thread finished." << endl;
     return 0;
 }

@@ -1,21 +1,14 @@
 #include <iostream>
-#include <future>
+#include <thread>
 using namespace std;
 
-class AreaCalculator {
-public:
-    double operator()(int radius) const {
-        return 3.1416 * radius * radius;
-    }
-};
-
 int main() {
-    AreaCalculator calc;
+    thread t([](int a, int b) {
+        cout << "Sum: " << a + b << endl;
+    }, 5, 3);
 
-    // Launch asynchronously and get future
-    future<double> result = async(launch::async, calc, 5);
-    // Do other work here...
-    cout << "Area of circle with radius 5 is " << result.get() << endl;
-    cout << "Main thread finished.\n";
+    t.join(); 
+
+    cout << "Main thread finished." << endl;
     return 0;
 }

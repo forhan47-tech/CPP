@@ -2,22 +2,13 @@
 #include <thread>
 using namespace std;
 
-class CircleArea {
-    double radius;
-public:
-    CircleArea(double r) : radius(r) {}
-
-    void operator()() {
-        double area = 3.1416 * radius * radius;
-        cout << "Area of circle with radius " << radius << " is: " << area << endl;
-    }
-};
+void task() {
+    cout << "Hello from thread!\n";
+}
 
 int main() {
-    CircleArea calc(5.0); 
-
-    thread t(calc);      
-    t.join();
+    thread t(task); // Start thread
+    t.join();       // Wait for thread to finish
     cout << "Main thread finished.\n";
     return 0;
 }

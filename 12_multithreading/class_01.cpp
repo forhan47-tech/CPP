@@ -2,7 +2,9 @@
 #include <thread>
 using namespace std;
 
-struct Task {
+// Functor class definition
+class Task {
+public:
     void operator()() {
         cout << "Functor thread executed.\n";
     }
@@ -10,7 +12,9 @@ struct Task {
 
 int main() {
     Task log;
-    thread t(log);
-    t.join();
+    
+    thread t(log); // Launch thread with functor class
+    t.join();        
+    cout << "Main thread finished.\n";
     return 0;
 }

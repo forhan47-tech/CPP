@@ -1,17 +1,15 @@
 #include <iostream>
-#include <mutex>
+#include <thread>
+#include <string>
 using namespace std;
 
-class Logger {
-    mutex logMutex;
-public:
-    void operator()(const string& msg) {
-        lock_guard<mutex> lock(logMutex);
-        cout << msg << endl;
-    }
-};
+void printMessage(string msg, int count) {
+    for (int i = 0; i < count; ++i)
+        cout << msg << " " << i << endl;
+}
 
 int main() {
-    Logger log;
-    log("Thread-safe logging initialized.");
+    thread t(printMessage, "Thread running", 5);
+    t.join();
+    return 0;
 }
