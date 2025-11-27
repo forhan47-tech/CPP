@@ -1,10 +1,12 @@
 #include <iostream>
 using namespace std;
 
+/**
+ * This function prints a greeting message.
+ * @return int Exit status
+ */
 int main() {
-    /* This is a multi-line comment
-       It can explain program logic
-       or disable multiple lines of code */
-    cout << "Multi-line comment example" << endl;
+    /// Print greeting to console
+    cout << "Hello with documentation comment" << endl;
     return 0;
 }

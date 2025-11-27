@@ -9,7 +9,7 @@ int main() {
     // Display numbers in different bases
     cout << "Hexadecimal: " << hex << num1 << endl;   
     cout << "Octal: " << oct << num1 << endl;         
-    cout << "Decimal (default): " << num1 << endl;  
+    cout << "Decimal (default): " << num1 << endl;
 
     // Binary Representation
     cout << "num2 (4-bits view): " << bitset<4>(num2) << endl; 

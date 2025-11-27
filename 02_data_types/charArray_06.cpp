@@ -2,16 +2,16 @@
 using namespace std;
 
 int main() {
-    char names[3][30];
+    char grid[3][30];
 
     cout << "Enter 3 full names:" << endl;
     for (int i = 0; i < 3; i++) {
-        cin.getline(names[i], 30);
+        cin.getline(grid[i], 30);
     }
 
     cout << "The names are:" << endl;
     for (int i = 0; i < 3; i++) {
-        cout << names[i] << endl;
+        cout << grid[i] << endl;
     }
 
     return 0;

@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 namespace Functions {
     double square(double x) {
         return x * x;

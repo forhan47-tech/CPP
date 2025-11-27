@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 namespace Math {
     double PI = 3.14159;
     float Value = 2.71828;

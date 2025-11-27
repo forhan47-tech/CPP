@@ -3,6 +3,7 @@ using namespace std;
 
 int main() {
     int x = 5, y = 10;
+    
     cout << (x == y) << endl; // Equal?
     cout << (x != y) << endl; // Not equal?
     cout << (x > y) << endl;  // Greater?

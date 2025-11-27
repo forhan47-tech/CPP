@@ -3,9 +3,9 @@
 using namespace std;
 
 int main() {
-    vector<string> names = {"Alice", "Bob", "Charlie"};
+    vector<string> str = {"Alice", "Bob", "Charlie"};
 
-    for (auto name : names) { 
+    for (auto name : str) { 
         cout << "Hello, " << name << "!" << endl;
     }
     return 0;

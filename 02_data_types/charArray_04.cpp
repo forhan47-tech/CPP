@@ -2,12 +2,12 @@
 using namespace std;
 
 int main() {
-    char name[50];
+    char str[50];
     
     cout << "Enter your full name: ";
-    cin.getline(name, 50);
+    cin.getline(str, 50); // reads until newline
 
-    cout << "Your full name is: " << name;
+    cout << "Your full name is: " << str;
     return 0;
 }
 

@@ -2,11 +2,11 @@
 using namespace std;
 
 int main() {
-    for (int i = 1; i <= 3; i++) {
-        for (int j = 1; j <= 3; j++) {
-            if (j == 2) break; // exits inner loop only
-            cout << "i = " << i << ", j = " << j << endl;
-        }
+    int i = 0;
+    while (i < 10) {
+        if (i == 5) break; // stop at 5
+        cout << "i = " << i << endl;
+        i++;
     }
     return 0;
 }

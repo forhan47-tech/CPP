@@ -2,13 +2,10 @@
 using namespace std;
 
 int main() {
-    int arr[5];               // Declaration: array of 5 integers
-
-    arr[0] = 10;              // Assign values individually
-    arr[1] = 20;
-    arr[2] = 30;
-
-    cout << "arr[0]: " << arr[0] << endl;
-    cout << "arr[1]: " << arr[1] << endl;
+    int arr[5] = {}; // all elements set to 0
+    
+    for (int i = 0; i < 5; i++) {
+        cout << arr[i] << " ";
+    }
     return 0;
 }

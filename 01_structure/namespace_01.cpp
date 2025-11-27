@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 namespace LibraryA {
     void display() { 
         cout << "Library A Function\n"; 

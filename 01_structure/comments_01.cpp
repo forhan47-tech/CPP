@@ -2,7 +2,11 @@
 using namespace std;
 
 int main() {
-    // This is a single-line comment
-    cout << "Hello, World!" << endl; // Inline comment after statement
+    // Single-line comment
+    cout << "Hello, World!" << endl; /* Inline comment */
+    /*
+       Multi-line comment
+       Explaining program logic
+    */
     return 0;
 }

@@ -11,6 +11,5 @@ int main() {
 #else
     cout << "VALUE is less than 5" << endl;
 #endif
-
     return 0;
 }

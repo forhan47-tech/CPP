@@ -2,18 +2,21 @@
 using namespace std;
 
 int main() {
-    int category = 1;
-    int item = 2;
+    int n = 2;
 
-    switch (category) {
-        case 1:
-            switch (item) {
-                case 1: cout << "Category 1 - Item 1" << endl; break;
-                case 2: cout << "Category 1 - Item 2" << endl; break;
-            }
+    switch (n) {
+        case 1:  case 2: 
+            cout << "One" << endl;   // executes for n=1 or n=2
+
+        case 3:  
+            cout << "Three" << endl; // fall-through continues here
+
+        case 4:  
+            cout << "Four" << endl;  // break stops execution here
             break;
-        default:
-            cout << "Other category" << endl;
+
+        default: 
+            cout << "Default" << endl;
     }
 
     return 0;

@@ -2,10 +2,12 @@
 using namespace std;
 
 int main() {
-    int arr[10];
+    int arr[5];               // Declaration: array of 5 integers
 
-    cout << "Total size of array: " << sizeof(arr) << " bytes" << endl;
-    cout << "Size of one element: " << sizeof(arr[0]) << " bytes" << endl;
-    cout << "Number of elements: " << sizeof(arr) / sizeof(arr[0]) << endl;
+    arr[0] = 10;              // Assign values individually
+    arr[1] = 20;
+
+    cout << "arr[0]: " << arr[0] << endl;
+    cout << "arr[1]: " << arr[1] << endl;
     return 0;
 }
