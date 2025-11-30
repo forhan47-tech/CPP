@@ -7,6 +7,6 @@ using namespace std;
  */
 int main() {
     /// Print greeting to console
-    cout << "Hello with documentation comment" << endl;
+    cout << "Doc-style comment example" << endl;
     return 0;
 }

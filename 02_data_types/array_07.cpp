@@ -11,7 +11,7 @@ int main() {
 
     // Pointer arithmetic demonstration
     for (int i = 0; i < 3; i++) {
-        cout << *(ptr + i) << " ";
+        cout << ptr[i] << " ";
     }
     cout << endl;
 

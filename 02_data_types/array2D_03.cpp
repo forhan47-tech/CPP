@@ -5,8 +5,8 @@ int main() {
     int mtx[2][2] = { {10, 20}, {30, 40} };
 
     // Traversing matrix
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
+    for (int i = 0; i < 2; i++) {          // rows
+        for (int j = 0; j < 2; j++) {      // columns
             cout << "mtx[" << i << "][" << j << "] = " << mtx[i][j] << endl;
         }
     }

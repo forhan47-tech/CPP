@@ -1,16 +1,13 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
 int main() {
-    char grid[3][10] = {
-        "Hello",
-        "World",
-        "C++"
-    };
+    char str[50];
+    
+    cout << "Enter your full name: ";
+    cin.getline(str, 50); // reads until newline
 
-    for (int i = 0; i < 3; i++) {
-        cout << grid[i] << endl;
-    }
-
+    cout << "Your full name is: " << str;
     return 0;
 }
+

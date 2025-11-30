@@ -1,13 +1,10 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int main() {
-    char str[50];
-    
-    cout << "Enter your full name: ";
-    cin.getline(str, 50); // reads until newline
-
-    cout << "Your full name is: " << str;
+    char str[20];
+    cout << "Enter your name: ";
+    cin >> str; // stops at whitespace
+    cout << "You entered: " << str << endl;
     return 0;
 }
-

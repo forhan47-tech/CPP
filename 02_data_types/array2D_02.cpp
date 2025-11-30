@@ -4,6 +4,7 @@ using namespace std;
 int main() {
     int mtx[2][2] = {};
 
+    // Traversal
     for (int i = 0; i < 2; i++) {
         for (int j = 0; j < 2; j++) {
             cout << "mtx[" << i << "][" << j << "] = " << mtx[i][j] << endl;

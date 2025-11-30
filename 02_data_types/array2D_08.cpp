@@ -7,7 +7,8 @@ int main() {
         {40, 50, 60}
     };
     
-    int (*ptr)[3] = arr;  // Pointer to an array of 3 ints (row pointer)
+    // Pointer to an array of 3 ints (row pointer)
+    int (*ptr)[3] = arr;
 
     // Modify element in second row, third column
     ptr[1][2] = 4;

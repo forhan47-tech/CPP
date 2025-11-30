@@ -6,7 +6,7 @@ int main() {
     int* ptr = &mtx[0][0]; // mtx decays to &mtx[0][0]
 
     for (int i = 0; i < 6; i++) {
-        cout << *(ptr+i) << " "; // linear traversal
+        cout << ptr[i] << " "; // linear traversal
     }
     return 0;
 }
