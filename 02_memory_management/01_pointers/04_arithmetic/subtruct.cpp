@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[5] = {1, 2, 3, 4, 5};
+    int* ptr = &arr[4];
+
+    cout << *(ptr - 2) << endl;
+    cout << *(ptr - 4) << endl; 
+    cout << *(ptr - 1) << endl;
+}
