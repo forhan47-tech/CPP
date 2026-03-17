@@ -10,11 +10,13 @@ public:
         return Number(-value);
     }
 
-    void display() { cout << value << endl; }
+    void display() { 
+        cout << value << endl; 
+    }
 };
 
 int main() {
     Number n(10);
-    Number neg = -n;   // uses overloaded unary -
+    Number neg = -n;  // uses overloaded unary -
     neg.display();     
 }

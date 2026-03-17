@@ -2,12 +2,12 @@
 using namespace std;
 
 class Box {
-    int vol;
+    int length;
 public:
-    Box(int v) : vol(v) {}
+    Box(int l) : length(l) {}
 
     bool operator>(const Box &b) {
-        return vol > b.vol;
+        return length > b.length;
     }
 };
 

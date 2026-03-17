@@ -6,14 +6,12 @@ class Counter {
 public:
     Counter(int c=0): count(c) {}
 
-    // Prefix increment
-    Counter operator++() {
+    Counter operator++() {  // Prefix increment
         ++count;
         return *this;
     }
 
-    // Postfix increment (dummy int parameter)
-    Counter operator++(int) {
+    Counter operator++(int) {  // Postfix increment
         Counter temp = *this;
         count++;
         return temp;
