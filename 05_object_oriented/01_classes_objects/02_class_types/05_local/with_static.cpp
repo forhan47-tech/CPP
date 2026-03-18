@@ -4,7 +4,7 @@ using namespace std;
 void test() {
     static int count = 0;  // static variable
 
-    class Helper {   // Local class
+    class Helper {  
     public:
         void increment(int& c) {
             c++;

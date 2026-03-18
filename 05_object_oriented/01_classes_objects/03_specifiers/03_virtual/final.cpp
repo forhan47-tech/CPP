@@ -16,7 +16,7 @@ public:
 };
 
 int main() {
-    Base* b = new Derived();
-    b->show();  
-    delete b;
+    Base* b1 = new Derived();
+    b1->show();  
+    delete b1;
 }

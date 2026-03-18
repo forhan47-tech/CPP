@@ -14,7 +14,7 @@ public:
 
 int main() {
     Calculator calc;
-    cout << "Sum (int): " << calc.add(2, 3) << endl;
+    cout << "Sum (2 int): " << calc.add(2, 3) << endl;
     cout << "Sum (3 ints): " << calc.add(1, 2, 3) << endl;
     return 0;
 }
