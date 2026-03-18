@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
 
-int nestedRecursion(int n) {
+int nestedRec(int n) {
     if (n > 100) return n - 10;
-    return nestedRecursion(nestedRecursion(n + 11)); // Recursive call
+    return nestedRec(nestedRec(n + 11)); // Recursive call
 }
 
 int main() {
-    cout << "Result: " << nestedRecursion(95);
+    cout << "Result: " << nestedRec(95);
     return 0;
 }
