@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
 
-void directRecursion(int n) {
-    if (n <= 0) return; // base case
+void directRec(int n) {
+    if (n <= 0) return;
     cout << n << " ";
-    directRecursion(n - 1); // direct call
+    directRec(n - 1); // direct call
 }
 
 int main() {
-    directRecursion(5); 
+    directRec(5); 
 }

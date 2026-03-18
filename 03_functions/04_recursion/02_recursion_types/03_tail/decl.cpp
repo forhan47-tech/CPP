@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 
-void tailRecursion(int n) {
+void tailRec(int n) {
     if (n == 0) return;
     cout << n << " ";
-    tailRecursion(n - 1); // Last operation
+    tailRec(n - 1); // last operation
 }
 
 int main() {
-    tailRecursion(5);
+    tailRec(5);
     return 0;
 }
