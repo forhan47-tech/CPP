@@ -7,8 +7,6 @@ int main() {
     v.insert(v.begin() + 1, 10); // insert 10 at index 1
 
     cout << "Vector after insert: ";
-    for (int x : v) {
-        cout << x << " "; 
-    }
+    for (int x : v) cout << x << " "; 
     return 0;
 }
