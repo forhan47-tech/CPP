@@ -1,5 +1,5 @@
 #include <iostream>
-#include <vector>
+#include <deque>
 #include <string>
 using namespace std;
 
@@ -10,7 +10,7 @@ struct Person {
 };
 
 int main() {
-    vector<Person> people;
-    people.emplace_back("Alice", 25); // directly constructs pair
-    cout << people[0].name << " - " << people[0].age << endl;
+    deque<Person> d;
+    d.emplace(d.begin(), "Charlie", 40);
+    cout << d[0].name << " - " << d[0].age << endl;
 }

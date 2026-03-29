@@ -11,6 +11,6 @@ struct Person {
 
 int main() {
     vector<Person> people;
-    people.emplace(people.begin(), "Bob", 30);
+    people.emplace(people.begin(), "Bob", 30); // construct at index 0
     cout << people[0].name << " - " << people[0].age << endl;
 }
