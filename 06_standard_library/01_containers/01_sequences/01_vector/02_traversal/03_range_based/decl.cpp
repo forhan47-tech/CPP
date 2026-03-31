@@ -3,11 +3,11 @@
 using namespace std;
 
 int main() {
-    vector<int> vec = {10, 20, 30, 40};
+    vector<int> v = {10, 20, 30, 40, 50};
 
-    cout << "Range-based traversal: ";
-    for (int x : vec) {
-        cout << x << " ";
+    cout << "Forward traversal: ";
+    for (const auto &x : v) {
+        cout << x << " ";   // directly access each element
     }
     return 0;
 }

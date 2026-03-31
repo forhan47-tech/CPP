@@ -4,9 +4,7 @@ using namespace std;
 
 int main() {
     vector<int> v;
-    cout << "Is empty? " << v.empty() << endl; 
-
+    cout << (v.empty() ? "Empty" : "Not Empty") << endl; 
     v.push_back(10);
-    cout << "Is empty after push_back? " << v.empty() << endl; 
-    return 0;
+    cout << (v.empty() ? "Empty" : "Not Empty") << endl;
 }

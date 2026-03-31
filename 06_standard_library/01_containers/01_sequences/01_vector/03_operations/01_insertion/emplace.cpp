@@ -1,16 +1,9 @@
 #include <iostream>
 #include <vector>
-#include <string>
 using namespace std;
 
-struct Person {
-    string name;
-    int age;
-    Person(string n, int a) : name(n), age(a) {}
-};
-
 int main() {
-    vector<Person> people;
-    people.emplace(people.begin(), "Bob", 30); // construct at index 0
-    cout << people[0].name << " - " << people[0].age << endl;
+    vector<int> v = {1, 2, 3};
+    v.emplace(v.begin() + 1, 99);   // construct 99 at index 1
+    for (int x : v) cout << x << " ";
 }

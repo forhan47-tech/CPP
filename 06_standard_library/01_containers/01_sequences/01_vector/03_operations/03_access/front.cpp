@@ -3,7 +3,6 @@
 using namespace std;
 
 int main() {
-    vector<int> v = {10, 20, 30};
-    cout << "First element: " << v.front() << endl; 
-    return 0;
+    vector<int> v = {5, 10, 15};
+    cout << "First element: " << v.front() << endl;
 }

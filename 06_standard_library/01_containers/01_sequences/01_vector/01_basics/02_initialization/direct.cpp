@@ -3,9 +3,6 @@
 using namespace std;
 
 int main() {
-    vector<int> v = {1, 2, 3, 4, 5};
-
-    cout << "v: ";
-    for (int x : v) cout << x << " ";
-    return 0;
+    vector<int> v = {5, 10, 15, 20};
+    for (int x : v) cout << x << " "; 
 }

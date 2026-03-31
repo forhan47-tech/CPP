@@ -3,14 +3,9 @@
 #include <string>
 using namespace std;
 
-struct Person {
-    string name;
-    int age;
-    Person(string n, int a) : name(n), age(a) {}
-};
-
 int main() {
-    vector<Person> people;
-    people.emplace_back("Alice", 25); // directly constructs pair
-    cout << people[0].name << " - " << people[0].age << endl;
+    vector<string> v;
+    v.emplace_back("Hello");   // construct in place
+    v.emplace_back("World");
+    for (auto &s : v) cout << s << " ";
 }

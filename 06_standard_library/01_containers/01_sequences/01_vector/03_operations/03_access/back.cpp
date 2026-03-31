@@ -3,7 +3,6 @@
 using namespace std;
 
 int main() {
-    vector<int> v = {10, 20, 30};
-    cout << "Last element: " << v.back() << endl; 
-    return 0;
+    vector<int> v = {5, 10, 15};
+    cout << "Last element: " << v.back() << endl;
 }

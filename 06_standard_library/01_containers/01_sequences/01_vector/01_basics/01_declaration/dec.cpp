@@ -10,5 +10,4 @@ int main() {
 
     cout << vec[0] << endl;  // access
     cout << vec[1] << endl;
-    return 0;
 }

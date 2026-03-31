@@ -3,11 +3,7 @@
 using namespace std;
 
 int main() {
-    vector<int> v;
-    v.push_back(10);
-    v.push_back(20);
-
-    cout << "Vector after push_back: ";
+    vector<int> v = {1, 2, 3};
+    v.push_back(4);   // add at end
     for (int x : v) cout << x << " "; 
-    return 0;
 }
