@@ -3,11 +3,10 @@
 using namespace std;
 
 int main() {
-    deque<int> dq;  // declaration only
+    deque<int> dq;   // empty deque
 
-    dq.push_back(10);  // initialization
-    dq.push_back(20);
-
-    cout << dq[0] << endl;  // access
-    cout << dq[1] << endl;
+    dq.push_back(5);
+    dq.push_back(10);
+    
+    for (int x : dq) cout << x << " ";
 }

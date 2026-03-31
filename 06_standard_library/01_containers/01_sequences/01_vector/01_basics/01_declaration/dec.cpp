@@ -3,11 +3,10 @@
 using namespace std;
 
 int main() {
-    vector<int> vec;   // declaration only
+    vector<int> vec;   // empty vector
 
-    vec.push_back(10);  // initialization
+    vec.push_back(10);
     vec.push_back(20);
 
-    cout << vec[0] << endl;  // access
-    cout << vec[1] << endl;
+    for (int x : vec) cout << x << " ";
 }
