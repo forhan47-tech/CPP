@@ -3,8 +3,7 @@
 using namespace std;
 
 int main() {
-    set<int> s;   // empty set
-    
+    set<int> s;   // empty set  
     s.insert(5);
     s.insert(10);
 
