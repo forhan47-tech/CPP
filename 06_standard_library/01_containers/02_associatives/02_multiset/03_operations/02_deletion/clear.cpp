@@ -3,7 +3,8 @@
 using namespace std;
 
 int main() {
-    multiset<int> ms = {1, 2, 2, 3};
+    multiset<int> ms = {1,2,2,3};
     ms.clear();
-    cout << "Size: " << ms.size(); // 0
+
+    cout << "Size after clear: " << ms.size() << endl; // 0
 }

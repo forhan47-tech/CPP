@@ -3,11 +3,11 @@
 using namespace std;
 
 int main() {
-    map<int, string> m = {{1, "Alice"}, {2, "Bob"}, {3, "Charlie"}};
+    map<int,string> m = {{1,"Alice"},{3,"Charlie"},{5,"Eve"}};
 
-    auto range = m.equal_range(2);
-    if (range.first != range.second)
-        cout << "Equal range for 2: " << range.first->first << " -> " << range.first->second << endl;
+    auto range = m.equal_range(3);
+    if(range.first != range.second)
+        cout << "Equal range of 3: " << range.first->first << " -> " << range.first->second << endl;
     else
-        cout << "Key not found" << endl;
+        cout << "Key not found!" << endl;
 }

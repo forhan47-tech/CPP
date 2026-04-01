@@ -7,5 +7,5 @@ int main() {
 
     auto it = s.begin();
     advance(it, 2);   // move iterator forward by 2
-    cout << "Element at index 2: " << *it << endl;
+    cout << "Element: " << *it << endl;
 }
