@@ -7,7 +7,7 @@ int main() {
 
     auto it = l.begin();
     advance(it, 2);  
-    l.erase(it);  // erase single element 
+    l.erase(it);  // remove single element 
 
     auto start = l.begin();
     auto end   = next(l.begin(), 2);
