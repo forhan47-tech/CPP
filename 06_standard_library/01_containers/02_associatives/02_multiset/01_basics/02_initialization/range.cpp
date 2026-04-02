@@ -1,9 +1,10 @@
 #include <iostream>
 #include <set>
+#include <vector>
 using namespace std;
 
 int main() {
-    int arr[] = {1, 2, 2, 3, 4};
-    multiset<int> ms(arr, arr + 5);   // initialize from array
-    for (int x : ms) cout << x << " "; 
+    vector<int> v = {5, 3, 8, 3};
+    multiset<int> ms(v.begin(), v.end()); // duplicates preserved, sorted
+    for(int x : ms) cout << x << " "; 
 }

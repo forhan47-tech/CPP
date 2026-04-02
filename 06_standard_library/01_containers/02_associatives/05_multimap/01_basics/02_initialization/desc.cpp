@@ -7,7 +7,7 @@ int main() {
         {1, "One"},
         {2, "Two"},
         {3, "Three"},
-        {2, "Duplicate Two"} // duplicate key allowed
+        {2, "Four"} // duplicate key allowed
     };
 
     for (auto &p : mm)

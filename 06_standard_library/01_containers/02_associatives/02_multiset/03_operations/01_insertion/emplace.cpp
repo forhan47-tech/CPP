@@ -1,12 +1,12 @@
 #include <iostream>
 #include <set>
+#include <string>
 using namespace std;
 
 int main() {
-    multiset<string> ms;
-    ms.emplace("Apple");
-    ms.emplace("Banana");
-    ms.emplace("Banana"); // duplicate allowed
-
-    for (auto &x : ms) cout << x << " "; 
+    multiset<pair<int,string>> ms;
+    ms.emplace(1,"Alice");
+    ms.emplace(1,"Alice"); // duplicate preserved
+    ms.emplace(2,"Bob");
+    for(auto &p : ms) cout << p.first << " -> " << p.second << endl;
 }

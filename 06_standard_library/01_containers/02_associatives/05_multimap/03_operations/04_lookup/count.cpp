@@ -3,6 +3,6 @@
 using namespace std;
 
 int main() {
-    multimap<int,string> mm = {{1,"Alice"},{1,"Charlie"},{2,"Bob"}};
-    cout << "Count of key 1: " << mm.count(1) << endl;
+    multimap<int,string> mm = {{1,"A"}, {2,"B"}, {2,"C"}, {3,"D"}};
+    cout << "Count of key 2: " << mm.count(2) << endl; 
 }

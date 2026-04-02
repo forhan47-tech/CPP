@@ -1,11 +1,11 @@
 #include <iostream>
 #include <set>
+#include <string>
 using namespace std;
 
 int main() {
-    set<string> s;
-    s.emplace("Apple");
-    s.emplace("Banana");
-
-    for (auto &x : s) cout << x << " "; 
+    set<pair<int,string>> s;
+    s.emplace(1,"Alice");
+    s.emplace(2,"Bob");
+    for(auto &p : s) cout << p.first << " -> " << p.second << endl;
 }

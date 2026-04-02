@@ -3,9 +3,9 @@
 using namespace std;
 
 int main() {
-    map<int, string> m;
-    cout << (m.empty() ? "Empty" : "Not Empty") << endl; 
+    map<int,string> m;
+    cout << "Is empty? " << m.empty() << endl; 
 
     m[1] = "Hello";
-    cout << (m.empty() ? "Empty" : "Not Empty") << endl; 
+    cout << "Is empty? " << m.empty() << endl; 
 }

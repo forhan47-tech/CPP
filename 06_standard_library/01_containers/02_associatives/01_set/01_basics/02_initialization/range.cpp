@@ -1,9 +1,10 @@
 #include <iostream>
 #include <set>
+#include <vector>
 using namespace std;
 
 int main() {
-    int arr[] = {1, 2, 3, 4};
-    set<int> s(arr, arr + 4);   // initialize from array
-    for (int x : s) cout << x << " "; 
+    vector<int> v = {5, 3, 8, 3};
+    set<int> s(v.begin(), v.end()); // duplicates removed, sorted
+    for(int x : s) cout << x << " "; 
 }

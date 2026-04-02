@@ -4,7 +4,8 @@ using namespace std;
 
 int main() {
     set<int> s;
-    cout << (s.empty() ? "Empty" : "Not Empty") << endl; 
-    s.insert(10);
-    cout << (s.empty() ? "Empty" : "Not Empty") << endl; 
+    cout << "Is empty? " << (s.empty() ? "Yes" : "No") << endl; // Yes
+
+    s.insert(100);
+    cout << "Is empty after insert? " << (s.empty() ? "Yes" : "No") << endl; // No
 }

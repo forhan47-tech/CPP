@@ -9,5 +9,5 @@ int main() {
     cout << "Key 1 -> " << um[1] << endl;
 
     cout << "Key 2 -> " << um[2] << endl; // inserts key 2 with default value ""
-    cout << "Size: " << um.size() << endl; // 2
+    cout << "Size: " << um.size() << endl; 
 }

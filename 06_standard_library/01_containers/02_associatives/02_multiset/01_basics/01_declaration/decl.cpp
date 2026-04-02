@@ -3,9 +3,6 @@
 using namespace std;
 
 int main() {
-    multiset<int> ms;   // empty multiset 
-    ms.insert(10);
-    ms.insert(20);
-    
-    for (int x : ms) cout << x << " ";
+    multiset<int> ms; // empty
+    cout << "Size: " << ms.size() << endl; 
 }

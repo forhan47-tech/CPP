@@ -10,5 +10,5 @@ int main() {
     if(it != ms.end()) ms.erase(it); // remove one occurrence
     ms.erase(ms.begin(), ms.end()); // remove all
 
-    cout << "Size after erase: " << ms.size() << endl; // 0
+    cout << "Size after erase: " << ms.size() << endl; 
 }

@@ -3,9 +3,9 @@
 using namespace std;
 
 int main() {
-    multimap<int,string> mm = {{1,"Alice"},{1,"Charlie"},{2,"Bob"}};
+    multimap<int,string> mm = {{1,"A"}, {2,"B"}, {2,"C"}};
 
-    auto it = mm.find(1);
+    auto it = mm.find(2);
     if(it != mm.end())
-        cout << "Found: " << it->first << " -> " << it->second << endl;
+        cout << "First occurrence of 2: " << it->second << endl; 
 }

@@ -3,9 +3,6 @@
 using namespace std;
 
 int main() {
-    set<int> s;   // empty set  
-    s.insert(5);
-    s.insert(10);
-
-    for (int x : s) cout << x << " "; 
+    set<int> s; // empty set
+    cout << "Size: " << s.size() << endl; 
 }
