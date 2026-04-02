@@ -5,5 +5,5 @@ using namespace std;
 int main() {
     list<int> l = {1, 2, 3};
     l.clear();        // remove all
-    cout << "Size of l: " << l.size(); 
+    cout << "Size after clear: " << l.size(); 
 }

@@ -1,9 +1,12 @@
 #include <iostream>
 #include <deque>
+#include <string>
 using namespace std;
 
 int main() {
-    deque<int> d = {2, 3};
-    d.emplace_front(1);   // construct at front
-    for (int x : d) cout << x << " "; 
+    deque<pair<int,string>> d;
+    d.emplace_front(1,"Alice");
+    d.emplace_front(2,"Bob");
+    
+    for(auto &p : d) cout << p.first << " -> " << p.second << endl;
 }

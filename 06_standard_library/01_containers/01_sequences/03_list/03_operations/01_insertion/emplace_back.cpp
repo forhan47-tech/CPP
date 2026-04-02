@@ -1,9 +1,10 @@
 #include <iostream>
 #include <list>
+#include <string>
 using namespace std;
 
 int main() {
-    list<int> l;
-    l.emplace_back(3);   // construct at end
-    for (int x : l) cout << x << " ";
+    list<pair<int,string>> l;
+    l.emplace_back(1,"Alice");
+    for(auto &p : l) cout << p.first << " -> " << p.second << endl;
 }

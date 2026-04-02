@@ -3,9 +3,10 @@
 using namespace std;
 
 int main() {
-    vector<int> v = {1, 2, 3, 4, 5};
-    v.reserve(20); // artificially increase capacity
+    vector<int> v(10, 1); // 10 elements
     cout << "Capacity before shrink: " << v.capacity() << endl;
-    v.shrink_to_fit(); // reduce capacity
+
+    v.resize(3); // reduce size to 3
+    v.shrink_to_fit(); // request capacity reduction
     cout << "Capacity after shrink: " << v.capacity() << endl;
 }

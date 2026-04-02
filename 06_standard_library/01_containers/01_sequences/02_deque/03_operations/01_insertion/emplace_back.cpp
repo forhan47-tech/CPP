@@ -4,8 +4,9 @@
 using namespace std;
 
 int main() {
-    deque<string> d;
-    d.emplace_back("Hello");
-    d.emplace_back("World");
-    for (auto &s : d) cout << s << " "; 
+    deque<pair<int,string>> d;
+    d.emplace_back(1,"Alice");
+    d.emplace_back(2,"Bob");
+    
+    for(auto &p : d) cout << p.first << " -> " << p.second << endl;
 }

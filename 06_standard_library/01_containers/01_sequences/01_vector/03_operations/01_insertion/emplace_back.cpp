@@ -4,8 +4,9 @@
 using namespace std;
 
 int main() {
-    vector<string> v;
-    v.emplace_back("Hello");   // construct in place
-    v.emplace_back("World");
-    for (auto &s : v) cout << s << " ";
+    vector<pair<int,string>> v;
+    v.emplace_back(1,"Alice");
+    v.emplace_back(2,"Bob");
+    
+    for(auto &p : v) cout << p.first << " -> " << p.second << endl;
 }

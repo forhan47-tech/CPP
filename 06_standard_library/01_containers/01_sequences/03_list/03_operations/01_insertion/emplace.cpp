@@ -1,11 +1,11 @@
 #include <iostream>
 #include <list>
+#include <string>
 using namespace std;
 
 int main() {
-    list<int> l = {5, 10, 15, 20};
-    auto it = l.begin();
-    ++it;
-    l.emplace(it, 99);    // construct before 3
-    for (int x : l) cout << x << " "; 
+    list<pair<int,string>> l = { {1,"Alice"}, {3,"Charlie"} };
+    auto it = ++l.begin(); // points to Charlie
+    l.emplace(it, 2, "Bob"); // construct Bob before Charlie
+    for(auto &p : l) cout << p.first << " -> " << p.second << endl;
 }

@@ -3,6 +3,8 @@
 using namespace std;
 
 int main() {
-    deque<int> d = {5, 10, 15};
-    cout << "Front element: " << d.front() << endl; 
+    deque<int> d = {100, 200, 300};
+    cout << "Front element: " << d.front() << endl; // 100
+    d.front() = 999; // modify
+    cout << "Modified front: " << d.front() << endl; // 999
 }

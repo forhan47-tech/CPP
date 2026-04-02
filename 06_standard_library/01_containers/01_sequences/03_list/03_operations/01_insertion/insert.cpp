@@ -3,9 +3,9 @@
 using namespace std;
 
 int main() {
-    list<int> l = {1, 2, 3};
+    list<int> l = {10, 30};
     auto it = l.begin();
-    ++it; // points to 2
-    l.insert(it, 99);   // insert before 2
-    for (int x : l) cout << x << " ";
+    ++it; // points to 30
+    l.insert(it, 20); // insert 20 before 30
+    for(int x : l) cout << x << " "; 
 }

@@ -5,13 +5,12 @@ using namespace std;
 int main() {
     list<int> l = {1, 2, 3};
 
-    auto it = l.begin();
-    advance(it, 2);  
+    auto it = ++l.begin(); // points to 2
     l.erase(it);  // remove single element 
 
-    auto start = l.begin();
-    auto end   = next(l.begin(), 2);
-    l.erase(start, end); // removes first two elements
+    auto first = l.begin();
+    auto last   = next(l.begin(), 2);
+    l.erase(first, last); // removes first two elements
 
     for(int x : l) cout << x << " ";
 }
