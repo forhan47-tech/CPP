@@ -3,6 +3,6 @@
 using namespace std;
 
 int main() {
-    string s1 = "World"; // copy from literal
-    cout << s1 << endl;
+    string s;
+    cout << "Max size: " << s.max_size() << endl;
 }

@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    string s = "HelloWorld";
-    s.insert(5, " Beautiful"); // insert " Beautiful" at index 5
+    string s = "I love Java";
+    s.replace(7, 4, "C++"); // replace "Java" with "C++"
     cout << s << endl; 
 }

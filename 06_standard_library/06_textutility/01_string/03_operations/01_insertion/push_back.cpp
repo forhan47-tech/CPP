@@ -1,9 +1,9 @@
 #include <iostream>
-#include <vector>
+#include <string>
 using namespace std;
 
 int main() {
-    vector<int> v = {1, 2, 3};
-    v.push_back(4);   // add at end
-    for (int x : v) cout << x << " "; 
+    string s = "Data";
+    s.push_back('!'); // add '!' at the end
+    cout << s << endl; 
 }

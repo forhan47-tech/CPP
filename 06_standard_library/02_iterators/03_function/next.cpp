@@ -1,12 +1,12 @@
 #include <iostream>
-#include <deque>
+#include <vector>
 #include <iterator>
 using namespace std;
 
 int main() {
-    deque<int> d = {5,10,15,20};
-    auto it1 = d.begin();
+    vector<int> v = {10, 20, 30, 40};
+    auto it1 = v.begin();
 
-    auto it2 = next(it1, 2); // move forward 2
-    cout << "Third element: " << *it2 << endl; 
+    auto it2 = next(it1, 3); // move forward 3
+    cout << *it2 << endl;  
 }

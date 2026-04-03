@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    string s1 = "Programming";
-    string s2(s1.begin(), s1.begin()+6); 
-    cout << s2 << endl; 
+    string s1 = "Contiguous";
+    string part(s1.begin(), s1.begin()+4); 
+    cout << part << endl; 
 }

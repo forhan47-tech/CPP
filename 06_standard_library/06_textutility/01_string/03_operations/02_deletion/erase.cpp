@@ -1,10 +1,13 @@
 #include <iostream>
-#include <vector>
+#include <string>
 using namespace std;
 
 int main() {
-    vector<int> v = {5, 10, 15, 20};
-    v.erase(v.begin() + 2);   // remove single element
-    v.erase(v.begin(), v.begin() + 2);   // remove first two elements
-    for (int x : v) cout << x << " "; 
+    string s = "Hello, World!";
+
+    s.erase(s.begin()+5); // remove single character at index 5
+    cout << s << endl;
+
+    s.erase(5, 6); // remove 6 characters starting at index 5
+    cout << s << endl; 
 }

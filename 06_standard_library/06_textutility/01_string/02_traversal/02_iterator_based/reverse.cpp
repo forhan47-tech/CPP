@@ -1,13 +1,13 @@
 #include <iostream>
-#include <vector>
+#include <string>
 using namespace std;
 
 int main() {
-    vector<int> v = {10, 20, 30, 40};
+    string s = "Programming";
 
     cout << "Reverse traversal: ";
-    for (auto rit = v.rbegin(); rit != v.rend(); ++rit) {
-        cout << *rit << " ";   // traverse backwards
+    for(auto it = s.rbegin(); it != s.rend(); ++it) {
+        cout << *it << " "; 
     }
-    return 0;
+    cout << endl;
 }

@@ -1,13 +1,13 @@
 #include <iostream>
-#include <vector>
+#include <string>
 using namespace std;
 
 int main() {
-    vector<int> v = {10, 20, 30, 40, 50};
+    string s = "Forward";
 
     cout << "Forward traversal: ";
-    for (size_t i = 0; i < v.size(); i++) {
-        cout << v[i] << " ";   // access element by index
+    for(size_t i = 0; i < s.size(); ++i) {
+        cout << s[i] << " ";  
     }
-    return 0;
+    cout << endl;
 }

@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    string s1 = "HelloWorld";
-    string s2(s1, 5, 5); 
-    cout << s2 << endl;
+    string s1 = "Programming";
+    string sub(s1, 2, 5); 
+    cout << sub << endl;
 }

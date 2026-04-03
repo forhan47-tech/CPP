@@ -1,13 +1,13 @@
 #include <iostream>
-#include <vector>
+#include <string>
 using namespace std;
 
 int main() {
-    vector<int> v = {10, 20, 30, 40};
+    string s = "Programming";
 
     cout << "Forward traversal: ";
-    for (auto it = v.begin(); it != v.end(); ++it) {
-        cout << *it << " ";   // dereference iterator
+    for(auto it = s.begin(); it != s.end(); ++it) {
+        cout << *it << " ";  
     }
-    return 0;
+    cout << endl;
 }

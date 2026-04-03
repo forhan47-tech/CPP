@@ -1,9 +1,9 @@
 #include <iostream>
-#include <vector>
+#include <string>
 using namespace std;
 
 int main() {
-    vector<int> v = {10, 20, 30};
-    v.pop_back();   // remove last element
-    for (int x : v) cout << x << " "; 
+    string s = "Hello!";
+    s.pop_back(); // remove '!'
+    cout << s << endl;
 }

@@ -3,6 +3,8 @@
 using namespace std;
 
 int main() {
-    string s = "Example";
-    cout << "Back: " << s.back() << endl; 
+    string s = "Language";
+    cout << s.back() << endl; 
+    s.back() = '!';   // modify
+    cout << s << endl;       
 }

@@ -4,8 +4,8 @@ using namespace std;
 
 int main() {
     string s = "Data";
-    cout << "Capacity before reserve: " << s.capacity() << endl;
-
-    s.reserve(100); // reserve space for 100 characters
-    cout << "Capacity after reserve: " << s.capacity() << endl;
+    cout << "Capacity before: " << s.capacity() << endl;
+    
+    s.reserve(50); // request capacity for 50 chars
+    cout << "Capacity after: " << s.capacity() << endl;
 }
