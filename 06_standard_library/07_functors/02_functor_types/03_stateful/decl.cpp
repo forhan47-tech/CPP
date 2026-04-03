@@ -2,7 +2,7 @@
 using namespace std;
 
 class Adder {
-    int base;   // state stored inside the functor
+    int base;   // state variable to hold the base value
 public:
     Adder(int b): base(b) {}
 

@@ -4,7 +4,7 @@ using namespace std;
 class Task {
 public:
     void operator()() {
-        cout << "Hello Functor!" << endl;
+        cout << "Hello, Functor..." << endl;
     }
 };
 

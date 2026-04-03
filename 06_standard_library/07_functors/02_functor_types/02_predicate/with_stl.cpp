@@ -14,7 +14,5 @@ int main() {
     vector<int> nums = {5, 2, 8, 1, 3};
 
     sort(nums.begin(), nums.end(), Descending());    // Sort using predicate functor
-
-    for (int n : nums)
-        cout << n << " ";  
+    for (int n : nums) cout << n << " ";  
 }

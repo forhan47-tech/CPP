@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class Adder {
+class Calculate {
 public:
     int operator()(int a, int b) {
         return a + b;
@@ -9,6 +9,6 @@ public:
 };
 
 int main() {
-    Adder add;
-    cout << add(10, 20) << endl; 
+    Calculate calc;
+    cout << calc(10, 20) << endl; 
 }
