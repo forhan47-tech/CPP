@@ -3,6 +3,6 @@
 using namespace std;
 
 int main() {
-    string s1; 
-    cout << "Empty string size: " << s1.size() << endl; 
+    string s1; // empty string
+    cout << "s1 length = " << s1.size() << endl; 
 }
