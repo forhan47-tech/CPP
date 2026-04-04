@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-void greet(string name = "Guest") { // default parameter
-    cout << "Hello, " << name << "!" << endl;
+void showMessages(string name = "Guest") { 
+    cout << "Hello, " << name << "!" << endl;   // default parameter
 }
 
 int main() {
-    greet("Alice"); // uses provided value
-    greet();        // uses default "Guest"
+    showMessages("Alice"); // uses provided value
+    showMessages(); // uses default "Guest"
 }

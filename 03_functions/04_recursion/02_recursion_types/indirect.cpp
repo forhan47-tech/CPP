@@ -4,12 +4,12 @@ using namespace std;
 bool isOdd(int n);   // forward declaration
 
 bool isEven(int n) {
-    if (n == 0) return true;     // base case
+    if (n == 0) return true;   
     return isOdd(n - 1);         // calls Odd
 }
 
 bool isOdd(int n) {
-    if (n == 0) return false;    // base case
+    if (n == 0) return false;   
     return isEven(n - 1);        // calls Even
 }
 

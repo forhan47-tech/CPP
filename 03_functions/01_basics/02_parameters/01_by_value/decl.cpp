@@ -2,12 +2,12 @@
 using namespace std;
 
 void increment(int x) {
-    x++;
+    x++; // modifies copy
     cout << "Inside function: " << x << endl;
 }
 
 int main() {
-    int a = 5;
-    increment(a);
-    cout << "Outside function: " << a << endl;
+    int num = 10;
+    increment(num);
+    cout << "Outside function: " << num << endl; 
 }

@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-void greet(string name) { // parameter added, no return
-    cout << "Hello, " << name << endl;
+void userId(string name) { 
+    cout << "Hello, " << name << endl; // parameter added, no return
 }
 
 int main() {
-    greet("Alice");
-    greet("Bob");
+    userId("Alice");
+    userId("Bob");
 }

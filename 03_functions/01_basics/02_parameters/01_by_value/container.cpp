@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-void showVector(vector<int> v) { // copy
+void showVector(vector<int> v) { 
     v.push_back(99); // modifies only the copy
     cout << "Inside function size=" << v.size() << endl;
 }

@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-void introduce(string name, string title = "Mr./Ms.") {
-    cout << title << " " << name << endl; // must be placed after non-default ones
+void printInfo(string name, int age = 0) {
+    cout << "Name: " << name << ", Age: " << age << endl;   // must be placed after non-default ones 
 }
 
-int main() {
-    introduce("Diana");       
-    introduce("Ethan", "Dr.");    
+int main() {;            
+    printInfo("Alice");          
+    printInfo("Bob", 25);   
 }

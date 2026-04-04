@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void printValue(const int x) { // const parameter
+void printValue(const int x) { 
     cout << "Value: " << x << endl;
 }
 

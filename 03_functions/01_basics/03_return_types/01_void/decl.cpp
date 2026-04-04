@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-void greet() { // no parameters, no return
-    cout << "Hello, World!" << endl;
+void greet() { 
+    cout << "Hello, World!" << endl; // no parameters, no return
 }
 
 int main() {
