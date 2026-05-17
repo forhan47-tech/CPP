@@ -20,6 +20,8 @@ int main() {
     }
 
     // free memory
-    for (int i = 0; i < rows; i++) delete[] mat[i];
+    for (int i = 0; i < rows; i++) {
+        delete[] mat[i];
+    }
     delete[] mat;
 }

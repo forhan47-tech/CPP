@@ -5,7 +5,7 @@ int main() {
     int arr[3] = {10, 20, 30};
     int* ptr = arr; // points to first element
 
-    cout << *ptr << endl;   // 10
+    cout << *ptr << endl;   
     ptr++;                  // move to next element
-    cout << *ptr << endl;   // 20
+    cout << *ptr << endl;   
 }

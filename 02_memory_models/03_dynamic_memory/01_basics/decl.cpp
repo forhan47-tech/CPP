@@ -2,11 +2,9 @@
 using namespace std;
 
 int main() {
-    int* ptr = new int;   // declaration only
+    int* ptr = new int; // allocate memory
     
-    *ptr = 42;            // assign value
+    *ptr = 42; // assign value
     cout << "Value = " << *ptr << endl;
-
-    delete ptr;           // free memory
-    return 0;
+    delete ptr; // free memory
 }

@@ -13,7 +13,7 @@ public:
 };
 
 int main() {
-    MyClass* obj = new MyClass; // constructor runs
-    delete obj;                 // destructor runs
+    MyClass* obj = new MyClass; // dynamic allocation
+    delete obj; // free memory        
     return 0;
 }
