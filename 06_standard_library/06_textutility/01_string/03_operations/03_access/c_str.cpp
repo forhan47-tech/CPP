@@ -4,6 +4,6 @@ using namespace std;
 
 int main() {
     string s = "Hello World";
-    const char* cstr = s.c_str(); // C-style string
-    cout << cstr << endl; 
+    const char* t = s.c_str(); // C-style string
+    cout << t << endl; 
 }

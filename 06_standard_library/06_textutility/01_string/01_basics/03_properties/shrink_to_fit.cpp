@@ -3,10 +3,11 @@
 using namespace std;
 
 int main() {
-    string s = "Shrink";
+    string s = "HelloWorld";
+
     s.reserve(100); // artificially increase capacity
-    cout << "Capacity before shrink: " << s.capacity() << endl;
-    
+    cout << "Before: " << s.capacity() << endl;
+
     s.shrink_to_fit();
-    cout << "Capacity after shrink: " << s.capacity() << endl;
+    cout << "After: " << s.capacity() << endl;
 }

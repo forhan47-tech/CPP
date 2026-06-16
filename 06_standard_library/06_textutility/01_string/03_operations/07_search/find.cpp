@@ -3,12 +3,11 @@
 using namespace std;
 
 int main() {
-    string s = "I like programming in C++";
+    string s = "HelloWorldHello";
 
-    size_t pos = s.find("programming");
-    if(pos != string::npos)
-        cout << "Found at index: " << pos << endl;
+    size_t first = s.find("Hello");
+    if(first != string::npos) cout << first << endl; // Find first occurrence
 
-    size_t rpos = s.rfind("in");
-    cout << "Last occurrence of 'in': " << rpos << endl;
+    size_t last = s.rfind("Hello");
+    if(last != string::npos) cout << last << endl; // Find last occurrence
 }

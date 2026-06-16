@@ -3,7 +3,8 @@
 using namespace std;
 
 int main() {
-    string s = "HelloWorld"; // initialized directly
-    s = "Basic C++";        // reassigned
+    string s = "HelloWorld"; // assign literal
+    cout << s << endl;
+    s = "GalaxyWorld"; // reassigned
     cout << s << endl;
 }

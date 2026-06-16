@@ -3,8 +3,10 @@
 using namespace std;
 
 int main() {
-    string s = "C++";
-    cout << s.front() << endl; 
-    s.front() = 'X';   // modify
+    string s = "HelloWorld";
+
+    cout << s.front() << endl; // Access first character
+
+    s.front() = 'X';   // Modify first character
     cout << s << endl;         
 }

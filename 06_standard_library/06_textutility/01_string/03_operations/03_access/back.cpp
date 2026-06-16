@@ -3,8 +3,10 @@
 using namespace std;
 
 int main() {
-    string s = "Language";
-    cout << s.back() << endl; 
-    s.back() = '!';   // modify
+    string s = "HelloWorld";
+
+    cout << s.back() << endl;  // Access last character
+
+    s.back() = '!';   // modify last character
     cout << s << endl;       
 }

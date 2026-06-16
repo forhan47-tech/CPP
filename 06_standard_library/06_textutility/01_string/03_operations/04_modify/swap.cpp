@@ -3,10 +3,11 @@
 using namespace std;
 
 int main() {
-    string s1 = "First";
-    string s2 = "Second";
-    s1.swap(s2); // exchange contents
+    string s = "Graph";
+    string t = "Jude";
+
+    s.swap(t); // exchange contents
     
-    cout << "s1: " << s1 << endl; 
-    cout << "s2: " << s2 << endl; 
+    cout << "s: " << s << endl; 
+    cout << "t: " << t << endl; 
 }

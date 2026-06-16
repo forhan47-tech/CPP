@@ -3,7 +3,11 @@
 using namespace std;
 
 int main() {
-    string s1;
-    s1.assign("C++ is powerful!");
-    cout << "s1: " << s1 << endl;
+    string s;
+
+    s.assign("Hello"); // assign C-string
+    cout << s << endl;         
+
+    s.assign(4, '*'); // assign 4 '*'
+    cout << s << endl;
 }

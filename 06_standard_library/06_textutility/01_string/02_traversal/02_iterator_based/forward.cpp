@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    string s = "Programming";
+    string s = "HelloWorld";
 
     cout << "Forward traversal: ";
     for(auto it = s.begin(); it != s.end(); ++it) {

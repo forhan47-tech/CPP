@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    string s = "Erase me";
+    string s = "HelloWorld";
     s.clear();
-    cout << "Size after clear: " << s.size() << endl;
+    cout << "Size: " << s.size() << endl;
 }

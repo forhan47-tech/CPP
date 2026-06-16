@@ -3,9 +3,9 @@
 using namespace std;
 
 int main() {
-    string s = "Modern";
+    string s = "HelloWorld";
 
-    cout << "Output: ";
-    for(char ch : string(s.rbegin(), s.rend())) 
-        cout << ch << " ";  
+    cout << "Reverse traversal: ";
+    for(char c : string(s.rbegin(), s.rend())) 
+        cout << c << " ";  
 }
