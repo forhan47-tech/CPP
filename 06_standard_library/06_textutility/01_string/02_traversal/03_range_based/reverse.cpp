@@ -5,7 +5,7 @@ using namespace std;
 int main() {
     string s = "Modern";
 
-    cout << "Characters: ";
+    cout << "Output: ";
     for(char ch : string(s.rbegin(), s.rend())) 
         cout << ch << " ";  
 }

@@ -3,6 +3,7 @@
 using namespace std;
 
 int main() {
-    string s = "World"; // copy from literal
+    string s = "HelloWorld"; // initialized directly
+    s = "Basic C++";        // reassigned
     cout << s << endl;
 }
