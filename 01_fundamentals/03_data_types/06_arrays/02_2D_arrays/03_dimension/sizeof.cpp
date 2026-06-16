@@ -8,9 +8,9 @@ int main() {
         {9, 10, 11, 12}
     };
 
-    int rows = sizeof(mat) / sizeof(mat[0]);
-    int cols = sizeof(mat[0]) / sizeof(mat[0][0]);
+    int r = sizeof(mat) / sizeof(mat[0]);
+    int c = sizeof(mat[0]) / sizeof(mat[0][0]);
 
-    cout << "Rows: " << rows << endl;
-    cout << "Columns: " << cols << endl;
+    cout << "Matrix Rows: " << r << endl;
+    cout << "Matrix Columns: " << c << endl;
 }

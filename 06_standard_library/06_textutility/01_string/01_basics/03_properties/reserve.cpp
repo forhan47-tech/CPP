@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    string s = "Data";
+    string s = "World";
     cout << "Capacity before: " << s.capacity() << endl;
     
     s.reserve(50); // request capacity for 50 chars

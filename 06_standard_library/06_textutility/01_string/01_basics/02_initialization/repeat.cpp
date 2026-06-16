@@ -3,6 +3,6 @@
 using namespace std;
 
 int main() {
-    string s1(5, '*'); 
-    cout << s1 << endl; 
+    string s(5, '*'); 
+    cout << s << endl; 
 }

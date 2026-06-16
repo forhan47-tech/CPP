@@ -3,6 +3,6 @@
 using namespace std;
 
 int main() {
-    string s1 = {'A','B','C'}; // initializer list
-    cout << s1 << endl; 
+    string s = {'A','B','C'}; // initializer list
+    cout << s << endl; 
 }

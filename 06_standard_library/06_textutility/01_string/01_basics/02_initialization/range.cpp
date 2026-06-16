@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    string s1 = "Contiguous";
-    string part(s1.begin(), s1.begin()+4); 
-    cout << part << endl; 
+    string s = "Contiguous";
+    string t(s.begin(), s.begin()+4); 
+    cout << t << endl; 
 }

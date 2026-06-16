@@ -8,8 +8,8 @@ int main() {
         {7, 8, 9}
     };
 
-    cout << mat[1][2] << endl; // Access element in second row, third column
+    cout << mat[1][2] << endl; // Access -> (2nd row, 3rd column)
 
-    mat[0][0] = 10; // Modify element
+    mat[0][0] = 10; // Modify -> (1st row, 1st column)
     cout << mat[0][0] << endl;
 }

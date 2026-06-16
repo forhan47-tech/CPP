@@ -9,9 +9,9 @@ int main() {
         {9, 10, 11, 12}
     };
 
-    int rows = size(mat);
-    int cols = size(mat[0]);
+    int r = size(mat);
+    int c = size(mat[0]);
 
-    cout << "Rows: " << rows << endl;
-    cout << "Columns: " << cols << endl;
+    cout << "Matrix Rows: " << r << endl;
+    cout << "Matrix Columns: " << c << endl;
 }

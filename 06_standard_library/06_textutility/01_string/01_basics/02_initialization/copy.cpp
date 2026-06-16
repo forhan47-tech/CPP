@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    string s1("Hello"); 
-    string s2(s1); // copy of s1
-    cout << s2 << endl; 
+    string s("Hello"); 
+    string t(s); // copy of s
+    cout << t << endl; 
 }

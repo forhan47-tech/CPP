@@ -4,6 +4,6 @@ using namespace std;
 int main() {
     int arr[5] = {10, 20, 30, 40, 50};
 
-    int length = size(arr);
-    cout << "Length of array: " << length;
+    int len = size(arr);
+    cout << "Array length: " << len << endl;
 }
