@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    string s = "HelloWorld"; // assign literal
+    string s = "HelloWorld"; // initialized directly
     cout << s << endl;
     s = "GalaxyWorld"; // reassigned
     cout << s << endl;
