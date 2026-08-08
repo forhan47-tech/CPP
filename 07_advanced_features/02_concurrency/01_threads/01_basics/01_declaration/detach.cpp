@@ -8,6 +8,6 @@ void backgroundTask() {
 
 int main() {
     thread t(backgroundTask);
-    t.detach(); // runs independently, main doesn’t wait
+    t.detach(); // runs independently, main doesn't wait
     cout << "Main thread continues..." << endl;
 }

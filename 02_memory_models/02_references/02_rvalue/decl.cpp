@@ -2,11 +2,8 @@
 using namespace std;
 
 int main() {
-    int&& ref = 10;   // rvalue reference to temporary
-
-    cout << "ref = " << ref << endl; 
-
-    ref = 25;   // modifies the temporary
-    cout << "ref (after modification) = " << ref << endl;
-    return 0;
+    int&& r = 10;   // reference to object
+    cout << "Before = " << r << endl; 
+    r = 25;   // modifies values
+    cout << "After = " << r << endl;
 }
