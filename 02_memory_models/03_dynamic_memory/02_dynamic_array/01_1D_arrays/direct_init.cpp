@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    int* arr = new int[3]{1, 2, 3}; // initialization
+    int* arr = new int[3]{1, 2, 3}; // initialized with values
 
     for (int i = 0; i < 3; i++) {
         cout << arr[i] << " ";

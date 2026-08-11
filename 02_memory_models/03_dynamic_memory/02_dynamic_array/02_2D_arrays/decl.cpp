@@ -3,8 +3,8 @@ using namespace std;
 
 int main() {
     int rows = 3, cols = 3;
-    int** mat = new int*[rows]; // array of pointers
 
+    int** mat = new int*[rows]; // array of pointers
     for (int i = 0; i < rows; i++) {
         mat[i] = new int[cols]; // each row is an array
     }
