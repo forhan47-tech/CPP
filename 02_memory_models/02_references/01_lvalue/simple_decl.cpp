@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
     int x = 20;
-    int& r = x; // must initialize immediately
-    cout << "x = " << x << endl;   
-    cout << "r = " << r << endl;
+    int& ref = x; // must be initialized
+    cout << "Address <-> " << &ref << endl;
+    cout << "Value <-> " << ref << endl;
 }

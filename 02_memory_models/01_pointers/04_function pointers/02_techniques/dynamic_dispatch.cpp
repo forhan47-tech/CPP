@@ -19,6 +19,5 @@ int main() {
     cout << "Add: " << ops[0](10, 5) << endl;    
     cout << "Sub: " << ops[1](10, 5) << endl;
     cout << "Mul: " << ops[2](10, 5) << endl; 
-
     return 0;
 }

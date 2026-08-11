@@ -5,7 +5,7 @@ int add(int a, int b) {
     return a + b; 
 }
 
-int multiply(int a, int b) { 
+int mul(int a, int b) { 
     return a * b; 
 }
 
@@ -15,6 +15,6 @@ void compute(int x, int y, int (*func)(int, int)) {
 
 int main() {
     compute(4, 2, add);     
-    compute(4, 2, multiply);
+    compute(4, 2, mul);
     return 0;
 }

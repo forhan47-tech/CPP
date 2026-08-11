@@ -6,14 +6,12 @@ int main() {
     char c = 'A';
     float f = 3.14;
 
-    void* vp; // generic pointer
-
-    vp = &x;
-    cout << "Integer: " << *(int*)vp << endl;
+    void* vp = &x; // generic pointer
+    cout << "int_val: " << *static_cast<int*>(vp) << endl;
 
     vp = &c;
-    cout << "Char: " << *(char*)vp << endl;
+    cout << "char_val: " << *static_cast<char*>(vp) << endl;
 
     vp = &f;
-    cout << "Float: " << *(float*)vp << endl;
+    cout << "float_val: " << *static_cast<float*>(vp) << endl;
 }

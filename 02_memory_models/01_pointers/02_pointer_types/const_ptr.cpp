@@ -3,7 +3,6 @@ using namespace std;
 
 int main() {
     int x = 100;
-    int* ptr = &x; // pointer to x
-    cout << "Address <-> " << ptr << endl;
+    const int* ptr = &x; // can't modify
     cout << "Value <-> " << *ptr << endl;
 }

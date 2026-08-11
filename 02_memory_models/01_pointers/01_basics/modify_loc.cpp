@@ -7,6 +7,6 @@ int main() {
     int *ptr = &a; // points to a
     cout << *ptr << endl;
 
-    ptr = &b; // points to b
+    ptr = &b; // now points to b
     cout << *ptr << endl;
 }

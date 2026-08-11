@@ -7,6 +7,6 @@ void task(string&& s) {
 }
 
 int main() {
-    task("C++");   // binding to temporaries
+    task("C++"); // assign rvalue
     return 0;
 }

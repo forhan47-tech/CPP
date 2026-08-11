@@ -3,10 +3,10 @@ using namespace std;
 
 int main() {
     int arr[5] = {10, 20, 30, 40, 50};
-    int* p = arr; // points to first element
+    int* ptr = arr; // points to first element
 
     for (int i = 0; i < 5; i++) {
-        cout << *(p + i) << " ";
+        cout << *(ptr + i) << " ";
     }
     cout << endl;
 }

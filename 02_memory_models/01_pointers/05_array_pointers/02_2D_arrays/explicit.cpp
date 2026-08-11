@@ -7,11 +7,11 @@ int main() {
         {4, 5, 6}
     };
 
-    int* ptr = &mat[0][0];  // points to first element
+    int (*p)[3] = mat;  // points to first row
 
     for (int i = 0; i < 2; i++) {
         for (int j = 0; j < 3; j++) {
-            cout << *(ptr + i * 3 + j) << " ";
+            cout << p[i][j] << " ";
         }
         cout << endl;
     }
