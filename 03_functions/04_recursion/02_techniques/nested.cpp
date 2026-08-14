@@ -2,8 +2,8 @@
 using namespace std;
 
 int mcCarthy91(int n) {
-    if (n > 100) return n - 10;              
-    return mcCarthy91(mcCarthy91(n + 11)); // recursive call with modified argument
+    if (n > 100) return n - 10;         
+    return mcCarthy91(mcCarthy91(n + 11)); // Argument itself recursively calls
 }
 
 int main() {
